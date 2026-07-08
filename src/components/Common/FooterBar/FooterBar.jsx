@@ -8,12 +8,16 @@ function FooterBar({
 }) {
   return (
     <div className="footer-bar">
-      <span>{editedCount} Sections Edited</span>
+    <span className="footer-bar-text">
+        {editedCount} Sections Edited
+    </span>
 
-      <Button onClick={onSave}>
-        {buttonText}
-      </Button>
+    <div className="footer-bar-actions">
+        <Button onClick={onSave}>
+            {buttonText}
+        </Button>
     </div>
+</div>
   );
 }
 

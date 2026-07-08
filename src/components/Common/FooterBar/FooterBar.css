@@ -3,13 +3,24 @@
     justify-content: space-between;
     align-items: center;
 
-    margin-top: 30px;
-    padding-top: 20px;
+    margin-top: 24px;
 
-    border-top: 1px solid #e5e5e5;
+    padding: 10px 24px;
+
+    background: #efe1c78c;
+
+    border: 1px solid #d8d6d0;
+
+    border-radius: 16px;
 }
 
-.footer-bar span {
-    color: #666;
-    font-size: 14px;
+.footer-bar-text {
+    color: #6b7280;
+    font-size: var(--text-sm);
+    font-weight: 500;
+}
+
+.footer-bar-actions {
+    display: flex;
+    gap: 12px;
 }

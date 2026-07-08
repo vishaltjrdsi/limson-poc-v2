@@ -1,0 +1,22 @@
+.screen-actions{
+    display:flex;
+    gap:12px;
+
+    margin-top:20px;
+    margin-bottom:20px;
+}
+
+.empty-state{
+
+    border:1px dashed var(--border);
+
+    border-radius:8px;
+
+    padding:18px;
+
+    background:#fffdf8;
+
+    color:#6b7280;
+
+    font-size:13px;
+}

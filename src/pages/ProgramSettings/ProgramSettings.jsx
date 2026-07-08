@@ -1,25 +1,25 @@
 import { useState } from "react";
 import "./ProgramSettings.css";
 
-import PageLayout from "../../components/common/PageLayout/PageLayout";
+import PageContainer from "../../containers/PageContainer/PageContainer";
 import Tabs from "../../components/common/Tabs/Tabs";
 import DynamicForm from "../../components/common/DynamicForm/DynamicForm";
 import FooterBar from "../../components/common/FooterBar/FooterBar";
-
 import programSettingsForm from "../../config/forms/programSettingsForm";
+import Page from "../../components/common/Page/Page";
+
 
 function ProgramSettings() {
   const [activeTab, setActiveTab] = useState("General");
 
-  const [formData, setFormData] = useState({
-    company: "",
-    companyName: "",
-    address: "",
-    email: "",
-    phone: "",
-    duns: "",
-    country: "",
-  });
+ const [formData, setFormData] = useState({
+  company: "",
+  companyName: "",
+  address1: "",
+  mainEmail: "",
+  phone: "",
+  dunsNumber: "",
+});
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -36,13 +36,18 @@ function ProgramSettings() {
     // TODO: API Call
     alert("Settings Saved Successfully");
   };
-
+ 
   return (
-    <div className="program-settings">
-      <PageLayout
+     <Page>
+      <PageContainer
         title="PROGRAM SETTINGS"
         subtitle="Company Configuration"
         description="Manage company information and default application settings."
+        headerRight={
+        <span className="unsaved-text">
+            Unsaved Changes
+        </span>
+    }
       >
         <Tabs
           tabs={[
@@ -81,8 +86,8 @@ function ProgramSettings() {
           buttonText="Save Settings"
           onSave={handleSave}
         />
-      </PageLayout>
-    </div>
+      </PageContainer>
+    </Page>
   );
 }
 

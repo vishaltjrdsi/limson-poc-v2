@@ -1,0 +1,23 @@
+:root {
+  --primary: #436b63;
+
+  --accent: #d8e52f;
+
+  --page-bg-start: #f2eee6;
+  --page-bg-middle: #f7f4ee;
+  --page-bg-end: #f4f1ea;
+
+  --card-bg: #fbf9f3bf;
+
+  --border: #d8d6d0;
+
+  --radius-lg: 10px;
+
+  --shadow-sm: 0 2px 10px #1e1c170d;
+
+  --text-xs: 0.75rem; /* 12px */
+  --text-sm: 0.875rem; /* 14px */
+  --text-md: 1rem; /* 16px */
+  --text-lg: 1.125rem; /* 18px */
+  --text-xl: 1.5rem; /* 24px */
+}

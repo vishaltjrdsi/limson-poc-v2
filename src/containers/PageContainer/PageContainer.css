@@ -1,0 +1,51 @@
+.page-container {
+  overflow: hidden;
+}
+
+.page-container-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    padding: 24px 30px;
+
+    background: #fbf9f3bf;
+}
+
+.page-container-title {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.page-container-header-right {
+    display: flex;
+    align-items: center;
+}
+
+.page-container-header h1 {
+  font-size: 12px;       
+  font-weight: 700;    
+  margin: 0 0 6px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #b4863a;
+}
+
+.page-container-header h3 {
+  font-size: 14px;       
+  font-weight: 700;  
+  margin: 0 0 8px;
+  font-weight: 600;
+  color: #000000;
+}
+
+.page-container-header p {
+  font-size: var(--text-sm); /* Description */
+  margin: 0;
+  color: #6b7280;
+}
+
+.page-container-body {
+  padding: 0 30px 30px;
+}

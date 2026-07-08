@@ -1,48 +1,40 @@
 const programSettingsForm = [
-
   {
-    component:"input",
-    label:"Company",
-    name:"company",
-    placeholder:"Enter Company"
+    label: "Company",
+    name: "company",
+    type: "text",
+    placeholder: "Enter company",
   },
-
   {
-    component:"input",
-    label:"Company Name",
-    name:"companyName",
-    placeholder:"Enter Company Name"
+    label: "Company Name",
+    name: "companyName",
+    type: "text",
+    placeholder: "Enter company name",
   },
-
   {
-    component:"select",
-    label:"Country",
-    name:"country",
-
-    options:[
-      {
-        label:"India",
-        value:"india"
-      },
-      {
-        label:"USA",
-        value:"usa"
-      },
-      {
-        label:"Canada",
-        value:"canada"
-      }
-    ]
+    label: "Address 1",
+    name: "address1",
+    type: "text",
+    placeholder: "Enter address",
   },
-
   {
-    component:"input",
-    label:"Email",
-    name:"email",
-    type:"email",
-    placeholder:"Enter Email"
-  }
-
+    label: "Main Email",
+    name: "mainEmail",
+    type: "text",
+    placeholder: "Enter email",
+  },
+  {
+    label: "Phone",
+    name: "phone",
+    type: "text",
+    placeholder: "Enter phone number",
+  },
+  {
+    label: "DUNS Number",
+    name: "dunsNumber",
+    type: "text",
+    placeholder: "Enter DUNS number",
+  },
 ];
 
 export default programSettingsForm;

@@ -1,7 +1,7 @@
 import "./Tabs.css";
 
 function Tabs({
-  tabs = [],
+  tabs,
   activeTab,
   onChange,
 }) {
@@ -10,7 +10,8 @@ function Tabs({
       {tabs.map((tab) => (
         <button
           key={tab}
-          className={`tab ${
+          type="button"
+          className={`tab-btn ${
             activeTab === tab ? "active" : ""
           }`}
           onClick={() => onChange(tab)}
