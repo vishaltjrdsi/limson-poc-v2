@@ -1,8 +1,7 @@
 import { useState } from "react";
-import DashboardLayout from "./components/Layout/DashboardLayout/DashboardLayout";
+import DashboardLayout from "./layouts/DashboardLayout/DashboardLayout";
 
 function App() {
-
   const [activeMenu, setActiveMenu] = useState("APPS");
 
   return (

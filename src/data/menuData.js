@@ -24,7 +24,10 @@ const menuData = {
     {
       title: "REPORTS",
       items: [
-        "Sales Report",
+        "Sales",
+        "Purchasing",
+        "Inventory",
+        "Items & Contacts"
       ],
     },
   ],
@@ -34,15 +37,44 @@ const menuData = {
       title: "CONFIGURATION",
       items: [
         "Program Settings",
+        "Screen Setup",
+        "Vendoer Rules",
+        "Wharehouse Rules"
+      ],
+    },
+    {
+      title: "MASTER DATA",
+      items: [
+        "List Navigation",
+        "Conopy Exports"
+      ],
+    },
+    {
+      title: "USERS & ROLES",
+      items: [  
+        "User Settings",
+        "Roles",
+        "Backup Access"
+      ],
+    },
+    {
+      title: "ADJUSTMENTS",
+      items: [  
+        "Inventory Adjustments",
+        "TX Qty Adjustments"
       ],
     },
   ],
 
   TOOLS: [
     {
-      title: "TOOLS",
+      title: "SYSTEM TOOLS",
       items: [
-        "Import",
+        "Spot Rate",
+        "Fiscal Calendar",
+        "EDI Settings",
+        "Unit of Measure",
+        "Pricing Mismatch"
       ],
     },
   ],

@@ -1,5 +1,14 @@
 import "./Header.css";
-import { FaBell, FaUserCircle } from "react-icons/fa";
+import { useState, useRef } from "react";
+import menuData from "../../data/menuData";
+import logo from "../../assets/icons/atlas_logo.png";
+
+import {
+  FaBell,
+  FaUserCircle,
+  FaSearch,
+} from "react-icons/fa";
+
 import {
   MdApps,
   MdAssessment,
@@ -7,66 +16,111 @@ import {
   MdBuild,
 } from "react-icons/md";
 
-function Header({ activeMenu, setActiveMenu }) {
+function Header() {
+  const [hoverMenu, setHoverMenu] = useState(null);
+  const timer = useRef(null);
+
+  const menuIcons = {
+    APPS: <MdApps className="nav-icon" />,
+    REPORTS: <MdAssessment className="nav-icon" />,
+    ADMIN: <MdAdminPanelSettings className="nav-icon" />,
+    TOOLS: <MdBuild className="nav-icon" />,
+  };
+
+  const menus = ["APPS", "REPORTS", "ADMIN", "TOOLS"];
+
+  const openMenu = (menu) => {
+    clearTimeout(timer.current);
+    setHoverMenu(menu);
+  };
+
+  const closeMenu = () => {
+    timer.current = setTimeout(() => {
+      setHoverMenu(null);
+    }, 200);
+  };
+
   return (
     <header className="header">
+      <div className="header-left">
+        <img
+          src={logo}
+          alt="Atlas Logo"
+          className="header-logo"
+        />
 
-  <nav className="header-nav">
-    <a
-      href="#"
-      className={activeMenu === "APPS" ? "active" : ""}
-      onClick={(e) => {
-        e.preventDefault();
-        setActiveMenu("APPS");
-      }}
-    >
-      <MdApps className="nav-icon" />
-      <span>APPS</span>
-    </a>
+        <h2 className="header-title">ATLAS</h2>
+      </div>
 
-    <a
-      href="#"
-      className={activeMenu === "REPORTS" ? "active" : ""}
-      onClick={(e) => {
-        e.preventDefault();
-        setActiveMenu("REPORTS");
-      }}
-    >
-      <MdAssessment className="nav-icon" />
-      <span>REPORTS</span>
-    </a>
+      <nav className="header-nav">
+        {menus.map((menu) => {
+          const sections = menuData[menu] || [];
 
-    <a
-      href="#"
-      className={activeMenu === "ADMIN" ? "active" : ""}
-      onClick={(e) => {
-        e.preventDefault();
-        setActiveMenu("ADMIN");
-      }}
-    >
-      <MdAdminPanelSettings className="nav-icon" />
-      <span>ADMIN</span>
-    </a>
+          const totalItems = sections.reduce(
+            (count, section) => count + section.items.length,
+            0
+          );
 
-    <a
-      href="#"
-      className={activeMenu === "TOOLS" ? "active" : ""}
-      onClick={(e) => {
-        e.preventDefault();
-        setActiveMenu("TOOLS");
-      }}
-    >
-      <MdBuild className="nav-icon" />
-      <span>TOOLS</span>
-    </a>
-  </nav>
+          let columns = 1;
 
-  <div className="header-right">
-    <FaBell className="icon" />
-    <FaUserCircle className="icon" />
-  </div>
+          if (totalItems > 20) columns = 3;
+          else if (totalItems > 10) columns = 2;
 
-</header>
+          return (
+            <div
+              key={menu}
+              className="nav-wrapper"
+              onMouseEnter={() => openMenu(menu)}
+              onMouseLeave={closeMenu}
+            >
+              <a
+                href="#"
+                className={hoverMenu === menu ? "active" : ""}
+                onClick={(e) => e.preventDefault()}
+              >
+                {menuIcons[menu]}
+                <span>{menu}</span>
+              </a>
+
+              {hoverMenu === menu && (
+                <div
+                  className="dropdown-menu"
+                  style={{
+                    "--columns": columns,
+                  }}
+                >
+                  <div className="dropdown-grid">
+                    {sections.map((section) => (
+                      <div
+                        key={section.title}
+                        className="dropdown-section"
+                      >
+                        <h5>{section.title}</h5>
+
+                        {section.items.map((item) => (
+                          <div
+                            key={item}
+                            className="dropdown-item"
+                          >
+                            {item}
+                          </div>
+                        ))}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+          );
+        })}
+      </nav>
+
+      <div className="header-right">
+        <FaSearch className="icon" />
+        <FaBell className="icon" />
+        <FaUserCircle className="icon" />
+      </div>
+    </header>
   );
 }
 

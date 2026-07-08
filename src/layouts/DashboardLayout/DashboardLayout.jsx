@@ -1,16 +1,10 @@
-import { useState } from "react";
 import "./DashboardLayout.css";
-import { Outlet } from "react-router-dom";
-import Sidebar from "../../Sidebar/Sidebar";
-import Header from "../../Header/Header";
+import Header from "../../components/Header/Header";
+import WelcomeCard from "../../components/WelcomeCard/WelcomeCard";
 
-function DashboardLayout() {
-  const [activeMenu, setActiveMenu] = useState("APPS");
-
+function DashboardLayout({ activeMenu, setActiveMenu }) {
   return (
     <div className="layout">
-      <Sidebar activeMenu={activeMenu} />
-
       <div className="content">
         <Header
           activeMenu={activeMenu}
@@ -18,7 +12,7 @@ function DashboardLayout() {
         />
 
         <main className="main-content">
-          <Outlet />
+          <WelcomeCard />
         </main>
       </div>
     </div>
