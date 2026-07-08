@@ -3,11 +3,7 @@ import { useState, useRef } from "react";
 import menuData from "../../data/menuData";
 import logo from "../../assets/icons/atlas_logo.png";
 
-import {
-  FaBell,
-  FaUserCircle,
-  FaSearch,
-} from "react-icons/fa";
+import { FaBell, FaUserCircle, FaSearch } from "react-icons/fa";
 
 import {
   MdApps,
@@ -16,7 +12,7 @@ import {
   MdBuild,
 } from "react-icons/md";
 
-function Header() {
+function Header({ selectedPage, setSelectedPage }) {
   const [hoverMenu, setHoverMenu] = useState(null);
   const timer = useRef(null);
 
@@ -43,11 +39,7 @@ function Header() {
   return (
     <header className="header">
       <div className="header-left">
-        <img
-          src={logo}
-          alt="Atlas Logo"
-          className="header-logo"
-        />
+        <img src={logo} alt="Atlas Logo" className="header-logo" />
 
         <h2 className="header-title">ATLAS</h2>
       </div>
@@ -58,7 +50,7 @@ function Header() {
 
           const totalItems = sections.reduce(
             (count, section) => count + section.items.length,
-            0
+            0,
           );
 
           let columns = 1;
@@ -91,16 +83,17 @@ function Header() {
                 >
                   <div className="dropdown-grid">
                     {sections.map((section) => (
-                      <div
-                        key={section.title}
-                        className="dropdown-section"
-                      >
+                      <div key={section.title} className="dropdown-section">
                         <h5>{section.title}</h5>
 
                         {section.items.map((item) => (
                           <div
                             key={item}
                             className="dropdown-item"
+                            onClick={() => {
+                              setSelectedPage(item);
+                              setHoverMenu(null);
+                            }}
                           >
                             {item}
                           </div>

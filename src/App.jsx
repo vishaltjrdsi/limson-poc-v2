@@ -2,12 +2,12 @@ import { useState } from "react";
 import DashboardLayout from "./layouts/DashboardLayout/DashboardLayout";
 
 function App() {
-  const [activeMenu, setActiveMenu] = useState("APPS");
+  const [selectedPage, setSelectedPage] = useState("HOME");
 
   return (
     <DashboardLayout
-      activeMenu={activeMenu}
-      setActiveMenu={setActiveMenu}
+      selectedPage={selectedPage}
+      setSelectedPage={setSelectedPage}
     />
   );
 }

@@ -1,0 +1,50 @@
+.page-layout{
+    overflow:hidden;
+}
+
+.page-layout-header{
+
+    background:#f5f7f8;
+
+    padding:24px 30px;
+
+    border-bottom:1px solid #e3e5e8;
+}
+
+.page-layout-header h1{
+
+    margin:0;
+
+    font-size:24px;
+
+    font-weight:600;
+
+    color:#2b2b2b;
+}
+
+.page-layout-header h3{
+
+    margin:8px 0 0;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    color:#436b63;
+}
+
+.page-layout-header p{
+
+    margin:8px 0 0;
+
+    font-size:14px;
+
+    color:#6b7280;
+
+    line-height:1.6;
+}
+
+.page-layout-body{
+
+    padding:28px;
+}

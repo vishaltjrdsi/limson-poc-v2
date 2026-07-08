@@ -1,19 +1,30 @@
 import "./DashboardLayout.css";
-import Header from "../../components/Header/Header";
-import WelcomeCard from "../../components/WelcomeCard/WelcomeCard";
 
-function DashboardLayout({ activeMenu, setActiveMenu }) {
+import Header from "../../components/Header/Header";
+
+import Home from "../../pages/Home/Home";
+import ProgramSettings from "../../pages/ProgramSettings/ProgramSettings";
+import pageRoutes from "../../routes/pageRoutes";
+
+function DashboardLayout({
+  selectedPage,
+  setSelectedPage,
+}) {
+  const CurrentPage = pageRoutes[selectedPage] || pageRoutes.HOME;
   return (
     <div className="layout">
       <div className="content">
+
         <Header
-          activeMenu={activeMenu}
-          setActiveMenu={setActiveMenu}
+          selectedPage={selectedPage}
+          setSelectedPage={setSelectedPage}
         />
 
         <main className="main-content">
-          <WelcomeCard />
+
+          <CurrentPage />
         </main>
+
       </div>
     </div>
   );

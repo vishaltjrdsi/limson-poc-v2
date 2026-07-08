@@ -1,0 +1,26 @@
+.program-settings {
+    padding: 20px;
+}
+
+.tab-placeholder {
+    min-height: 250px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    color: #777;
+
+    text-align: center;
+}
+
+.tab-placeholder h3 {
+    margin-bottom: 8px;
+
+    color: #436b63;
+}
+
+.tab-placeholder p {
+    margin: 0;
+}
