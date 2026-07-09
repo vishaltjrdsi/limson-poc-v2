@@ -22,7 +22,10 @@ function DashboardLayout({
 
         <main className="main-content">
 
-          <CurrentPage />
+          <CurrentPage
+  selectedPage={selectedPage}
+  setSelectedPage={setSelectedPage}
+/>
         </main>
 
       </div>

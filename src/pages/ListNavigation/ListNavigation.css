@@ -1,0 +1,52 @@
+.list-navigation-header {
+
+    background: #436b63;
+
+    color: white;
+
+    padding: 24px 30px;
+
+    border-radius: 12px;
+
+    margin-bottom: 20px;
+}
+
+.list-navigation-header h1 {
+
+    margin: 0;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    color: #e4c07d;
+}
+
+.list-navigation-header h3 {
+
+    margin: 8px 0;
+
+    font-size: 20px;
+
+    font-weight: 700;
+
+    color: white;
+}
+
+.list-navigation-header p {
+
+    margin: 0;
+
+    color: rgba(255,255,255,.8);
+}
+
+.navigation-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fill, minmax(155px, 1fr));
+
+    gap: 14px;
+}

@@ -17,12 +17,17 @@ function AgGridTable({
       className="ag-theme-alpine limson-grid"
       style={{ height }}
     >
+   
       <AgGridReact
-        rowData={rowData}
-        columnDefs={columnDefs}
-        defaultColDef={defaultColDef}
-        animateRows
-      />
+  rowData={rowData}
+  columnDefs={columnDefs}
+  defaultColDef={defaultColDef}
+  animateRows
+  pagination={true}
+  paginationPageSize={10}
+  rowHeight={38}
+  headerHeight={38}
+/>
     </div>
   );
 }

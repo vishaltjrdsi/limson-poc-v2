@@ -4,18 +4,40 @@
 
     border: 1px solid var(--border);
 
-    border-radius: 8px;
+    border-radius: 12px;
 
     overflow: hidden;
+
+    --ag-border-color: transparent;
+
+    --ag-row-border-color: #ece7dc;
+
+    --ag-header-background-color: #f1ede4;
+
+    --ag-background-color: #fffdf8;
+
+    --ag-odd-row-background-color: #fffdf8;
+
+    --ag-font-size: 12px;
+
+    --ag-font-family: inherit;
 }
 
 /* Header */
 
 .limson-grid .ag-header {
 
-    background: #f1ede4;
-
     border-bottom: 1px solid var(--border);
+}
+
+.limson-grid .ag-header-cell {
+
+    border-right: 1px solid #ebe4d8;
+}
+
+.limson-grid .ag-header-cell:last-child {
+
+    border-right: none;
 }
 
 .limson-grid .ag-header-cell-label {
@@ -33,21 +55,45 @@
 
 .limson-grid .ag-cell {
 
-    font-size: 12px;
-
     display: flex;
 
     align-items: center;
+
+    font-size: 12px;
+
+    color: #333;
 }
 
 /* Rows */
 
 .limson-grid .ag-row {
 
-    border-color: #ece7dc;
+    background: #fffdf8;
 }
 
 .limson-grid .ag-row:hover {
 
-    background: #faf8f3;
+    background: #f8f5ef;
+}
+
+/* Remove blue focus */
+
+.limson-grid .ag-cell-focus,
+.limson-grid .ag-cell:focus,
+.limson-grid .ag-header-cell:focus {
+
+    border: none !important;
+
+    outline: none !important;
+}
+
+/* Pagination */
+
+.limson-grid .ag-paging-panel {
+
+    border-top: 1px solid var(--border);
+
+    background: #fbf9f3;
+
+    font-size: 12px;
 }

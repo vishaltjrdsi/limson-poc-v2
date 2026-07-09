@@ -1,0 +1,103 @@
+.navigation-card {
+
+    background: #fbf9f3bf;
+
+    border: 1px solid var(--border);
+
+    border-radius: 12px;
+
+    padding: 12px;
+
+    cursor: pointer;
+
+    transition: .2s;
+
+    min-height: 90px;
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+.navigation-card:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow: var(--shadow-sm);
+}
+
+.navigation-card-top {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 14px;
+}
+
+.navigation-icon {
+
+    width: 24px;
+
+    height: 24px;
+
+    border-radius: 8px;
+
+    background: #dfece7;
+
+    color: #2c6b60;
+
+    font-weight: 700;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+    font-size: 10px;
+}
+
+.navigation-count {
+
+    min-width: 20px;
+
+    height: 20px;
+
+    border-radius: 20px;
+
+    background: #f5f0e6;
+
+    border: 1px solid var(--border);
+
+    font-size: 10px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: #666;
+}
+
+.navigation-title {
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    color: #000;
+
+    margin-bottom: 6px;
+}
+
+.navigation-description {
+
+    font-size: 10px;
+
+    color: #777;
+
+    line-height: 1.5;
+}

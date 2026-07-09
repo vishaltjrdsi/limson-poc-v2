@@ -1,10 +1,14 @@
 const defaultColDef = {
   flex: 1,
+  minWidth: 120,
+
   sortable: true,
   filter: true,
   resizable: true,
+
+  suppressMenu: true,
+
   floatingFilter: false,
-  minWidth: 120,
 };
 
 export default defaultColDef;
