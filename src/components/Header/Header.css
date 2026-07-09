@@ -1,23 +1,25 @@
 .header {
-    height: 60px;
-    margin: 5px 30px 0;
-    padding: 0 20px;
+    min-height: 60px;
+    margin: 8px 12px 0;
+    padding: 0 24px;
 
     background: #436b63;
-    border-radius: 8px;
+    border-radius: 10px;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 24px;
 }
 
 
 .header-right {
     display: flex;
     align-items: center;
-    gap: 18px;
+    gap: 12px;
 
     margin-left: auto;
+    flex: 0 0 auto;
 }
 
 .logo-placeholder {
@@ -30,9 +32,10 @@
 .header-nav {
     display: flex;
     align-items: center;
-    justify-content: center; /* Center the menu items */
-    flex: 1;                 /* Take the available space */
+    justify-content: center;
+    flex: 1 1 auto;
     gap: 8px;
+    min-width: 0;
 }
 
 .header-nav a {
@@ -40,25 +43,25 @@
     align-items: center;
     justify-content: center;
 
-    height: 40px;          /* Important */
-    padding: 0 14px;       /* Remove vertical padding */
+    height: 36px;
+    padding: 0 18px;
 
     gap: 6px;
 
     color: #fff;
     text-decoration: none;
 
-    font-size: 13px;
-    font-weight: 600;
+    font-size: 12px;
+    font-weight: 500;
 
-    border-radius: 4px;
+    border-radius: 6px;
 
     box-sizing: border-box;
 }
 
 .nav-icon {
-  font-size: 18px;
-  margin-right: 5px;
+  font-size: 13px;
+  margin-right: 2px;
 }
 
 .header-nav a.active {
@@ -70,26 +73,24 @@
     background: rgba(255,255,255,.08);
 }
 
+.header-nav a.active:hover {
+    background: #d8e52f;
+    color: #2d5149;
+}
+
 
 .icon {
     display: flex;
     align-items: center;
     justify-content: center;
 
-    font-size: 18px;
+    font-size: 13px;
     color: #fff;
 }
 
 .icon:hover {
-  color: #2d6a5f;
+  color: #d8e52f;
 }
-
-.header-nav {
-    display: flex;
-    gap: 8px;
-}
-
-
 
 .dropdown-menu h5 {
     margin: 12px 18px 8px;
@@ -104,7 +105,8 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    min-width: 180px;
+    flex: 0 0 210px;
+    min-width: 0;
 }
 
 .header-logo {
@@ -119,11 +121,59 @@
     color: #D8E63A;
 
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 800;
 
     font-family: Georgia, serif;
 
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
+}
+
+.environment-chip {
+    height: 20px;
+    padding: 0 10px;
+    background: #d8e52f;
+    color: #214a42;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: 900;
+}
+
+.environment-chip-wide {
+    min-width: 108px;
+}
+
+.user-avatar {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #111;
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: 800;
+}
+
+.user-name {
+    color: #fff;
+    font-size: 12px;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.user-caret {
+    color: #d3dfd8;
+    font-size: 14px;
+    flex: 0 0 auto;
+}
+
+.logout-icon {
+    color: #ec5a52;
+    font-size: 17px;
+    flex: 0 0 auto;
 }
 
 
@@ -187,4 +237,24 @@
 .dropdown-item:hover {
     color: #D8E52F;
     padding-left: 8px;
+}
+
+@media (max-width: 1100px) {
+    .header {
+        padding: 0 12px;
+        gap: 10px;
+    }
+
+    .header-left {
+        flex-basis: 150px;
+    }
+
+    .header-right {
+        gap: 16px;
+    }
+
+    .user-name,
+    .environment-chip-wide {
+        display: none;
+    }
 }

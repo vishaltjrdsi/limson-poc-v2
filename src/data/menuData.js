@@ -46,7 +46,7 @@ const menuData = {
       title: "MASTER DATA",
       items: [
         "List Navigation",
-        "Conopy Exports"
+        "Canopy Exports"
       ],
     },
     {

@@ -15,12 +15,19 @@
 
 /* Primary */
 .btn-primary {
-    background: #436b63;
+
+    background: #1f7468;
+
+    border: 1px solid #1f7468;
+
     color: white;
+
+    font-weight: 600;
 }
 
-.btn-primary:hover {
-    background: #35564f;
+.button-primary:hover {
+
+    background: #195f56;
 }
 
 /* Secondary */

@@ -1,0 +1,25 @@
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 56px;
+  height: 22px;
+
+  padding: 0 10px;
+
+  border-radius: 999px;
+
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.status-active {
+  background: #dbeccf;
+  color: #3d6e2d;
+}
+
+.status-inactive {
+  background: #f8dede;
+  color: #b03838;
+}

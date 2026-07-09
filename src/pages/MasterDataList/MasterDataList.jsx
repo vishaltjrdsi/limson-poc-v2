@@ -1,24 +1,62 @@
-import Page from "../../components/common/Page/Page";
-import Button from "../../components/common/Button/Button";
-import AgGridTable from "../../components/common/AgGridTable/AgGridTable";
-import palletRates from "../../config/admin/masterData/palletRates";
-
+import Page from "../../components/Common/Page/Page";
+import Button from "../../components/Common/Button/Button";
+import AgGridTable from "../../components/Common/AgGridTable/AgGridTable";
+import masterData from "../../mock/masterData";
+import {
+  ActionCellRenderer,
+  StatusCellRenderer,
+} from "../../components/common/AgGridTable/CellRenderers";
 import "./MasterDataList.css";
 
-function MasterDataList() {
+function MasterDataList({
+  setSelectedPage,
+  selectedMasterData,
+}) {
+
+
+  const currentData =
+  masterData[selectedMasterData?.id] || {
+    columnDefs: [],
+    rowData: [],
+  };
+
+  const columnDefs = currentData.columnDefs.map((column) => {
+  if (column.field === "status") {
+    return {
+      ...column,
+      cellRenderer: StatusCellRenderer,
+    };
+  }
+
+  if (column.field === "actions") {
+    return {
+      ...column,
+      cellRenderer: ActionCellRenderer,
+      sortable: false,
+      filter: false,
+      resizable: false,
+    };
+  }
+
+  return column;
+});
+
   return (
     <Page>
       <div className="master-list-header">
 
     <div className="master-list-left">
 
-        <button className="back-link">
-            ← Back to Master Data
-        </button>
+       <button
+  className="back-link"
+  onClick={() => setSelectedPage("List Navigation")}
+>
+  ← Back to Master Data
+</button>
 
-        <h1 className="master-list-title">
-            Pallet Rates
-        </h1>
+     <h1 className="master-list-title">
+    {selectedMasterData?.title || "Master Data"}
+</h1>
 
     </div>
 
@@ -38,11 +76,13 @@ function MasterDataList() {
 
 <div className="master-list-content">
 
-    <AgGridTable
-        columnDefs={palletRates.columnDefs}
-        rowData={palletRates.rowData}
-        height="500px"
-    />
+   <AgGridTable
+    columnDefs={columnDefs}
+    rowData={currentData.rowData}
+     pagination={false}
+     filters={false}
+    autoHeight
+/>
 
 </div>
     </Page>

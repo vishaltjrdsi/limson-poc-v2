@@ -3,7 +3,8 @@ import { useState, useRef } from "react";
 import menuData from "../../data/menuData";
 import logo from "../../assets/icons/atlas_logo.png";
 
-import { FaBell, FaUserCircle, FaSearch } from "react-icons/fa";
+import { FaBell, FaSearch } from "react-icons/fa";
+import { FiChevronDown, FiLogOut } from "react-icons/fi";
 
 import {
   MdApps,
@@ -67,7 +68,12 @@ function Header({ selectedPage, setSelectedPage }) {
             >
               <a
                 href="#"
-                className={hoverMenu === menu ? "active" : ""}
+                className={
+                  hoverMenu === menu ||
+                  (menu === "ADMIN" && selectedPage === "HOME")
+                    ? "active"
+                    : ""
+                }
                 onClick={(e) => e.preventDefault()}
               >
                 {menuIcons[menu]}
@@ -109,9 +115,16 @@ function Header({ selectedPage, setSelectedPage }) {
       </nav>
 
       <div className="header-right">
+        <span className="environment-chip">US US</span>
+        <span className="environment-chip environment-chip-wide">
+          SIT ENVIRONMENT
+        </span>
         <FaSearch className="icon" />
         <FaBell className="icon" />
-        <FaUserCircle className="icon" />
+        <span className="user-avatar">R</span>
+        <span className="user-name">Local Dev User</span>
+        <FiChevronDown className="user-caret" />
+        <FiLogOut className="logout-icon" />
       </div>
     </header>
   );

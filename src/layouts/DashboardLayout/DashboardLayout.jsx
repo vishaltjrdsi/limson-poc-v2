@@ -2,13 +2,13 @@ import "./DashboardLayout.css";
 
 import Header from "../../components/Header/Header";
 
-import Home from "../../pages/Home/Home";
-import ProgramSettings from "../../pages/ProgramSettings/ProgramSettings";
 import pageRoutes from "../../routes/pageRoutes";
 
 function DashboardLayout({
   selectedPage,
   setSelectedPage,
+  selectedMasterData,
+  setSelectedMasterData,
 }) {
   const CurrentPage = pageRoutes[selectedPage] || pageRoutes.HOME;
   return (
@@ -21,11 +21,12 @@ function DashboardLayout({
         />
 
         <main className="main-content">
-
           <CurrentPage
-  selectedPage={selectedPage}
-  setSelectedPage={setSelectedPage}
-/>
+          selectedPage={selectedPage}
+          setSelectedPage={setSelectedPage}
+          selectedMasterData={selectedMasterData}
+          setSelectedMasterData={setSelectedMasterData}
+        />
         </main>
 
       </div>

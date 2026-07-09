@@ -6,6 +6,7 @@ import "./ListNavigation.css";
 
 function ListNavigation({
   setSelectedPage,
+  setSelectedMasterData,
 }) {
   return (
     <Page>
@@ -28,12 +29,14 @@ function ListNavigation({
           <NavigationCard
             key={item.title}
             {...item}
-            onClick={() => {
-  if (item.id === "palletRates") {
-    setSelectedPage("Master Data List");
-  }
+
+      onClick={() => {
+  setSelectedMasterData(item);
+  setSelectedPage("Master Data List");
 }}
           />
+
+
         ))}
 
       </div>
