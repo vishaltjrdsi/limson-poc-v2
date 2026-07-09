@@ -38,8 +38,8 @@ const menuData = {
       items: [
         "Program Settings",
         "Screen Setup",
-        "Vendoer Rules",
-        "Wharehouse Rules"
+        "Vendor Rules",
+        "Warehouse Rules"
       ],
     },
     {

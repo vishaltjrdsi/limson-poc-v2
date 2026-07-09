@@ -1,0 +1,53 @@
+.limson-grid {
+
+    width: 100%;
+
+    border: 1px solid var(--border);
+
+    border-radius: 8px;
+
+    overflow: hidden;
+}
+
+/* Header */
+
+.limson-grid .ag-header {
+
+    background: #f1ede4;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.limson-grid .ag-header-cell-label {
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    color: #7b5b2b;
+
+    text-transform: uppercase;
+}
+
+/* Cells */
+
+.limson-grid .ag-cell {
+
+    font-size: 12px;
+
+    display: flex;
+
+    align-items: center;
+}
+
+/* Rows */
+
+.limson-grid .ag-row {
+
+    border-color: #ece7dc;
+}
+
+.limson-grid .ag-row:hover {
+
+    background: #faf8f3;
+}

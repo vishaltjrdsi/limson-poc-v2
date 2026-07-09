@@ -1,0 +1,79 @@
+.rule-card {
+
+    background: #fbf9f3bf;
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius-lg);
+
+    overflow: hidden;
+
+    display: flex;
+
+    flex-direction: column;
+
+
+}
+
+.rule-card-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 16px 18px;
+
+    background: #fbf9f3bf;
+}
+
+.rule-card-header h3 {
+
+    margin: 0;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    color: #000;
+}
+
+.rule-card-btn {
+
+    min-width: auto;
+
+    padding: 6px 12px;
+
+    font-size: 11px;
+}
+
+.rule-card-content {
+
+    flex: 1;
+
+    padding: 18px;
+}
+
+.rule-card-empty {
+
+    height: 60px;
+
+    border: 2px dashed #d9d2c3;
+
+    border-radius: 8px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    color: #8a8a8a;
+
+    font-size: 13px;
+
+    background: #fffdf8;
+}
