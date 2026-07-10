@@ -1,0 +1,43 @@
+.preview-label {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #9b6b32;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+}
+
+.preview-title {
+
+    margin: 0;
+
+    font-size: 22px;
+
+    font-weight: 700;
+
+    color: #222;
+}
+
+.preview-description {
+
+    margin: 10px 0 22px;
+
+    color: #666;
+
+    line-height: 1.5;
+}
+
+.preview-body {
+
+    display: flex;
+
+    flex-direction: column;
+}

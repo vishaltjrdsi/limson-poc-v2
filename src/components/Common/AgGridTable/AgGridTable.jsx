@@ -41,6 +41,11 @@ function AgGridTable({
         rowHeight={38}
         headerHeight={34}
         domLayout={autoHeight ? "autoHeight" : "normal"}
+        overlayNoRowsTemplate={`
+    <span style="padding:12px;color:#8b8b8b;font-size:12px;">
+      No inventory adjustments configured
+    </span>
+  `}
       />
     </div>
   );

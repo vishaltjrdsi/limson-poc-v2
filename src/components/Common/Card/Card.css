@@ -9,3 +9,21 @@
 
     overflow: hidden;
 }
+
+/* Padding Variants */
+
+.card--none {
+    padding: 0;
+}
+
+.card--small {
+    padding: 16px;
+}
+
+.card--default {
+    padding: 20px;
+}
+
+.card--large {
+    padding: 28px;
+}

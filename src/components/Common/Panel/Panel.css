@@ -1,0 +1,39 @@
+.panel-header {
+
+    padding: 16px 18px 10px;
+
+    border-bottom: 1px solid #ece4d6;
+}
+
+.panel-label {
+
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: #9b6d33;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+}
+
+.panel-title {
+
+    margin: 0;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    color: #1d2430;
+}
+
+.panel-body {
+
+    padding: 0;
+}

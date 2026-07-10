@@ -1,6 +1,7 @@
 .limson-grid {
   width: 100%;
   overflow: hidden;
+   overflow-x: auto;
 
   --ag-background-color: #fffdf8;
   --ag-data-color: #333;
@@ -106,6 +107,9 @@
   background: #f7f4ee;
 }
 
+.limson-grid .ag-header-cell-text {
+    white-space: nowrap;
+}
 
 /* =======================================
    Status Pill

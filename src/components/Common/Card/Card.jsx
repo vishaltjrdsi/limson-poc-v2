@@ -1,8 +1,12 @@
 import "./Card.css";
 
-function Card({ children, className = "" }) {
+function Card({
+  children,
+  className = "",
+  padding = "default",
+}) {
   return (
-    <div className={`card ${className}`}>
+    <div className={`card card--${padding} ${className}`}>
       {children}
     </div>
   );
