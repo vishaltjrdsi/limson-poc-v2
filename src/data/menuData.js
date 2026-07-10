@@ -61,7 +61,7 @@ const menuData = {
       title: "ADJUSTMENTS",
       items: [  
         "Inventory Adjustments",
-        "TX Qty Adjustments"
+        "TX Qty Adjustment"
       ],
     },
   ],

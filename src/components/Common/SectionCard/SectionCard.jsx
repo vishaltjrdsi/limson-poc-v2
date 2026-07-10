@@ -5,15 +5,26 @@ function SectionCard({
   label,
   title,
   description,
+  actions,
   children,
   footer,
 }) {
   return (
     <Card padding="large">
 
-      <span className="section-card-label">
-        {label}
-      </span>
+      <div className="section-card-top">
+
+        <span className="section-card-label">
+          {label}
+        </span>
+
+        {actions && (
+          <div className="section-card-actions">
+            {actions}
+          </div>
+        )}
+
+      </div>
 
       <h2 className="section-card-title">
         {title}

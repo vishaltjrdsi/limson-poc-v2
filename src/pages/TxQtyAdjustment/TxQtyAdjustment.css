@@ -1,0 +1,9 @@
+.tx-adjustment-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1.45fr;
+
+    gap: 20px;
+
+    align-items: stretch;
+}

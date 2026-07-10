@@ -1,0 +1,23 @@
+.user-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+
+    height: 100%;
+}
+
+.user-list-tabs {
+    display: flex;
+    gap: 8px;
+}
+
+.user-list-items {
+    flex: 1;
+
+    overflow-y: auto;
+
+    border: 1px solid #ddd4c5;
+    border-radius: 8px;
+
+    background: #fff;
+}

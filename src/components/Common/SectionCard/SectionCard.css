@@ -1,3 +1,16 @@
+.section-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 2px;
+}
+
+.section-card-actions {
+    display: flex;
+    align-items: center;
+}
+
 .section-card-label {
     display: block;
     margin-bottom: 8px;
@@ -14,7 +27,7 @@
 
     color: #222;
 
-    font-size: 30px;
+    font-size: 18px;
     font-weight: 700;
 }
 

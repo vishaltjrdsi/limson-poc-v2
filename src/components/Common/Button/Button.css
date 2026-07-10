@@ -1,51 +1,48 @@
 .btn {
-    border: none;
-    outline: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
     cursor: pointer;
 
     padding: 10px 20px;
 
     border-radius: 6px;
 
-    font-size: 14px;
+    border: 1px solid transparent;
+
+    font-size: 13px;
     font-weight: 600;
 
-    transition: all .2s ease;
+    transition: .2s;
 }
 
 /* Primary */
+
 .btn-primary {
-
     background: #1f7468;
-
-    border: 1px solid #1f7468;
-
+    border-color: #1f7468;
     color: white;
-
-    font-weight: 600;
 }
 
-.button-primary:hover {
-
+.btn-primary:hover {
     background: #195f56;
 }
 
 /* Secondary */
+
 .btn-secondary {
     background: #ececec;
+    border-color: #ececec;
     color: #333;
 }
 
-.btn-secondary:hover {
-    background: #dddddd;
-}
-
 /* Outline */
+
 .btn-outline {
     background: white;
+    border-color: #436b63;
     color: #436b63;
-
-    border: 1px solid #436b63;
 }
 
 .btn-outline:hover {
@@ -54,16 +51,47 @@
 }
 
 /* Danger */
+
 .btn-danger {
     background: #d9534f;
+    border-color: #d9534f;
     color: white;
 }
 
-.btn-danger:hover {
-    background: #c9302c;
+/* ---------- TAB ---------- */
+
+.btn-tab {
+    background: #f8f5ef;
+
+    border: 1px solid #d9cfbf;
+
+    color: #6f675d;
+
+    border-radius: 999px;
+
+    height: 30px;
+
+    padding: 0 16px;
+
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+.btn-tab:hover {
+    background: #f2ece0;
+}
+
+.btn-tab.active {
+    background: #fff7e7;
+
+    border-color: #b9852d;
+
+    color: #8a6332;
 }
 
 /* Disabled */
+
 .btn:disabled {
     opacity: .5;
     cursor: not-allowed;
