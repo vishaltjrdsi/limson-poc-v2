@@ -10,6 +10,7 @@ import InventoryAdjustment from "../pages/InventoryAdjustment/InventoryAdjustmen
 import TxQtyAdjustment from "../pages/TxQtyAdjustment/TxQtyAdjustment";
 import UserSettings from "../pages/UserSettings/UserSettings";
 import RolesManagement from "../pages/RolesManagement/RolesManagement";
+import BackupAccess from "../pages/BackupAccess/BackupAccess";
 
 const pageRoutes = {
   HOME: Home,
@@ -23,7 +24,7 @@ const pageRoutes = {
   "TX Qty Adjustment": TxQtyAdjustment,
   "User Settings": UserSettings,
   "Roles": RolesManagement,
-  // "Backup Access": BackupAccess,
+  "Backup Access": BackupAccess,
   "List Navigation": ListNavigation,
   "Master Data List": MasterDataList,
 };

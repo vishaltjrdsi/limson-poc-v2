@@ -1,0 +1,58 @@
+.backup-access-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 20px;
+}
+
+.backup-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 20px;
+}
+
+.backup-form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    margin: 20px 0;
+}
+
+.backup-card-label {
+    display: block;
+
+    margin-bottom: 18px;
+
+    color: #9b6b32;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+}
+
+.backup-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 14px 18px;
+}
+
+.pending-chip {
+    padding: 4px 10px;
+
+    border-radius: 999px;
+
+    background: #f7e7c6;
+
+    color: #a56a0b;
+
+    font-size: 11px;
+
+    font-weight: 700;
+}
