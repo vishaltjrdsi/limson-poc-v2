@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import Page from "../../components/common/Page/Page";
 import SectionCard from "../../components/common/SectionCard";
-import Panel from "../../components/common/Panel";
+import Card from "../../components/common/Card";
 import Button from "../../components/common/Button";
 import Input from "../../components/common/Input";
 import InfoBox from "../../components/common/InfoBox";
@@ -14,7 +14,7 @@ import "./TxQtyAdjustment.css";
 
 const columnDefs = [
   {
-    headerName: "TX ID",
+    headerName: "TXID",
     field: "txId",
     width: 90,
   },
@@ -46,7 +46,7 @@ const columnDefs = [
   {
     headerName: "DESCRIPTION",
     field: "description",
-    width: 220,
+    width: 180,
   },
   {
     headerName: "EFF DATE",
@@ -60,7 +60,7 @@ function TxQtyAdjustment() {
   const [transactions, setTransactions] = useState([]);
 
   const handleSearch = () => {
-    const result = mockTransactions.filter((item) =>
+    const result = txQtyAdjustmentData.filter((item) =>
       item.txId.toLowerCase().includes(txId.toLowerCase())
     );
 
@@ -70,6 +70,9 @@ function TxQtyAdjustment() {
   return (
     <Page variant="form">
       <div className="tx-adjustment-grid">
+
+        {/* LEFT CARD */}
+
         <SectionCard
           label="TX QTY ADJUSTMENT"
           title="Search first, adjust second"
@@ -88,29 +91,45 @@ function TxQtyAdjustment() {
 
           {transactions.length === 0 && (
             <InfoBox>
-              No transaction loaded yet. Search by TXID to review
-              quantity, weight, value and effective dates before
-              enabling adjustment.
+              No transaction loaded yet. Search by TXID to review quantity,
+              weight, value and effective dates before enabling adjustment.
             </InfoBox>
           )}
         </SectionCard>
 
-        <Panel
-          label="Adjustment Preview"
-          title="Transaction Details"
-          actions={
+        {/* RIGHT CARD */}
+
+        <Card padding="none">
+
+          <div className="tx-preview-header">
+
+            <div>
+
+              <span className="tx-preview-label">
+                ADJUSTMENT PREVIEW
+              </span>
+
+              <h3 className="tx-preview-title">
+                Transaction details
+              </h3>
+
+            </div>
+
             <Button variant="secondary">
               Save Adjustment
             </Button>
-          }
-        >
+
+          </div>
+
           <AgGridTable
             columnDefs={columnDefs}
             rowData={transactions}
             pagination={false}
             autoHeight
           />
-        </Panel>
+
+        </Card>
+
       </div>
     </Page>
   );

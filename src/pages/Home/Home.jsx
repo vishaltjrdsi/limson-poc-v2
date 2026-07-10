@@ -3,26 +3,26 @@ import "./Home.css";
 
 function Home() {
   return (
-    <div className="home">
+
       <div className="home-content">
 
-        <Card className="welcome-card">
+      <Card className="welcome-card">
 
-          <h1 className="welcome-title">
-            Welcome
-          </h1>
+  <p className="welcome-title">
+    Welcome
+  </p>
 
-          <h2 className="welcome-app-name">
-            Atlas BOS
-          </h2>
+  <h1 className="welcome-app-name">
+    Atlas BOS
+  </h1>
 
-          <p className="welcome-description">
-            Please select a module from the menu above to get started.
-          </p>
+  <p className="welcome-description">
+    Please select a module from the menu above to get started.
+  </p>
 
-        </Card>
+</Card>
 
-      </div>
+
     </div>
   );
 }

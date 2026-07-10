@@ -1,46 +1,45 @@
-.home {
-    padding: 24px;
-}
+
 
 .home-content {
     display: flex;
     justify-content: center;
-    align-items: center;
-
-    min-height: calc(100vh - 120px);
+    align-items: flex-start;
+    padding: 10px;
 }
 
 .welcome-card {
-    width: 100%;
-    max-width: 650px;
+
+    min-width: 100%;
+
+    margin-top: 12px;         /* <-- Changed */
 
     text-align: center;
 
-    padding: 50px 30px;
+    padding: 70px 50px;        /* <-- Changed */
 }
 
 .welcome-title {
     margin: 0;
 
-    font-size: 36px;
-    font-weight: 300;
+    font-size: 12px;
+    font-weight: 700;
 
-    color: #2f5249;
+    color: #b4863a;
 }
 
 .welcome-app-name {
-    margin: 12px 0;
+    margin: 10px 0;
 
-    font-size: 42px;
+    font-size: 14px;
     font-weight: 700;
 
-    color: #436b63;
+    color: #2f5d58;
 }
 
 .welcome-description {
-    margin-top: 20px;
+    margin-top: 10px;
 
-    font-size: 16px;
+    font-size: 12px;
     color: #666;
 
     line-height: 1.7;
