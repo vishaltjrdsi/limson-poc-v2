@@ -6,6 +6,8 @@ import App from "./App";
 
 import "./styles/global.css";
 import "./styles/theme.css";
+import "./styles/typography.css";
+import "./styles/variables.css";
 
 ModuleRegistry.registerModules([
   AllCommunityModule,

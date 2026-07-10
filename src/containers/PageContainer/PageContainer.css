@@ -7,7 +7,7 @@
     justify-content: space-between;
     align-items: flex-start;
 
-    padding: 24px 30px;
+    padding: 18px;
 
     background: #fbf9f3bf;
 }
@@ -26,7 +26,7 @@
 .page-container-header h1 {
   font-size: 12px;       
   font-weight: 700;    
-  margin: 0 0 6px;
+  margin: 0 0 3px;
   text-transform: uppercase;
   letter-spacing: 1px;
   color: #b4863a;
@@ -35,7 +35,7 @@
 .page-container-header h3 {
   font-size: 14px;       
   font-weight: 700;  
-  margin: 0 0 8px;
+  margin: 0 0 3px;
   font-weight: 600;
   color: #000000;
 }
@@ -47,5 +47,5 @@
 }
 
 .page-container-body {
-  padding: 0 30px 30px;
+  padding: 18px;
 }

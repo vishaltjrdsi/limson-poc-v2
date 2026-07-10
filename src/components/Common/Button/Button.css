@@ -5,13 +5,13 @@
 
     cursor: pointer;
 
-    padding: 10px 20px;
+    padding: 8px 15px;
 
     border-radius: 6px;
 
     border: 1px solid transparent;
 
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 600;
 
     transition: .2s;

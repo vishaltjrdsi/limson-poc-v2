@@ -5,15 +5,15 @@
 }
 
 .input-group label {
-    font-size: var(--text-xs);
-    font-weight: 600;
+    font-size: var(--font-xxs);
+    font-weight: var(--font-semibold);
     color: #555;
 }
 
 .input-group input {
-    width: 100%;
+    width: 99%;
 
-    height: 40px;
+    height: 35px;
 
     padding: 0 12px;
 
@@ -41,7 +41,9 @@
 }
 
 .input-group input::placeholder {
-    color: #a0a0a0;
+     color: var(--placeholder-color);
+    font-size: var(--placeholder-size);
+    opacity: 1;
 }
 
 .input-label {
