@@ -1,9 +1,9 @@
-import Page from "../../components/common/Page/Page";
-import SectionCard from "../../components/common/SectionCard";
-import Panel from "../../components/common/Panel/Panel";
-import Button from "../../components/common/Button/Button";
-import Select from "../../components/common/Select";
-import AgGridTable from "../../components/common/AgGridTable/AgGridTable";
+import Page from "../../components/Common/Page/Page";
+import SectionCard from "../../components/Common/SectionCard";
+import Panel from "../../components/Common/Panel/Panel";
+import Button from "../../components/Common/Button/Button";
+import Select from "../../components/Common/Select";
+import AgGridTable from "../../components/Common/AgGridTable/AgGridTable";
 import inventoryAdjustment from "../../mock/inventoryAdjustment";
 
 import "./InventoryAdjustment.css";
