@@ -2,11 +2,11 @@ import { useState } from "react";
 import "./ProgramSettings.css";
 
 import PageContainer from "../../containers/PageContainer/PageContainer";
-import Tabs from "../../components/common/Tabs/Tabs";
-import DynamicForm from "../../components/common/DynamicForm/DynamicForm";
-import FooterBar from "../../components/common/FooterBar/FooterBar";
+import Tabs from "../../components/Common/Tabs/Tabs";
+import DynamicForm from "../../components/Common/DynamicForm/DynamicForm";
+import FooterBar from "../../components/Common/FooterBar/FooterBar";
 import programSettingsForm from "../../config/forms/programSettingsForm";
-import Page from "../../components/common/Page/Page";
+import Page from "../../components/Common/Page/Page";
 
 
 function ProgramSettings() {

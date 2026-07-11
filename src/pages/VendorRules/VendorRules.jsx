@@ -1,10 +1,10 @@
 import { useState } from "react";
 
-import Page from "../../components/common/Page/Page";
+import Page from "../../components/Common/Page/Page";
 import PageContainer from "../../containers/PageContainer/PageContainer";
-import FormGrid from "../../components/common/FormGrid/FormGrid";
-import Select from "../../components/common/Select/Select";
-import Button from "../../components/common/Button/Button";
+import FormGrid from "../../components/Common/FormGrid/FormGrid";
+import Select from "../../components/Common/Select/Select";
+import Button from "../../components/Common/Button/Button";
 
 import "./VendorRules.css";
 
