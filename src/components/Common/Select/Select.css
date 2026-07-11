@@ -12,7 +12,7 @@
     color: #8a6332;
 }
 
-.select-input {
+/* .select-input {
     width: 100%;
     height: 42px;
 
@@ -28,7 +28,22 @@
     outline: none;
 
     transition: .2s;
+} */
+
+.select-input {
+   width: 99%;
+    height: 35px;
+    padding: 0 12px;
+    background: #fffdf8;
+    border: 1px solid var(--border);
+    border-radius: 11.2px;
+    font-size: var(--text-sm);
+    color: #333;
+    outline: none;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
 }
+
 
 .select-input:hover {
     border-color: #c7baa7;
