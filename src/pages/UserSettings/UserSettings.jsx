@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import Page from "../../components/common/Page/Page";
+import Page from "../../components/common/Page";
 import SectionCard from "../../components/common/SectionCard";
 import Card from "../../components/common/Card";
 import Button from "../../components/common/Button";

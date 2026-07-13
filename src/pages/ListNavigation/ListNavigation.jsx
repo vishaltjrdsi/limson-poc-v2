@@ -1,4 +1,4 @@
-import Page from "../../components/common/Page/Page";
+import Page from "../../components/common/Page";
 import NavigationCard from "../../components/common/NavigationCard/NavigationCard";
 import listNavData from "../../config/admin/listNavData";
 

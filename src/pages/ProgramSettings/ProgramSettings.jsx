@@ -6,7 +6,7 @@ import Tabs from "../../components/common/Tabs/Tabs";
 import DynamicForm from "../../components/common/DynamicForm/DynamicForm";
 import FooterBar from "../../components/common/FooterBar/FooterBar";
 import programSettingsForm from "../../config/forms/programSettingsForm";
-import Page from "../../components/common/Page/Page";
+import Page from "../../components/common/Page";
 
 
 function ProgramSettings() {

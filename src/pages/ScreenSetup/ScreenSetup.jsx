@@ -5,7 +5,7 @@ import PageContainer from "../../containers/PageContainer/PageContainer";
 import FormGrid from "../../components/common/FormGrid/FormGrid";
 import Select from "../../components/common/Select/Select";
 import Button from "../../components/common/Button/Button";
-import Page from "../../components/common/Page/Page";
+import Page from "../../components/common/Page";
 import screenSetupFields from "../../config/forms/screenSetupFields";
 
 function ScreenSetup() {

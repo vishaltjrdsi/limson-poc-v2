@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import Page from "../../components/common/Page/Page";
+import Page from "../../components/common/Page";
 import PageContainer from "../../containers/PageContainer/PageContainer";
 import FormGrid from "../../components/common/FormGrid/FormGrid";
 import Select from "../../components/common/Select/Select";

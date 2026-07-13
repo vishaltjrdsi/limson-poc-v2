@@ -1,4 +1,4 @@
-import Page from "../../components/common/Page/Page";
+import Page from "../../components/common/Page";
 import Button from "../../components/common/Button/Button";
 import AgGridTable from "../../components/common/AgGridTable/AgGridTable";
 import masterData from "../../mock/masterData";
