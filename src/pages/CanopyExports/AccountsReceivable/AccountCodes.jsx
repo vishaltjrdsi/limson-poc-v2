@@ -1,4 +1,4 @@
-import { Card } from "../../../components/common";
+import { Card } from "../../../components/Common";
 
 function AccountCodes() {
 
