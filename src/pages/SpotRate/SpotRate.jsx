@@ -49,17 +49,17 @@ function SpotRate() {
                 Monday, April 27 2026
               </strong>
 
-              <input
+              <Input
     className="spot-rate-input"
     value="1.00000"
     readOnly
 />
-<input
+<Input
     className="spot-rate-input"
     value="1.38426"
     readOnly
 />
-<input
+<Input
     className="spot-rate-input"
     value="0.85316"
     readOnly
