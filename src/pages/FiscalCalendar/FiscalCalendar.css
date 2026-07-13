@@ -1,0 +1,33 @@
+.fiscal-header-actions {
+    display: flex;
+    align-items: flex-end;
+    gap: 16px;
+}
+
+.fiscal-header-actions .input-group {
+    width: 170px;
+}
+
+.fiscal-card-header {
+    padding: 16px 20px;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.fiscal-card-header h3 {
+    margin: 0;
+
+    font-size: var(--font-lg);
+    font-weight: var(--font-bold);
+
+    color: var(--color-text);
+}
+
+.fiscal-footer {
+    display: flex;
+    gap: 12px;
+
+    padding: 16px 20px;
+
+    border-top: 1px solid var(--border);
+}

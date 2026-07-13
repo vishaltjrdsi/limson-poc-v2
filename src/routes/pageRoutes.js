@@ -1,17 +1,20 @@
-import Home from "../pages/Home";
-import ProgramSettings from "../pages/ProgramSettings";
-import ScreenSetup from "../pages/ScreenSetup";
-import VendorRules from "../pages/VendorRules";
-import WarehouseRules from "../pages/WarehouseRules";
-import ListNavigation from "../pages/ListNavigation";
-import MasterDataList from "../pages/MasterDataList";
-import CanopyExports from "../pages/CanopyExports";
-import InventoryAdjustment from "../pages/InventoryAdjustment";
-import TxQtyAdjustment from "../pages/TxQtyAdjustment";
-import UserSettings from "../pages/UserSettings";
-import RolesManagement from "../pages/RolesManagement";
-import BackupAccess from "../pages/BackupAccess";
-import SpotRate from "../pages/SpotRate";
+import {
+  Home,
+  CanopyExports,
+  ProgramSettings,
+  ScreenSetup,
+  VendorRules,
+  WarehouseRules,
+  ListNavigation,
+  MasterDataList,
+  InventoryAdjustment,
+  TxQtyAdjustment,
+  UserSettings,
+  RolesManagement,
+  BackupAccess,
+  SpotRate,
+  FiscalCalendar,
+} from "../pages";
 
 const pageRoutes = {
   HOME: Home,
@@ -27,6 +30,7 @@ const pageRoutes = {
   "Roles": RolesManagement,
   "Backup Access": BackupAccess,
   "Spot Rate": SpotRate,
+  "Fiscal Calendar": FiscalCalendar,
   "List Navigation": ListNavigation,
   "Master Data List": MasterDataList,
 };
