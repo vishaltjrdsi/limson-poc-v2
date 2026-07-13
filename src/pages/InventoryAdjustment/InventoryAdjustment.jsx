@@ -1,8 +1,8 @@
 import Page from "../../components/common/Page";
 import SectionCard from "../../components/common/SectionCard";
-import Button from "../../components/common/Button/Button";
+import Button from "../../components/common/Button";
 import Select from "../../components/common/Select";
-import AgGridTable from "../../components/common/AgGridTable/AgGridTable";
+import AgGridTable from "../../components/common/AgGridTable";
 import inventoryAdjustment from "../../mock/inventoryAdjustment";
 
 import "./InventoryAdjustment.css";

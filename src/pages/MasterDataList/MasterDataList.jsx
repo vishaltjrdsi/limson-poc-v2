@@ -1,6 +1,6 @@
 import Page from "../../components/common/Page";
-import Button from "../../components/common/Button/Button";
-import AgGridTable from "../../components/common/AgGridTable/AgGridTable";
+import Button from "../../components/common/Button";
+import AgGridTable from "../../components/common/AgGridTable";
 import masterData from "../../mock/masterData";
 import {
   ActionCellRenderer,

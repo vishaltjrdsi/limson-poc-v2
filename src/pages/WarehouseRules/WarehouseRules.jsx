@@ -2,9 +2,9 @@ import { useState } from "react";
 
 import Page from "../../components/common/Page";
 import PageContainer from "../../containers/PageContainer/PageContainer";
-import Select from "../../components/common/Select/Select";
-import Button from "../../components/common/Button/Button";
-import RuleCard from "../../components/common/RuleCard/RuleCard";
+import Select from "../../components/common/Select";
+import Button from "../../components/common/Button";
+import RuleCard from "../../components/common/RuleCard";
 
 import "./WarehouseRules.css";
 

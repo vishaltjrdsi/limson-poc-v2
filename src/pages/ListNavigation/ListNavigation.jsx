@@ -1,5 +1,5 @@
 import Page from "../../components/common/Page";
-import NavigationCard from "../../components/common/NavigationCard/NavigationCard";
+import NavigationCard from "../../components/common/NavigationCard";
 import listNavData from "../../config/admin/listNavData";
 
 import "./ListNavigation.css";
