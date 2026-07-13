@@ -11,6 +11,7 @@ import TxQtyAdjustment from "../pages/TxQtyAdjustment/TxQtyAdjustment";
 import UserSettings from "../pages/UserSettings/UserSettings";
 import RolesManagement from "../pages/RolesManagement/RolesManagement";
 import BackupAccess from "../pages/BackupAccess/BackupAccess";
+import SpotRate from "../pages/SpotRate/SpotRate";
 
 const pageRoutes = {
   HOME: Home,
@@ -25,6 +26,7 @@ const pageRoutes = {
   "User Settings": UserSettings,
   "Roles": RolesManagement,
   "Backup Access": BackupAccess,
+  "Spot Rate": SpotRate,
   "List Navigation": ListNavigation,
   "Master Data List": MasterDataList,
 };

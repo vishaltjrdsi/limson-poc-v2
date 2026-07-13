@@ -3,20 +3,22 @@
     align-items: center;
     justify-content: center;
 
-    cursor: pointer;
-
-    padding: 8px 15px;
-
-    border-radius: 6px;
+    height: 34px;              /* Fixed height */
+    min-width: 80px;
+    margin: 3px;
+    padding: 0 16px;           /* Vertical padding no longer needed */
 
     border: 1px solid transparent;
+    border-radius: 6px;
+
+    cursor: pointer;
 
     font-size: 12px;
     font-weight: 600;
 
     transition: .2s;
+    box-sizing: border-box;
 }
-
 /* Primary */
 
 .btn-primary {
@@ -31,9 +33,15 @@
 
 /* Secondary */
 
-.btn-secondary {
+/* .btn-secondary {
     background: #ececec;
     border-color: #ececec;
+    color: #333;
+} */
+
+.btn-secondary {
+    background: #f1ede4;
+    border-color: #d8d0c1;
     color: #333;
 }
 
@@ -54,7 +62,7 @@
 
 .btn-danger {
     background: #d9534f;
-    border-color: #d9534f;
+    border-color: #e0453f;
     color: white;
 }
 

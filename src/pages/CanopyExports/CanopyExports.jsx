@@ -1,4 +1,5 @@
 import "./CanopyExports.css";
+import Button from "../../components/Common/Button";
 
 function CanopyExports() {
   return (
@@ -57,11 +58,19 @@ function CanopyExports() {
           </tbody>
         </table>
 
-        <div className="invoice-file-row">
-          <label htmlFor="invoice-file">Filename</label>
-          <input id="invoice-file" type="text" defaultValue="name.txt" />
-          <button className="invoice-submit">Invoice CX</button>
-        </div>
+       <div className="invoice-file-row">
+  <label htmlFor="invoice-file">Filename</label>
+
+  <input
+    id="invoice-file"
+    type="text"
+    defaultValue="name.txt"
+  />
+
+  <div className="invoice-file-actions">
+    <Button>Invoice CX</Button>
+  </div>
+</div>
       </div>
 
       <p className="canopy-note">

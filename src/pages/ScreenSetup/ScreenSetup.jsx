@@ -49,7 +49,7 @@ function ScreenSetup() {
           Clear Filters
         </Button>
 
-        <Button>
+        <Button variant="primary">
           Apply Filters
         </Button>
       </div>

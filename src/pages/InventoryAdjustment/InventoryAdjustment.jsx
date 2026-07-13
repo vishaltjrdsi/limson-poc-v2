@@ -1,6 +1,5 @@
 import Page from "../../components/Common/Page/Page";
 import SectionCard from "../../components/Common/SectionCard";
-import Panel from "../../components/Common/Panel/Panel";
 import Button from "../../components/Common/Button/Button";
 import Select from "../../components/Common/Select";
 import AgGridTable from "../../components/Common/AgGridTable/AgGridTable";
@@ -70,7 +69,7 @@ function InventoryAdjustment() {
           </div>
         </SectionCard>
 
-     <Panel
+     <SectionCard
     label="Adjustment Preview"
     title="Configuration details"
 >
@@ -80,7 +79,7 @@ function InventoryAdjustment() {
   pagination={false}
   autoHeight
 />
-        </Panel>
+        </SectionCard>
 
       </div>
     </Page>
