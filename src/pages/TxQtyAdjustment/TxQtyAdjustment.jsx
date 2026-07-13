@@ -62,6 +62,7 @@ function TxQtyAdjustment() {
   const handleSearch = () => {
     const result = txQtyAdjustmentData.filter((item) =>
       item.txId.toLowerCase().includes(txId.toLowerCase())
+    
     );
 
     setTransactions(result);
