@@ -2,7 +2,7 @@ import masterData from "../../mock/masterData";
 import {
   ActionCellRenderer,
   StatusCellRenderer,
-} from "../../components/common/AgGridTable/CellRenderers";
+} from "../../components/Common/AgGridTable/CellRenderers";
 
 import {
   Page,

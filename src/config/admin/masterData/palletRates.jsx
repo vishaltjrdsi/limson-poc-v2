@@ -1,5 +1,5 @@
-import ActionCellRenderer from "../../../components/common/AgGridTable/CellRenderers";
-import StatusCellRenderer from "../../../components/common/AgGridTable/CellRenderers";
+import ActionCellRenderer from "../../../components/Common/AgGridTable/CellRenderers";
+import StatusCellRenderer from "../../../components/Common/AgGridTable/CellRenderers";
 
 const palletRates = {
   columnDefs: [

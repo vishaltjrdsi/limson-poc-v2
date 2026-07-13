@@ -1,5 +1,5 @@
 import "./PageContainer.css";
-import {Card} from "../../components/common";
+import {Card} from "../../components/Common";
 
 function PageContainer({
   title,
