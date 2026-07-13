@@ -1,9 +1,9 @@
 import "./Tabs.css";
 
 function Tabs({
-  tabs,
+  tabs = [],
   activeTab,
-  onChange,
+  onChange = () => {},
 }) {
   return (
     <div className="tabs">
@@ -11,9 +11,7 @@ function Tabs({
         <button
           key={tab}
           type="button"
-          className={`tab-btn ${
-            activeTab === tab ? "active" : ""
-          }`}
+          className={`tab-btn ${activeTab === tab ? "active" : ""}`}
           onClick={() => onChange(tab)}
         >
           {tab}
