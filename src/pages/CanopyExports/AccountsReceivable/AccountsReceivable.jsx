@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import { Tabs } from "../../../components/common";
+import { Tabs } from "../../../components/Common";
 
 import InvoiceSelection from "./InvoiceSelection";
 import ExportToFile from "./ExportToFile";
