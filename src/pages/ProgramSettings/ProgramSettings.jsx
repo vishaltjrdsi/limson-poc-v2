@@ -1,13 +1,14 @@
 import { useState } from "react";
-import "./ProgramSettings.css";
-
 import PageContainer from "../../containers/PageContainer/PageContainer";
-import Tabs from "../../components/common/Tabs";
-import DynamicForm from "../../components/common/DynamicForm";
-import FooterBar from "../../components/common/FooterBar";
 import programSettingsForm from "../../config/forms/programSettingsForm";
-import Page from "../../components/common/Page";
+import {
+  Tabs,
+  DynamicForm,
+  FooterBar,
+  Page
+} from "../../components/common";
 
+import "./ProgramSettings.css";
 
 function ProgramSettings() {
   const [activeTab, setActiveTab] = useState("General");

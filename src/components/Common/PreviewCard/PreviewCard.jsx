@@ -1,4 +1,4 @@
-import Card from "../Card";
+import {Card} from "../../common";
 import "./PreviewCard.css";
 
 function PreviewCard({

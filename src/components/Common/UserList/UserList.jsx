@@ -1,8 +1,10 @@
 import { useMemo, useState } from "react";
 
-import Input from "../Input";
-import Button from "../Button";
-import UserCard from "../UserCard";
+import {
+  Input,
+  Button,
+  UserCard
+} from "../../common";
 
 import "./UserList.css";
 

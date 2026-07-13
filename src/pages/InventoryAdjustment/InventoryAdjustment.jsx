@@ -1,10 +1,12 @@
-import Page from "../../components/common/Page";
-import SectionCard from "../../components/common/SectionCard";
-import Button from "../../components/common/Button";
-import Select from "../../components/common/Select";
-import AgGridTable from "../../components/common/AgGridTable";
-import inventoryAdjustment from "../../mock/inventoryAdjustment";
+import {
+  Page,
+  SectionCard,
+  Button,
+  Select,
+  AgGridTable
+} from "../../components/common";
 
+import inventoryAdjustment from "../../mock/inventoryAdjustment";
 import "./InventoryAdjustment.css";
 
 const columnDefs = [

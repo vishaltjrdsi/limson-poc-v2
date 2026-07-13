@@ -1,12 +1,7 @@
 import { useState } from "react";
+import { Page, SectionCard, Card, Button, 
+  Input, InfoBox, AgGridTable} from "../../components/common";
 
-import Page from "../../components/common/Page";
-import SectionCard from "../../components/common/SectionCard";
-import Card from "../../components/common/Card";
-import Button from "../../components/common/Button";
-import Input from "../../components/common/Input";
-import InfoBox from "../../components/common/InfoBox";
-import AgGridTable from "../../components/common/AgGridTable";
 
 import txQtyAdjustmentData from "../../mock/txQtyAdjustmentData";
 

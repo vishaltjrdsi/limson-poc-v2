@@ -2,11 +2,14 @@ import { useState } from "react";
 import "./ScreenSetup.css";
 
 import PageContainer from "../../containers/PageContainer/PageContainer";
-import FormGrid from "../../components/common/FormGrid";
-import Select from "../../components/common/Select";
-import Button from "../../components/common/Button";
-import Page from "../../components/common/Page";
 import screenSetupFields from "../../config/forms/screenSetupFields";
+
+import {
+  FormGrid,
+  Select,
+  Button,
+  Page
+} from "../../components/common";
 
 function ScreenSetup() {
   const [filters, setFilters] = useState({

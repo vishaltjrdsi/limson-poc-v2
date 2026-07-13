@@ -1,11 +1,11 @@
 import { useState } from "react";
-
-import Page from "../../components/common/Page";
-import PageContainer from "../../containers/PageContainer/PageContainer";
-import FormGrid from "../../components/common/FormGrid";
-import Select from "../../components/common/Select";
-import Button from "../../components/common/Button";
-
+import PageContainer from "../../containers/PageContainer/PageContainer"
+import {
+  Page,
+  FormGrid,
+  Select,
+  Button
+} from "../../components/common";
 import "./VendorRules.css";
 
 function VendorRules() {

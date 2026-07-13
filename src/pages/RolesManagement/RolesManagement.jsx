@@ -1,10 +1,12 @@
-import Page from "../../components/common/Page";
-import SectionCard from "../../components/common/SectionCard";
-import Card from "../../components/common/Card";
-import Button from "../../components/common/Button";
-import Input from "../../components/common/Input";
-import Select from "../../components/common/Select";
-import AgGridTable from "../../components/common/AgGridTable";
+import {
+  Page,
+  SectionCard,
+  Card,
+  Button,
+  Input,
+  Select,
+  AgGridTable,
+} from "../../components/common";
 
 import columns from "./columns";
 import mockData from "./mockData";
