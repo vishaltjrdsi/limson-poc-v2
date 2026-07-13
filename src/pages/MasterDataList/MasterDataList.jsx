@@ -1,11 +1,11 @@
-import Page from "../../components/Common/Page/Page";
-import Button from "../../components/Common/Button/Button";
-import AgGridTable from "../../components/Common/AgGridTable/AgGridTable";
+import Page from "../../components/common/Page/Page";
+import Button from "../../components/common/Button/Button";
+import AgGridTable from "../../components/common/AgGridTable/AgGridTable";
 import masterData from "../../mock/masterData";
 import {
   ActionCellRenderer,
   StatusCellRenderer,
-} from "../../components/Common/AgGridTable/CellRenderers";
+} from "../../components/common/AgGridTable/CellRenderers";
 import "./MasterDataList.css";
 
 function MasterDataList({

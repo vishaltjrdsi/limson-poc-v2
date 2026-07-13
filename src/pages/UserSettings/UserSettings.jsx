@@ -1,12 +1,12 @@
 import { useState } from "react";
 
-import Page from "../../components/Common/Page/Page";
-import SectionCard from "../../components/Common/SectionCard";
-import Card from "../../components/Common/Card";
-import Button from "../../components/Common/Button";
-import Input from "../../components/Common/Input";
-import Chip from "../../components/Common/Chip";
-import UserList from "../../components/Common/UserList";
+import Page from "../../components/common/Page/Page";
+import SectionCard from "../../components/common/SectionCard";
+import Card from "../../components/common/Card";
+import Button from "../../components/common/Button";
+import Input from "../../components/common/Input";
+import Chip from "../../components/common/Chip";
+import UserList from "../../components/common/UserList";
 
 import users from "../../mock/users";
 

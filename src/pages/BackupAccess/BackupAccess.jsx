@@ -1,10 +1,10 @@
-import Page from "../../components/Common/Page/Page";
-import SectionCard from "../../components/Common/SectionCard";
-import Card from "../../components/Common/Card";
-import Button from "../../components/Common/Button";
-import Input from "../../components/Common/Input";
-import Select from "../../components/Common/Select";
-import AgGridTable from "../../components/Common/AgGridTable";
+import Page from "../../components/common/Page/Page";
+import SectionCard from "../../components/common/SectionCard";
+import Card from "../../components/common/Card";
+import Button from "../../components/common/Button";
+import Input from "../../components/common/Input";
+import Select from "../../components/common/Select";
+import AgGridTable from "../../components/common/AgGridTable";
 
 import columns from "./columns";
 import mockData from "./mockData";

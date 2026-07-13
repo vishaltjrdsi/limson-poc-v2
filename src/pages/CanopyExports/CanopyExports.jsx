@@ -1,5 +1,5 @@
 import "./CanopyExports.css";
-import Button from "../../components/Common/Button";
+import Button from "../../components/common/Button";
 
 function CanopyExports() {
   return (
