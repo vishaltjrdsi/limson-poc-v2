@@ -5,7 +5,7 @@ import {
   Select,
   Button,
   RuleCard
-} from "../../components/Common";
+} from "../../components/common";
 
 import "./WarehouseRules.css";
 

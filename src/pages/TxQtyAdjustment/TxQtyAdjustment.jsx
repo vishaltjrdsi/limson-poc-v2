@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Page, SectionCard, Card, Button, 
-  Input, InfoBox, AgGridTable} from "../../components/Common";
+  Input, InfoBox, AgGridTable} from "../../components/common";
 
 
 import txQtyAdjustmentData from "../../mock/txQtyAdjustmentData";

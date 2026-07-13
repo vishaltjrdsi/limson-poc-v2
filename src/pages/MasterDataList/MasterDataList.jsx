@@ -2,14 +2,14 @@ import masterData from "../../mock/masterData";
 import {
   ActionCellRenderer,
   StatusCellRenderer,
-} from "../../components/Common/AgGridTable/CellRenderers";
+} from "../../components/common/AgGridTable/CellRenderers";
 
 import {
   Page,
   Button,
   AgGridTable,
 
-} from "../../components/Common";
+} from "../../components/common";
 
 import "./MasterDataList.css";
 

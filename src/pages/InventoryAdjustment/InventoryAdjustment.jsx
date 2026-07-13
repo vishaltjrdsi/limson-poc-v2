@@ -4,7 +4,7 @@ import {
   Button,
   Select,
   AgGridTable
-} from "../../components/Common";
+} from "../../components/common";
 
 import inventoryAdjustment from "../../mock/inventoryAdjustment";
 import "./InventoryAdjustment.css";

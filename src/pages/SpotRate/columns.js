@@ -1,4 +1,4 @@
-import { CheckboxCellRenderer } from "../../components/Common/AgGridTable/CellRenderers";
+import { CheckboxCellRenderer } from "../../components/common/AgGridTable/CellRenderers";
 
 const columns = [
   {

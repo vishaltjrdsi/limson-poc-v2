@@ -5,7 +5,7 @@ import {
   FormGrid,
   Select,
   Button
-} from "../../components/Common";
+} from "../../components/common";
 import "./VendorRules.css";
 
 function VendorRules() {

@@ -5,7 +5,7 @@ import {
   Button,
   Input,
   AgGridTable,
-} from "../../../components/Common";
+} from "../../../components/common";
 
 import invoiceColumns from "./invoiceColumns";
 import invoiceMockData from "./invoiceMockData";

@@ -7,7 +7,7 @@ import {
   Input,
   Chip,
   UserList,
-} from "../../components/Common";
+} from "../../components/common";
 
 import users from "../../mock/users";
 

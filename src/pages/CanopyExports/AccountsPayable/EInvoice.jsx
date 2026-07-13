@@ -1,6 +1,6 @@
 import {
   Card,
-} from "../../../components/Common";
+} from "../../../components/common";
 
 function EInvoice() {
 

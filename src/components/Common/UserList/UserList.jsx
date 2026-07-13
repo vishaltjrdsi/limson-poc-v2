@@ -4,7 +4,7 @@ import {
   Input,
   Button,
   UserCard
-} from "../../Common";
+} from "../../common";
 
 import "./UserList.css";
 

@@ -4,7 +4,7 @@ import {
   Page,
   SectionCard,
   Button,
-} from "../../components/Common";
+} from "../../components/common";
 
 import AccountsPayable from "./AccountsPayable/AccountsPayable";
 import AccountsReceivable from "./AccountsReceivable/AccountsReceivable";

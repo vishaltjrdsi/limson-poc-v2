@@ -1,7 +1,7 @@
 import {
   Page,
   NavigationCard
-} from "../../components/Common";
+} from "../../components/common";
 
 import listNavData from "../../config/admin/listNavData";
 import "./ListNavigation.css";
