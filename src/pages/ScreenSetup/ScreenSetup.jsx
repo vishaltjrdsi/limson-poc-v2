@@ -9,7 +9,7 @@ import {
   Select,
   Button,
   Page
-} from "../../components/common";
+} from "../../components/Common";
 
 function ScreenSetup() {
   const [filters, setFilters] = useState({

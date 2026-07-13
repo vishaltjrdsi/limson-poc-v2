@@ -9,7 +9,7 @@ import {
   Button,
   AgGridTable,
 
-} from "../../components/common";
+} from "../../components/Common";
 
 import "./MasterDataList.css";
 

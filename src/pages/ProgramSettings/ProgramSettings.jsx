@@ -6,7 +6,7 @@ import {
   DynamicForm,
   FooterBar,
   Page
-} from "../../components/common";
+} from "../../components/Common";
 
 import "./ProgramSettings.css";
 

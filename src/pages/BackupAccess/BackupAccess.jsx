@@ -6,7 +6,7 @@ import {
   Input,
   Select,
   AgGridTable,
-} from "../../components/common";
+} from "../../components/Common";
 
 import columns from "./columns";
 import mockData from "./mockData";
