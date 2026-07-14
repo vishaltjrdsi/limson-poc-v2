@@ -1,5 +1,4 @@
 import { AgGridReact } from "ag-grid-react";
-
 import defaultColDef from "./defaultColDef";
 
 import "ag-grid-community/styles/ag-grid.css";
@@ -10,15 +9,21 @@ import "./AgGridTable.css";
 function AgGridTable({
   rowData = [],
   columnDefs = [],
-  height = "500px",
+  height = 500,
   autoHeight = false,
+  maxHeight = 450,
   pagination = true,
   pageSize = 10,
 }) {
+  const shouldAutoHeight =
+    autoHeight && rowData.length <= 10;
+
   const gridClassName = [
     "ag-theme-quartz",
     "limson-grid",
-    autoHeight ? "limson-grid-auto-height" : "",
+    shouldAutoHeight
+      ? "limson-grid-auto-height"
+      : "",
   ]
     .filter(Boolean)
     .join(" ");
@@ -27,7 +32,10 @@ function AgGridTable({
     <div
       className={gridClassName}
       style={{
-        height: autoHeight ? "auto" : height,
+        height: shouldAutoHeight
+          ? "auto"
+          : Math.min(height, maxHeight),
+        maxHeight,
       }}
     >
       <AgGridReact
@@ -40,12 +48,16 @@ function AgGridTable({
         paginationPageSize={pageSize}
         rowHeight={38}
         headerHeight={34}
-        domLayout={autoHeight ? "autoHeight" : "normal"}
-        overlayNoRowsTemplate={`
-    <span style="padding:12px;color:#8b8b8b;font-size:12px;">
-      No inventory adjustments configured
-    </span>
-  `}
+        domLayout={
+          shouldAutoHeight
+            ? "autoHeight"
+            : "normal"
+        }
+        overlayNoRowsTemplate="
+          <span class='ag-overlay-no-rows-center'>
+            No records found
+          </span>
+        "
       />
     </div>
   );

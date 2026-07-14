@@ -1,6 +1,10 @@
-import FormGrid from "../FormGrid/FormGrid";
-import Input from "../Input/Input";
-import Select from "../Select/Select";
+import {
+  Input,
+  Select,
+  Checkbox,
+} from "../../common";
+
+import "./DynamicForm.css";
 
 function DynamicForm({
   fields = [],
@@ -8,42 +12,81 @@ function DynamicForm({
   onChange,
 }) {
   return (
-    <FormGrid>
+    <div className="dynamic-form">
 
       {fields.map((field) => {
 
-        switch (field.component) {
+        const {
+          type = "text",
+          name,
+          label,
+          placeholder,
+          options = [],
+          required = false,
+          fullWidth = false,
+        } = field;
+
+        const wrapperClass = fullWidth
+          ? "form-field full-width"
+          : "form-field";
+
+        switch (type) {
 
           case "select":
             return (
-              <Select
-                key={field.name}
-                label={field.label}
-                name={field.name}
-                value={values[field.name]}
-                options={field.options}
-                onChange={onChange}
-              />
+              <div
+                key={name}
+                className={wrapperClass}
+              >
+                <Select
+                  label={label}
+                  name={name}
+                  value={values[name] || ""}
+                  placeholder={placeholder}
+                  options={options}
+                  required={required}
+                  onChange={onChange}
+                />
+              </div>
+            );
+
+          case "checkbox":
+            return (
+              <div
+                key={name}
+                className={wrapperClass}
+              >
+                <Checkbox
+                  label={label}
+                  name={name}
+                  checked={values[name] || false}
+                  onChange={onChange}
+                />
+              </div>
             );
 
           default:
             return (
-              <Input
-                key={field.name}
-                label={field.label}
-                name={field.name}
-                type={field.type || "text"}
-                placeholder={field.placeholder}
-                value={values[field.name]}
-                onChange={onChange}
-              />
+              <div
+                key={name}
+                className={wrapperClass}
+              >
+                <Input
+                  label={label}
+                  name={name}
+                  value={values[name] || ""}
+                  placeholder={placeholder}
+                  required={required}
+                  onChange={onChange}
+                />
+              </div>
             );
 
         }
 
       })}
 
-    </FormGrid>
+    </div>
   );
 }
 

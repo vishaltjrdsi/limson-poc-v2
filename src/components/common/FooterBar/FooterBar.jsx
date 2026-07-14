@@ -1,5 +1,6 @@
+import { Button } from "../../common";
+
 import "./FooterBar.css";
-import Button from "../Button/Button";
 
 function FooterBar({
   editedCount = 0,
@@ -8,16 +9,29 @@ function FooterBar({
 }) {
   return (
     <div className="footer-bar">
-    <span className="footer-bar-text">
-        {editedCount} Sections Edited
-    </span>
 
-    <div className="footer-bar-actions">
-        <Button onClick={onSave}>
-            {buttonText}
+      <div className="footer-left">
+
+        <span className="footer-count">
+
+          {editedCount} Sections Edited
+
+        </span>
+
+      </div>
+
+      <div className="footer-right">
+
+        <Button
+          variant="primary"
+          onClick={onSave}
+        >
+          {buttonText}
         </Button>
+
+      </div>
+
     </div>
-</div>
   );
 }
 

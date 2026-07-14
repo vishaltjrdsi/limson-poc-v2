@@ -2,17 +2,17 @@ const columns = [
   {
     headerName: "MANAGER",
     field: "manager",
-    width: 170,
+    flex: 1,
   },
   {
     headerName: "USER",
     field: "user",
-    width: 170,
+    flex: 1,
   },
   {
     headerName: "BACKUP USER",
     field: "backupUser",
-    width: 180,
+    flex: 1,
   },
   {
     headerName: "ROLE",
@@ -22,7 +22,12 @@ const columns = [
   {
     headerName: "START DATE",
     field: "startDate",
-    width: 140,
+    width: 130,
+  },
+  {
+    headerName: "END DATE",
+    field: "endDate",
+    width: 130,
   },
 ];
 

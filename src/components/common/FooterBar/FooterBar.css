@@ -1,26 +1,57 @@
-.footer-bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+/* ==========================================================
+   FOOTER
+========================================================== */
 
-    margin-top: 24px;
+.footer-bar{
 
-    padding: 5px 20px;
+    display:flex;
 
-    background: #efe1c78c;
+    justify-content:space-between;
 
-    border: 1px solid #d8d6d0;
+    align-items:center;
 
-    border-radius: 12px;
+    margin-top:18px;
+
+    padding:12px 16px;
+
+    background:#f8f5ef;
+
+    border:1px solid var(--border);
+
+    border-radius:6px;
+
 }
 
-.footer-bar-text {
-    color: #6b7280;
-    font-size: var(--text-sm);
-    font-weight: 500;
+/* ==========================================================
+   LEFT
+========================================================== */
+
+.footer-left{
+
+    display:flex;
+
+    align-items:center;
+
 }
 
-.footer-bar-actions {
-    display: flex;
-    gap: 12px;
+.footer-count{
+
+    font-size:12px;
+
+    font-weight:600;
+
+    color:#7b6d58;
+
+}
+
+/* ==========================================================
+   RIGHT
+========================================================== */
+
+.footer-right{
+
+    display:flex;
+
+    align-items:center;
+
 }

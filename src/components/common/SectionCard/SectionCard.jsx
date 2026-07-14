@@ -1,4 +1,4 @@
-import {Card} from "../../common";
+import { Card } from "../../common";
 import "./SectionCard.css";
 
 function SectionCard({
@@ -10,13 +10,29 @@ function SectionCard({
   footer,
 }) {
   return (
-    <Card padding="large">
+    <Card padding="default">
 
-      <div className="section-card-top">
+      <div className="section-card-header">
 
-        <span className="section-card-label">
-          {label}
-        </span>
+        <div>
+
+          {label && (
+            <div className="section-card-label">
+              {label}
+            </div>
+          )}
+
+          <h1 className="section-card-title">
+            {title}
+          </h1>
+
+          {description && (
+            <div className="section-card-description">
+              {description}
+            </div>
+          )}
+
+        </div>
 
         {actions && (
           <div className="section-card-actions">
@@ -26,24 +42,20 @@ function SectionCard({
 
       </div>
 
-      <h2 className="section-card-title">
-        {title}
-      </h2>
+      <div className="section-card-content">
 
-      {description && (
-        <p className="section-card-description">
-          {description}
-        </p>
-      )}
-
-      <div className="section-card-body">
         {children}
+
       </div>
 
       {footer && (
+
         <div className="section-card-footer">
+
           {footer}
+
         </div>
+
       )}
 
     </Card>

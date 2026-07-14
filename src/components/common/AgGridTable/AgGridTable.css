@@ -1,130 +1,206 @@
-.limson-grid {
-  width: 100%;
-  overflow: hidden;
-   overflow-x: auto;
+/* ==========================================================
+   AG GRID THEME
+========================================================== */
 
-  --ag-background-color: #fffdf8;
-  --ag-data-color: #333;
-  --ag-font-family: inherit;
-  --ag-font-size: 12px;
-  --ag-header-background-color: #f1ede4;
-  --ag-header-foreground-color: #8a6332;
-  --ag-border-color: #f0eadf;
-  --ag-row-border-color: #f0eadf;
-  --ag-odd-row-background-color: #fbf8f1;
-  --ag-row-hover-color: #f7f3eb;
-  --ag-wrapper-border-radius: 0;
-  --ag-row-height: 34px;
-  --ag-header-height: 34px;
+.limson-grid {
+    width: 100%;
+    overflow: hidden;
+    overflow-x: auto;
+
+    --ag-background-color: #fffdf8;
+    --ag-data-color: #333;
+    --ag-font-family: inherit;
+    --ag-font-size: 12px;
+
+    --ag-header-background-color: #f5f1e9;
+    --ag-header-foreground-color: #8b6331;
+
+    --ag-border-color: #e8e1d6;
+    --ag-row-border-color: #ece5da;
+
+    --ag-row-hover-color: #faf7f1;
+
+    --ag-header-height: 34px;
+    --ag-row-height: 34px;
+
+    --ag-wrapper-border-radius: 0;
 }
 
 .limson-grid-auto-height {
-  height: auto !important;
+    height: auto !important;
 }
+
+.limson-grid-auto-height .ag-root-wrapper {
+
+    border-bottom: none;
+    height: auto;
+
+}
+
+.limson-grid-auto-height .ag-body-viewport {
+
+    overflow: hidden !important;
+
+}
+/* ==========================================================
+   ROOT
+========================================================== */
 
 .limson-grid .ag-root-wrapper {
-  border: 0;
-  background: var(--ag-background-color);
+    border: none;
+    border-radius: 0;
+    background: #fffdf8;
 }
 
-.limson-grid .ag-header {
-  border-bottom: 1px solid var(--ag-border-color);
+.limson-grid .ag-root-wrapper-body {
+    border: none;
+}
+
+/* ==========================================================
+   HEADER
+========================================================== */
+
+.limson-grid .ag-header{
+
+    background:#f8f5ef;
+
+    border-bottom:1px solid #d9cfbf;
+
 }
 
 .limson-grid .ag-header-cell {
-  padding-left: 10px;
-
-    padding-right: 10px;
+    padding: 0 10px;
 }
 
 .limson-grid .ag-header-cell::after {
-
     display: none;
 }
 
-.limson-grid .ag-header-cell-label {
+.limson-grid .ag-header-cell-label{
 
-    font-size: 10px;
+    font-size:10px;
 
-    font-weight: 700;
+    font-weight:600;
 
-    color: #866334;
+    color:#8a6332;
 
-    letter-spacing: 1px;
+    letter-spacing:1px;
 
-    text-transform: uppercase;
-    justify-content: flex-start;
-}
+    text-transform:uppercase;
 
-.limson-grid .ag-cell {
-  display: flex;
-
-    align-items: center;
-
-    font-size: 12px;
-
-    color: #333;
-
-    padding-left: 10px;
-
-    padding-right: 10px;
-
-    border-right: none;
-}
-
-.limson-grid .ag-row-even {
-  background: #fcfbf7;
-}
-
-.limson-grid .ag-row-odd {
-  background: var(--ag-odd-row-background-color);
-}
-
-.limson-grid .ag-cell-focus,
-.limson-grid .ag-cell:focus,
-.limson-grid .ag-header-cell:focus {
-  border-color: transparent !important;
-  outline: 0 !important;
-}
-
-.limson-grid .ag-paging-panel {
-  background: #fbf9f3;
-  border-top: 1px solid var(--border);
-  font-size: 12px;
-}
-
-.limson-grid ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-}
-
-.limson-grid ::-webkit-scrollbar-thumb {
-  background: #d8cfbf;
-  border-radius: 8px;
-}
-
-.limson-grid ::-webkit-scrollbar-track {
-  background: #f7f4ee;
 }
 
 .limson-grid .ag-header-cell-text {
     white-space: nowrap;
 }
 
-/* =======================================
-   Status Pill
-======================================= */
+/* ==========================================================
+   ROWS
+========================================================== */
+
+/* .limson-grid .ag-row {
+    transition: background-color .15s ease;
+}
+
+.limson-grid .ag-row:hover {
+    background: #faf7f1;
+} */
+
+/* .limson-grid .ag-row-even {
+    background: #ffffff;
+}
+
+.limson-grid .ag-row-odd {
+    background: #fcfbf8;
+} */
+
+.limson-grid .ag-row{
+
+    background:#fcfaf6;
+
+    border-bottom:1px solid #ece3d5;
+
+}
+
+.limson-grid .ag-row:hover{
+
+    background:#f8f3ea;
+
+}
+/* ==========================================================
+   CELLS
+========================================================== */
+
+.limson-grid .ag-cell {
+   
+    font-size:13px;
+
+    color:#2f2f2f;
+}
+
+/* ==========================================================
+   REMOVE FOCUS BORDER
+========================================================== */
+
+.limson-grid .ag-cell-focus,
+.limson-grid .ag-cell:focus,
+.limson-grid .ag-header-cell:focus {
+    outline: none !important;
+    border-color: transparent !important;
+}
+
+/* ==========================================================
+   PAGINATION
+========================================================== */
+
+.limson-grid .ag-paging-panel {
+    background: #fbf9f3;
+    border-top: 1px solid #e8e1d6;
+    font-size: 12px;
+}
+
+/* ==========================================================
+   EMPTY STATE
+========================================================== */
+
+.limson-grid .ag-overlay-no-rows-center {
+    color: #888;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+/* ==========================================================
+   SCROLLBAR
+========================================================== */
+
+.limson-grid ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+.limson-grid ::-webkit-scrollbar-track {
+    background: #f7f4ee;
+}
+
+.limson-grid ::-webkit-scrollbar-thumb {
+    background: #d6cdbd;
+    border-radius: 8px;
+}
+
+.limson-grid ::-webkit-scrollbar-thumb:hover {
+    background: #c7baa4;
+}
+
+/* ==========================================================
+   STATUS PILLS
+========================================================== */
 
 .status-pill {
-
     display: inline-flex;
-
     align-items: center;
-
     justify-content: center;
 
-    min-width: 56px;
-
+    min-width: 60px;
     height: 22px;
 
     padding: 0 10px;
@@ -132,22 +208,35 @@
     border-radius: 999px;
 
     font-size: 11px;
-
     font-weight: 600;
-
-    line-height: 22px;
 }
 
 .status-active {
-
     background: #dbeccf;
-
     color: #3d6e2d;
 }
 
 .status-inactive {
-
-    background: #f6d7d7;
-
+    background: #f7d7d7;
     color: #a23636;
+}
+
+/* ==========================================================
+   ACTION BUTTONS (Future Use)
+========================================================== */
+
+.grid-actions {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.grid-action {
+    cursor: pointer;
+    color: #666;
+    transition: color .15s ease;
+}
+
+.grid-action:hover {
+    color: #2f6d66;
 }

@@ -1,0 +1,155 @@
+/* ==========================================================
+   LAYOUT
+========================================================== */
+
+.screen-permission-layout{
+
+    display:grid;
+
+    grid-template-columns:54% 46%;
+
+    gap:14px;
+
+    align-items:stretch;
+
+    padding: 10px;
+
+}
+
+.screen-permission-layout > .card{
+
+    min-width:0;
+
+    height:100%;
+
+}
+
+/* ==========================================================
+   CARDS
+========================================================== */
+.details-card {
+    min-width: 0;
+}
+
+
+
+.screen-card,
+.details-card{
+
+    display:flex;
+
+    flex-direction:column;
+
+    overflow:hidden;
+
+}
+
+/* ==========================================================
+   HEADER
+========================================================== */
+
+.card-header{
+
+    height:42px;
+
+    display:flex;
+
+    align-items:center;
+
+    padding:0 16px;
+
+    border-bottom:1px solid var(--border);
+
+    color:#9b6b32;
+
+    font-size:11px;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+
+    text-transform:uppercase;
+
+}
+
+/* ==========================================================
+   BODY
+========================================================== */
+
+.card-body{
+    padding:16px;
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+/* ==========================================================
+   FORM
+========================================================== */
+
+.screen-form{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:14px 12px;
+
+}
+
+.screen-form > :last-child{
+
+    grid-column:1;
+
+}
+
+/* ==========================================================
+   FOOTER
+========================================================== */
+
+.card-footer{
+
+    display:flex;
+
+    gap:10px;
+
+    margin-top:12px;
+
+}
+
+/* ==========================================================
+   GRID
+========================================================== */
+
+.details-card .limson-grid{
+
+    flex:1;
+
+}
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media (max-width:1100px){
+
+    .screen-permission-layout{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .screen-form{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .screen-form > :last-child{
+
+        grid-column:auto;
+
+    }
+
+}

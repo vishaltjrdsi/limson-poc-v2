@@ -2,7 +2,7 @@ import "./Input.css";
 
 function Input({
   label,
-  value,
+  value = "",
   onChange,
   placeholder = "",
   type = "text",
@@ -12,11 +12,16 @@ function Input({
 }) {
   return (
     <div className="input-group">
-      <label className="input-label">
-        {label}
 
-        {required && <span className="required">*</span>}
-      </label>
+      {label && (
+        <label className="input-label">
+          {label}
+
+          {required && (
+            <span className="required">*</span>
+          )}
+        </label>
+      )}
 
       <input
         className="input-field"
@@ -27,6 +32,7 @@ function Input({
         onChange={onChange}
         disabled={disabled}
       />
+
     </div>
   );
 }

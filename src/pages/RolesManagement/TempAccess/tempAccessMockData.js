@@ -5,6 +5,7 @@ const mockData = [
     backupUser: "Bob Wilson",
     role: "Clerk",
     startDate: "04/01/2026",
+    endDate: "04/15/2026",
   },
 ];
 

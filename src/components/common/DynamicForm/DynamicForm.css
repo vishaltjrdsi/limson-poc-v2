@@ -1,0 +1,39 @@
+.dynamic-form{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,minmax(0,1fr));
+
+    gap:14px 18px;
+
+    width:100%;
+
+}
+
+.form-field{
+
+    width:100%;
+
+}
+
+.full-width{
+
+    grid-column:1 / -1;
+
+}
+
+@media (max-width:900px){
+
+    .dynamic-form{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .full-width{
+
+        grid-column:auto;
+
+    }
+
+}

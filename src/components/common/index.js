@@ -25,3 +25,4 @@ export { default as GridPage } from "./GridPage/GridPage";
 export { default as DataTable } from "./DataTable/DataTable";
 export { default as ReportPage } from "./ReportPage/ReportPage";
 export { default as ReportTable } from "./ReportTable/ReportTable";
+export { default as PermissionCellRenderer } from "./AgGridTable/CellRenderers/PermissionCellRenderer/PermissionCellRenderer";

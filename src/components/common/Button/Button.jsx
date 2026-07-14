@@ -11,7 +11,11 @@ function Button({
   return (
     <button
       type={type}
-      className={`btn btn-${variant} ${className}`}
+      className={[
+        "btn",
+        `btn-${variant}`,
+        className,
+      ].join(" ")}
       disabled={disabled}
       onClick={onClick}
     >

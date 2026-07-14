@@ -1,25 +1,53 @@
+.vendor-form{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:16px;
+
+    margin-bottom:12px;
+
+}
+
 .vendor-actions{
 
     display:flex;
 
-    gap:12px;
+    gap:8px;
 
-    margin-top:20px;
+    margin-bottom:12px;
 
-    margin-bottom:20px;
 }
 
-.vendor-empty-state{
+.vendor-empty{
 
-    border:1px dashed var(--border);
+    display:flex;
+
+    align-items:center;
+
+    min-height:44px;
+
+    padding:0 14px;
+
+    border:1px dashed #d8cfbf;
 
     border-radius:8px;
 
-    padding:18px;
-
     background:#fffdf8;
 
-    color:#6b7280;
+    color:#6e675d;
 
     font-size:13px;
+
+}
+
+@media(max-width:900px){
+
+    .vendor-form{
+
+        grid-template-columns:1fr;
+
+    }
+
 }

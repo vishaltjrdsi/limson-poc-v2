@@ -6,7 +6,13 @@ function Card({
   padding = "default",
 }) {
   return (
-    <div className={`card card--${padding} ${className}`}>
+    <div
+      className={[
+        "card",
+        `card--${padding}`,
+        className,
+      ].join(" ")}
+    >
       {children}
     </div>
   );

@@ -1,23 +1,38 @@
 import "./PageContainer.css";
-import {Card} from "../../components/common";
+import { Card } from "../../components/common";
 
 function PageContainer({
   title,
-  subtitle,
+ subtitle,
   description,
   headerRight,
   children,
 }) {
   return (
-    <Card className="page-container">
+    <Card
+      className="page-container"
+      padding="none"
+    >
       <div className="page-container-header">
 
         <div className="page-container-title">
-          <h1>{title}</h1>
 
-          {subtitle && <h3>{subtitle}</h3>}
+          <div className="page-title">
+            {title}
+          </div>
 
-          {description && <p>{description}</p>}
+          {subtitle && (
+            <div className="page-subtitle">
+              {subtitle}
+            </div>
+          )}
+
+          {description && (
+            <div className="page-description">
+              {description}
+            </div>
+          )}
+
         </div>
 
         {headerRight && (
@@ -31,6 +46,7 @@ function PageContainer({
       <div className="page-container-body">
         {children}
       </div>
+
     </Card>
   );
 }

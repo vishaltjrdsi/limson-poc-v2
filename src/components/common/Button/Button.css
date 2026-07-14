@@ -1,125 +1,137 @@
+/* ==========================================================
+   BUTTON BASE
+========================================================== */
+
 .btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
 
-    height: 34px;              /* Fixed height */
-    min-width: 80px;
-    margin: 3px;
-    padding: 0 16px;           /* Vertical padding no longer needed */
+    min-width: 90px;
+    height: 32px;
+
+    padding: 0 16px;
 
     border: 1px solid transparent;
     border-radius: 6px;
 
-    cursor: pointer;
+    background: transparent;
 
     font-size: 12px;
     font-weight: 600;
+    font-family: inherit;
 
-    transition: .2s;
+    cursor: pointer;
+
+    transition:
+        background-color .2s ease,
+        border-color .2s ease,
+        color .2s ease,
+        box-shadow .2s ease;
+
     box-sizing: border-box;
+
+    user-select: none;
 }
-/* Primary */
+
+/* ==========================================================
+   PRIMARY
+========================================================== */
 
 .btn-primary {
-    background: #1f7468;
-    border-color: #1f7468;
-    color: white;
+    background: #2f6d66;
+    border-color: #2f6d66;
+    color: #fff;
 }
 
-.btn-primary:hover {
-    background: #195f56;
+.btn-primary:hover:not(:disabled) {
+    background: #275c56;
+    border-color: #275c56;
 }
 
-/* Secondary */
-
-/* .btn-secondary {
-    background: #ececec;
-    border-color: #ececec;
-    color: #333;
-} */
+/* ==========================================================
+   SECONDARY
+========================================================== */
 
 .btn-secondary {
-    background: #f1ede4;
-    border-color: #d8d0c1;
-    color: #333;
+    background: #f4f1ea;
+    border-color: #d7cdbd;
+    color: #555;
 }
 
-/* Outline */
+.btn-secondary:hover:not(:disabled) {
+    background: #ece6db;
+}
+
+/* ==========================================================
+   OUTLINE
+========================================================== */
 
 .btn-outline {
-    background: white;
-    border-color: #436b63;
-    color: #436b63;
+    background: #fff;
+    border-color: #2f6d66;
+    color: #2f6d66;
 }
 
-.btn-outline:hover {
-    background: #436b63;
-    color: white;
+.btn-outline:hover:not(:disabled) {
+    background: #2f6d66;
+    color: #fff;
 }
 
-/* Danger */
+/* ==========================================================
+   DANGER
+========================================================== */
 
 .btn-danger {
     background: #d9534f;
-    border-color: #e0453f;
-    color: white;
+    border-color: #d9534f;
+    color: #fff;
 }
 
-/* ---------- TAB ---------- */
-
-.btn-tab {
-    background: #f8f5ef;
-
-    border: 1px solid #d9cfbf;
-
-    color: #6f675d;
-
-    border-radius: 999px;
-
-    height: 30px;
-
-    padding: 0 16px;
-
-    font-size: 12px;
-
-    font-weight: 600;
+.btn-danger:hover:not(:disabled) {
+    background: #c84642;
+    border-color: #c84642;
 }
 
-.btn-tab:hover {
-    background: #f2ece0;
+/* ==========================================================
+   DANGER OUTLINE
+========================================================== */
+
+.btn-danger-outline {
+    background: #fff;
+    border-color: #d9534f;
+    color: #d9534f;
 }
 
-.btn-tab.active {
-    background: #fff7e7;
-
-    border-color: #b9852d;
-
-    color: #8a6332;
+.btn-danger-outline:hover:not(:disabled) {
+    background: #d9534f;
+    color: #fff;
 }
 
-/* Disabled */
+/* ==========================================================
+   DISABLED
+========================================================== */
 
 .btn:disabled {
-    opacity: .5;
+    opacity: .55;
     cursor: not-allowed;
 }
 
+/* ==========================================================
+   SMALL BUTTON
+========================================================== */
 
-/* Danger Outline */
-
-.btn-danger-outline{
-
-    background:#fff;
-
-    border:1px solid #e14a43;
-
-    color:#e14a43;
+.btn-small {
+    min-width: 70px;
+    height: 28px;
+    padding: 0 12px;
+    font-size: 11px;
 }
 
-.btn-danger-outline:hover{
+/* ==========================================================
+   FULL WIDTH
+========================================================== */
 
-    background:#e14a43;
-
-    color:#fff;
+.btn-block {
+    width: 100%;
 }

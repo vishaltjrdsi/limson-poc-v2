@@ -1,28 +1,17 @@
-import { useState } from "react";
-import PageContainer from "../../containers/PageContainer/PageContainer"
 import {
   Page,
-  FormGrid,
+  Button,
   Select,
-  Button
 } from "../../components/common";
+
+import PageContainer from "../../containers/PageContainer/PageContainer";
+
 import "./VendorRules.css";
 
 function VendorRules() {
-  const [formData, setFormData] = useState({
-    vendor: "",
-    costType: "",
-  });
-
-  const handleChange = ({ target: { name, value } }) => {
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
-  };
-
   return (
     <Page>
+
       <PageContainer
         title="VENDOR RULES"
         subtitle="Costs rule editor"
@@ -33,27 +22,22 @@ function VendorRules() {
           </Button>
         }
       >
-        <FormGrid>
+
+        <div className="vendor-form">
 
           <Select
-            label="Vendor"
-            name="vendor"
+            label="VENDOR"
             placeholder="Select vendor"
-            value={formData.vendor}
-            onChange={handleChange}
             options={[]}
           />
 
           <Select
-            label="Cost Type"
-            name="costType"
+            label="COST TYPE"
             placeholder="Select type"
-            value={formData.costType}
-            onChange={handleChange}
             options={[]}
           />
 
-        </FormGrid>
+        </div>
 
         <div className="vendor-actions">
 
@@ -67,11 +51,14 @@ function VendorRules() {
 
         </div>
 
-        <div className="vendor-empty-state">
+        <div className="vendor-empty">
+
           No cost rules yet. Add the first rule after selecting a vendor and cost type.
+
         </div>
 
       </PageContainer>
+
     </Page>
   );
 }

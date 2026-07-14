@@ -1,0 +1,150 @@
+/* ==========================================================
+   LAYOUT
+========================================================== */
+
+.role-access {
+
+    display:grid;
+
+    grid-template-columns:55% 45%;
+
+    gap:16px;
+
+    align-items:stretch;
+
+}
+
+.role-access > .card{
+
+    width:100%;
+
+    height:100%;
+
+}
+
+/* ==========================================================
+   CARD
+========================================================== */
+
+.role-definition-card,
+.role-rules-card{
+
+    display:flex;
+
+    flex-direction:column;
+
+    height:100%;
+
+    overflow:hidden;
+
+}
+
+.rule-card{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+/* ==========================================================
+   HEADER
+========================================================== */
+
+.card-header {
+    height: 36px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 16px;
+
+    border-bottom: 1px solid var(--border);
+
+    background: #f8f5ef;
+
+    color: #9b6b32;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: .8px;
+
+    text-transform: uppercase;
+}
+
+/* ==========================================================
+   BODY
+========================================================== */
+
+.card-content {
+    padding: 16px;
+}
+
+/* ==========================================================
+   FORM
+========================================================== */
+
+.role-form {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    column-gap: 14px;
+    row-gap: 12px;
+}
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
+/* ==========================================================
+   FOOTER
+========================================================== */
+
+.card-footer{
+
+    display:flex;
+
+    gap:10px;
+
+    padding:14px 16px 16px;
+
+    margin-top:12px;
+
+}
+
+/* ==========================================================
+   GRID CARD
+========================================================== */
+
+.rules-table {
+
+   flex:1;
+}
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media (max-width: 1100px) {
+
+    .role-access {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .role-form {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .full-width {
+
+        grid-column: auto;
+
+    }
+
+}
