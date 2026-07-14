@@ -5,7 +5,7 @@ import {
   SectionCard,
   Button,
   GridPage,
-} from "../../components/Common";
+} from "../../components/common";
 
 import columns from "./columns";
 import mockData from "./mockData";
