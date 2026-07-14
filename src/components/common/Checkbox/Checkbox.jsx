@@ -2,6 +2,7 @@ import "./Checkbox.css";
 
 function Checkbox({
   label,
+  children,
   checked,
   name,
   disabled = false,
@@ -18,9 +19,9 @@ function Checkbox({
         onChange={onChange}
       />
 
-      {label && (
-        <span>{label}</span>
-      )}
+      <span>
+        {children || label}
+      </span>
 
     </label>
   );

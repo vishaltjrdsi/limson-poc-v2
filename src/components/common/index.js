@@ -23,3 +23,5 @@ export { default as UserCard } from "./UserCard/UserCard";
 export { default as UserList } from "./UserList/UserList";
 export { default as GridPage } from "./GridPage/GridPage";
 export { default as DataTable } from "./DataTable/DataTable";
+export { default as ReportPage } from "./ReportPage/ReportPage";
+export { default as ReportTable } from "./ReportTable/ReportTable";

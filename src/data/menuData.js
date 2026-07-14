@@ -23,16 +23,28 @@ const menuData = {
   ],
 
   REPORTS: [
-    {
-      title: "REPORTS",
-      items: [
-        { label: "Sales", path: "#" },
-        { label: "Purchasing", path: "#" },
-        { label: "Inventory", path: "#" },
-        { label: "Items & Contacts", path: "#" },
-      ],
-    },
-  ],
+  {
+    title: "REPORTS",
+    items: [
+      {
+        label: "Sales",
+        path: ROUTES.SALES_REPORTS,
+      },
+      {
+        label: "Purchasing",
+        path: ROUTES.PURCHASING_REPORTS,
+      },
+      {
+        label: "Inventory",
+        path: ROUTES.INVENTORY_REPORTS,
+      },
+      {
+        label: "Items & Contacts",
+        path: ROUTES.ITEMS_CONTACTS_REPORTS,
+      },
+    ],
+  },
+],
 
   ADMIN: [
     {

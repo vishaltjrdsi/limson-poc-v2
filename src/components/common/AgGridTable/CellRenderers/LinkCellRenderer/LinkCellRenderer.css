@@ -1,0 +1,17 @@
+.report-link {
+    color: var(--color-primary);
+
+    font-size: var(--font-sm);
+
+    font-weight: var(--font-semibold);
+
+    cursor: pointer;
+
+    transition: color .2s;
+}
+
+.report-link:hover {
+    text-decoration: underline;
+
+    color: var(--color-secondary);
+}

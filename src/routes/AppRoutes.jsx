@@ -25,6 +25,12 @@ import {
   EdiSettings,
   UnitOfMeasure,
   PricingMismatch,
+
+  Reports,
+  SalesReports,
+  PurchasingReports,
+  InventoryReports,
+  ItemsContactsReports
 } from "../pages";
 
 import { ROUTES } from "./routeConstants";
@@ -130,7 +136,34 @@ function AppRoutes() {
           path={ROUTES.CANOPY_EXPORTS}
           element={<CanopyExports />}
         />
-      </Route>
+   
+
+ {/* Reports */}
+      <Route
+  path={ROUTES.REPORTS}
+  element={<Reports />}
+/>
+
+<Route
+  path={ROUTES.SALES_REPORTS}
+  element={<SalesReports />}
+/>
+
+<Route
+  path={ROUTES.PURCHASING_REPORTS}
+  element={<PurchasingReports />}
+/>
+
+<Route
+  path={ROUTES.INVENTORY_REPORTS}
+  element={<InventoryReports />}
+/>
+
+<Route
+  path={ROUTES.ITEMS_CONTACTS_REPORTS}
+  element={<ItemsContactsReports />}
+/>
+   </Route>
     </Routes>
   );
 }

@@ -27,4 +27,15 @@ export const ROUTES = {
 
   // MASTER DATA
   CANOPY_EXPORTS: "/canopy-exports",
+
+  // REPORTS
+  REPORTS: "/reports",
+  SALES_REPORTS: "/reports/sales",
+  PURCHASING_REPORTS: "/reports/purchasing",
+  INVENTORY_REPORTS: "/reports/inventory",
+  ITEMS_CONTACTS_REPORTS: "/reports/items-contacts",
+
+
+
+  
 };

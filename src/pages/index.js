@@ -33,3 +33,13 @@ export { default as EdiSettings } from "./EdiSettings/EdiSettings";
 export { default as UnitOfMeasure } from "./UnitOfMeasure/UnitOfMeasure";
 
 export { default as PricingMismatch } from "./PricingMismatch/PricingMismatch";
+
+export { default as Reports } from "./Reports/Reports";
+
+export { default as SalesReports } from "./Reports/Sales/SalesReports";
+
+export { default as PurchasingReports } from "./Reports/Purchasing/PurchasingReports";
+
+export { default as InventoryReports } from "./Reports/Inventory/InventoryReports";
+
+export { default as ItemsContactsReports } from "./Reports/ItemsContacts/ItemsContactsReports";
