@@ -1,5 +1,7 @@
 import "./Header.css";
 import { useState, useRef } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
+
 import menuData from "../../data/menuData";
 import logo from "../../assets/icons/atlas_logo.png";
 
@@ -13,9 +15,25 @@ import {
   MdBuild,
 } from "react-icons/md";
 
-function Header({ selectedPage, setSelectedPage }) {
+function Header() {
+  const navigate = useNavigate();
+  const location = useLocation();
+
   const [hoverMenu, setHoverMenu] = useState(null);
+
   const timer = useRef(null);
+
+  const isMenuActive = (menu) => {
+  const sections = menuData[menu] || [];
+
+  return sections.some((section) =>
+    section.items.some(
+      (item) =>
+        item.path !== "#" &&
+        location.pathname.startsWith(item.path)
+    )
+  );
+};
 
   const menuIcons = {
     APPS: <MdApps className="nav-icon" />,
@@ -34,24 +52,39 @@ function Header({ selectedPage, setSelectedPage }) {
   const closeMenu = () => {
     timer.current = setTimeout(() => {
       setHoverMenu(null);
-    }, 200);
+    }, 150);
   };
 
   return (
     <header className="header">
-      <div className="header-left">
-        <img src={logo} alt="Atlas Logo" className="header-logo" />
 
-        <h2 className="header-title">ATLAS</h2>
+      {/* Left */}
+
+      <div className="header-left">
+
+        <img
+          src={logo}
+          alt="Atlas Logo"
+          className="header-logo"
+        />
+
+        <h2 className="header-title">
+          ATLAS
+        </h2>
+
       </div>
 
+      {/* Menu */}
+
       <nav className="header-nav">
+
         {menus.map((menu) => {
+
           const sections = menuData[menu] || [];
 
           const totalItems = sections.reduce(
             (count, section) => count + section.items.length,
-            0,
+            0
           );
 
           let columns = 1;
@@ -60,72 +93,124 @@ function Header({ selectedPage, setSelectedPage }) {
           else if (totalItems > 10) columns = 2;
 
           return (
+
             <div
               key={menu}
               className="nav-wrapper"
               onMouseEnter={() => openMenu(menu)}
               onMouseLeave={closeMenu}
             >
+
               <a
                 href="#"
-                className={
-                  hoverMenu === menu ||
-                  (menu === "ADMIN" && selectedPage === "HOME")
-                    ? "active"
-                    : ""
-                }
                 onClick={(e) => e.preventDefault()}
+                className={
+    hoverMenu === menu || isMenuActive(menu)
+        ? "active"
+        : ""
+}
               >
+
                 {menuIcons[menu]}
+
                 <span>{menu}</span>
+
               </a>
 
               {hoverMenu === menu && (
+
                 <div
                   className="dropdown-menu"
                   style={{
                     "--columns": columns,
                   }}
                 >
+
                   <div className="dropdown-grid">
+
                     {sections.map((section) => (
-                      <div key={section.title} className="dropdown-section">
+
+                      <div
+                        key={section.title}
+                        className="dropdown-section"
+                      >
+
                         <h5>{section.title}</h5>
 
                         {section.items.map((item) => (
+
                           <div
-                            key={item}
-                            className="dropdown-item"
+                            key={item.label}
+                            className={`dropdown-item ${
+                              location.pathname === item.path
+                                ? "active"
+                                : ""
+                            }`}
                             onClick={() => {
-                              setSelectedPage(item);
+
+                              if (item.path !== "#") {
+                                navigate(item.path);
+                              }
+
                               setHoverMenu(null);
+
                             }}
                           >
-                            {item}
+
+                            {item.label}
+
                           </div>
+
                         ))}
+
                       </div>
+
                     ))}
+
                   </div>
+
                 </div>
+
               )}
+
             </div>
+
           );
+
         })}
+
       </nav>
 
+      {/* Right */}
+
       <div className="header-right">
-        <span className="environment-chip">US US</span>
+
+        <span className="environment-chip">
+          US US
+        </span>
+
         <span className="environment-chip environment-chip-wide">
           SIT ENVIRONMENT
         </span>
+
         <FaSearch className="icon" />
+
         <FaBell className="icon" />
-        <span className="user-avatar">R</span>
-        <span className="user-name">Local Dev User</span>
+
+        <span className="user-avatar">
+          R
+        </span>
+
+        <span className="user-name">
+          Local Dev User
+        </span>
+
         <FiChevronDown className="user-caret" />
+
         <FiLogOut className="logout-icon" />
+
       </div>
+
     </header>
   );
 }

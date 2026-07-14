@@ -1,35 +1,19 @@
-import "./DashboardLayout.css";
+import { Outlet } from "react-router-dom";
 
 import Header from "../../components/Header/Header";
 
-import pageRoutes from "../../routes/pageRoutes";
+import "./DashboardLayout.css";
 
-function DashboardLayout({
-  selectedPage,
-  setSelectedPage,
-  selectedMasterData,
-  setSelectedMasterData,
-}) {
-  const CurrentPage = pageRoutes[selectedPage] || pageRoutes.HOME;
+function DashboardLayout() {
   return (
-    <div className="layout">
-      <div className="content">
+    <div className="dashboard-layout">
 
-        <Header
-          selectedPage={selectedPage}
-          setSelectedPage={setSelectedPage}
-        />
+      <Header />
 
-        <main className="main-content">
-          <CurrentPage
-          selectedPage={selectedPage}
-          setSelectedPage={setSelectedPage}
-          selectedMasterData={selectedMasterData}
-          setSelectedMasterData={setSelectedMasterData}
-        />
-        </main>
+      <main className="dashboard-content">
+        <Outlet />
+      </main>
 
-      </div>
     </div>
   );
 }

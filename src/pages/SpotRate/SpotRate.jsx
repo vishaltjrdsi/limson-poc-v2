@@ -7,6 +7,7 @@ import {
   Button,
   Input,
   AgGridTable,
+  DataTable
 } from "../../components/common";
 
 import columns from "./columns";
@@ -30,13 +31,10 @@ function SpotRate() {
           </>
         }
       >
-        <Card padding="none">
-          <AgGridTable
-            columnDefs={columns}
-            rowData={rates}
-            pagination={false}
-            autoHeight
-          />
+      <DataTable
+    columns={columns}
+    data={rates}
+>
 
           <div className="spot-rate-footer">
             <div className="spot-rate-values">
@@ -49,7 +47,8 @@ function SpotRate() {
 
             <Button>Save</Button>
           </div>
-        </Card>
+
+        </DataTable>
       </SectionCard>
     </Page>
   );

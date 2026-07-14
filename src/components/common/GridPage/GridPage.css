@@ -1,0 +1,29 @@
+.grid-page-header {
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 16px 20px;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.grid-page-body{
+
+    padding:20px;
+}
+
+.grid-page-footer{
+
+    display:flex;
+    align-items:center;
+
+    gap:12px;
+
+    padding:16px 20px;
+
+    border-top:1px solid var(--border);
+}

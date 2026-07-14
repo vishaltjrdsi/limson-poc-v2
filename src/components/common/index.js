@@ -21,3 +21,5 @@ export { default as Tabs } from "./Tabs/Tabs";
 export { default as Toast } from "./Toast/Toast";
 export { default as UserCard } from "./UserCard/UserCard";
 export { default as UserList } from "./UserList/UserList";
+export { default as GridPage } from "./GridPage/GridPage";
+export { default as DataTable } from "./DataTable/DataTable";

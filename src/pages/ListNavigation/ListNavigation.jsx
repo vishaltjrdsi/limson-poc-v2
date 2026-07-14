@@ -1,15 +1,19 @@
+import { useNavigate } from "react-router-dom";
+
 import {
   Page,
-  NavigationCard
+  NavigationCard,
 } from "../../components/common";
 
+import { ROUTES } from "../../routes/routeConstants";
 import listNavData from "../../config/admin/listNavData";
+
 import "./ListNavigation.css";
 
-function ListNavigation({
-  setSelectedPage,
-  setSelectedMasterData,
-}) {
+function ListNavigation() {
+
+  const navigate = useNavigate();
+
   return (
     <Page>
 
@@ -28,16 +32,14 @@ function ListNavigation({
       <div className="navigation-grid">
 
         {listNavData.map((item) => (
+
           <NavigationCard
-            key={item.title}
+            key={item.id}
             {...item}
-
-      onClick={() => {
-  setSelectedMasterData(item);
-  setSelectedPage("Master Data List");
-}}
+            onClick={() =>
+              navigate(`${ROUTES.MASTER_DATA_LIST}/${item.id}`)
+            }
           />
-
 
         ))}
 

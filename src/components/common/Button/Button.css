@@ -104,3 +104,22 @@
     opacity: .5;
     cursor: not-allowed;
 }
+
+
+/* Danger Outline */
+
+.btn-danger-outline{
+
+    background:#fff;
+
+    border:1px solid #e14a43;
+
+    color:#e14a43;
+}
+
+.btn-danger-outline:hover{
+
+    background:#e14a43;
+
+    color:#fff;
+}

@@ -27,3 +27,9 @@ export { default as BackupAccess } from "./BackupAccess/BackupAccess";
 export { default as SpotRate } from "./SpotRate/SpotRate";
 
 export { default as FiscalCalendar } from "./FiscalCalendar/FiscalCalendar";
+
+export { default as EdiSettings } from "./EdiSettings/EdiSettings";
+
+export { default as UnitOfMeasure } from "./UnitOfMeasure/UnitOfMeasure";
+
+export { default as PricingMismatch } from "./PricingMismatch/PricingMismatch";

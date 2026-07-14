@@ -7,6 +7,7 @@ import {
   Button,
   Input,
   AgGridTable,
+  DataTable
 } from "../../components/common";
 
 import columns from "./columns";
@@ -43,20 +44,10 @@ function FiscalCalendar() {
         }
       >
 
-        <Card padding="none">
-
-          <div className="fiscal-card-header">
-
-            <h3>Blackouts</h3>
-
-          </div>
-
-          <AgGridTable
-            rowData={rowData}
-            columnDefs={columns}
-            pagination={false}
-            autoHeight
-          />
+        <DataTable
+    columns={columns}
+    data={rowData}
+>
 
           <div className="fiscal-footer">
 
@@ -78,7 +69,7 @@ function FiscalCalendar() {
 
           </div>
 
-        </Card>
+        </DataTable>
 
       </SectionCard>
     </Page>

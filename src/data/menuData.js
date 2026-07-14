@@ -1,21 +1,23 @@
+import { ROUTES } from "../routes/routeConstants";
+
 const menuData = {
   APPS: [
     {
       title: "CORE WORKFLOWS",
       items: [
-        "Purchase Orders",
-        "Sales Orders",
-        "Inventory Control",
-        "Repack Order",
-        "Transfer Order",
-        "Pending Orders"
+        { label: "Purchase Orders", path: "#" },
+        { label: "Sales Orders", path: "#" },
+        { label: "Inventory Control", path: "#" },
+        { label: "Repack Order", path: "#" },
+        { label: "Transfer Order", path: "#" },
+        { label: "Pending Orders", path: "#" },
       ],
     },
-     {
-      title: "Master Data",
+    {
+      title: "MASTER DATA",
       items: [
-        "Item Maintainance",
-        "Business Partners"
+        { label: "Item Maintainance", path: "#" },
+        { label: "Business Partners", path: "#" },
       ],
     },
   ],
@@ -24,10 +26,10 @@ const menuData = {
     {
       title: "REPORTS",
       items: [
-        "Sales",
-        "Purchasing",
-        "Inventory",
-        "Items & Contacts"
+        { label: "Sales", path: "#" },
+        { label: "Purchasing", path: "#" },
+        { label: "Inventory", path: "#" },
+        { label: "Items & Contacts", path: "#" },
       ],
     },
   ],
@@ -36,32 +38,68 @@ const menuData = {
     {
       title: "CONFIGURATION",
       items: [
-        "Program Settings",
-        "Screen Setup",
-        "Vendor Rules",
-        "Warehouse Rules"
+        {
+          label: "Program Settings",
+          path: ROUTES.PROGRAM_SETTINGS,
+        },
+        {
+          label: "Screen Setup",
+          path: ROUTES.SCREEN_SETUP,
+        },
+        {
+          label: "Vendor Rules",
+          path: ROUTES.VENDOR_RULES,
+        },
+        {
+          label: "Warehouse Rules",
+          path: ROUTES.WAREHOUSE_RULES,
+        },
       ],
     },
+
     {
       title: "MASTER DATA",
       items: [
-        "List Navigation",
-        "Canopy Exports"
+        {
+          label: "List Navigation",
+          path: ROUTES.LIST_NAVIGATION,
+        },
+        {
+          label: "Canopy Exports",
+          path: ROUTES.CANOPY_EXPORTS,
+        },
       ],
     },
+
     {
       title: "USERS & ROLES",
-      items: [  
-        "User Settings",
-        "Roles",
-        "Backup Access"
+      items: [
+        {
+          label: "User Settings",
+          path: ROUTES.USER_SETTINGS,
+        },
+        {
+          label: "Roles",
+          path: ROUTES.ROLES,
+        },
+        {
+          label: "Backup Access",
+          path: ROUTES.BACKUP_ACCESS,
+        },
       ],
     },
+
     {
       title: "ADJUSTMENTS",
-      items: [  
-        "Inventory Adjustments",
-        "TX Qty Adjustment"
+      items: [
+        {
+          label: "Inventory Adjustments",
+          path: ROUTES.INVENTORY_ADJUSTMENT,
+        },
+        {
+          label: "TX Qty Adjustment",
+          path: ROUTES.TX_QTY_ADJUSTMENT,
+        },
       ],
     },
   ],
@@ -70,11 +108,26 @@ const menuData = {
     {
       title: "SYSTEM TOOLS",
       items: [
-        "Spot Rate",
-        "Fiscal Calendar",
-        "EDI Settings",
-        "Unit of Measure",
-        "Pricing Mismatch"
+        {
+          label: "Spot Rate",
+          path: ROUTES.SPOT_RATE,
+        },
+        {
+          label: "Fiscal Calendar",
+          path: ROUTES.FISCAL_CALENDAR,
+        },
+        {
+          label: "EDI Settings",
+          path: ROUTES.EDI_SETTINGS,
+        },
+        {
+          label: "Unit Of Measure",
+          path: ROUTES.UNIT_OF_MEASURE,
+        },
+        {
+          label: "Pricing Mismatch",
+          path: ROUTES.PRICING_MISMATCH,
+        },
       ],
     },
   ],

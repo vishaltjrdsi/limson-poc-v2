@@ -1,0 +1,22 @@
+.edi-header-actions{
+    display:flex;
+    gap:10px;
+}
+
+/* Match screenshot */
+
+.edi-header-actions .btn{
+    min-width:90px;
+}
+
+/* Make table fill card */
+
+.edi-page .ag-theme-quartz{
+    width:100%;
+}
+
+/* Bold EDI column */
+
+.edi-page .ag-cell:first-child{
+    font-weight:600;
+}
