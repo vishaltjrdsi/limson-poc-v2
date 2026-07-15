@@ -44,34 +44,31 @@
    SELECT
 ========================================================== */
 
-.select-input{
+.select-input {
+    width: 99%;
+    height: 35px;
 
-    width:100%;
+    padding: 0 36px 0 12px;   /* Leave room for the arrow */
 
-    height:32px;
+    background: #fffdf8;
 
-    padding:0 10px;
+    border: 1px solid var(--border);
 
-    background:#fffdf8;
+    border-radius: 11.2px;
 
-    border:1px solid var(--border);
+    font-size: var(--text-sm);
 
-    border-radius:6px;
+    color: #333;
 
-    font-size:13px;
+    outline: none;
 
-    color:#333;
+    transition: all .2s ease;
 
-    outline:none;
+    box-sizing: border-box;
 
-    transition:.15s;
-
-    box-sizing:border-box;
-
-    appearance:none;
-
-    cursor:pointer;
-
+    appearance: auto;
+    -webkit-appearance: menulist;
+    -moz-appearance: menulist;
 }
 
 .select-input:hover{

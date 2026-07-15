@@ -33,23 +33,23 @@ function InvoiceSelection() {
         autoHeight
       />
 
-      <div className="invoice-footer">
+     <div className="invoice-footer">
 
-        <div className="invoice-file">
+    <label className="invoice-file-label">
+        FILENAME
+    </label>
 
-          <Input
-            label="FILENAME"
-            value="name.txt"
-            readOnly
-          />
+    <input
+        className="invoice-file-input"
+        value="name.txt"
+        readOnly
+    />
 
-        </div>
+    <Button>
+        Invoice CX
+    </Button>
 
-        <Button>
-          Invoice CX
-        </Button>
-
-      </div>
+</div>
 
     </Card>
   );

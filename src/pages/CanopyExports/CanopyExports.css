@@ -33,7 +33,7 @@
     justify-content:space-between;
     align-items:center;
 
-    padding:18px 20px;
+    padding:12px 16px;
 
     border-bottom:1px solid var(--border);
 }
@@ -41,7 +41,7 @@
 .invoice-toolbar h3{
     margin:0;
 
-    font-size:18px;
+    font-size:14px;
     font-weight:700;
 }
 
@@ -102,19 +102,81 @@
 }
 
 .invoice-footer{
-    display:flex;
-    align-items:flex-end;
-    gap:20px;
 
-    padding:20px;
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:12px 16px;
 
     border-top:1px solid var(--border);
+
+}
+
+.invoice-file-label{
+
+    font-size:11px;
+
+    font-weight:700;
+
+    color:#8a6332;
+
+    letter-spacing:1px;
+
+    text-transform:uppercase;
+
+    white-space:nowrap;
+
+}
+
+.invoice-file-input{
+
+    width:150px;
+
+    height:30px;
+
+    padding:0 10px;
+
+    border:1px solid var(--border);
+
+    border-radius:6px;
+
+    background:#fffdf8;
+
+    font-size:13px;
+
+    box-sizing:border-box;
+
+    
+
+}
+
+.invoice-footer .btn{
+
+    margin-left:auto;
+
 }
 
 .invoice-file{
-    flex:1;
+
+    width:260px;
+
+    flex:none;
+
+}
+.invoice-file .input-group{
+
+    margin:0;
+
 }
 
+.invoice-file .input-field{
+
+    height:30px;
+
+}
 /* Coming Soon */
 
 .coming-soon-card{
@@ -173,4 +235,28 @@
 
 .ar-toolbar-actions .input-group{
     width:180px;
+}
+
+/* ==========================================
+   AP / AR Module Switch
+========================================== */
+
+.canopy-module-switch .btn-tab {
+
+    background: #f3efe6;
+
+    border: 1px solid #d8d0c1;
+
+    color: #666;
+
+}
+
+.canopy-module-switch .btn-tab.active {
+
+    background: #436b63;
+
+    border-color: #436b63;
+
+    color: #fff;
+
 }

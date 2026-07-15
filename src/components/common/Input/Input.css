@@ -86,7 +86,8 @@
 
 .input-field::placeholder {
 
-    color: #b3aca2;
+    color: #9ca3af;   /* Grey */
+    opacity: 1; 
 
     font-size: 12px;
 

@@ -2,6 +2,7 @@ import "./Input.css";
 
 function Input({
   label,
+  className = "",
   value = "",
   onChange,
   placeholder = "",
@@ -11,7 +12,7 @@ function Input({
   disabled = false,
 }) {
   return (
-    <div className="input-group">
+    <div className={`input-group ${className}`}>
 
       {label && (
         <label className="input-label">
