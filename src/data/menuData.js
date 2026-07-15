@@ -5,19 +5,19 @@ const menuData = {
     {
       title: "CORE WORKFLOWS",
       items: [
-        { label: "Purchase Orders", path: "#" },
-        { label: "Sales Orders", path: "#" },
-        { label: "Inventory Control", path: "#" },
-        { label: "Repack Order", path: "#" },
-        { label: "Transfer Order", path: "#" },
-        { label: "Pending Orders", path: "#" },
+        { label: "Purchase Orders (Pending)", path: "#" },
+        { label: "Sales Orders (Pending)", path: "#" },
+        { label: "Inventory Control (Pending)", path: "#" },
+        { label: "Repack Order (Pending)", path: "#" },
+        { label: "Transfer Order (Pending)", path: "#" },
+        { label: "Pending Orders (Pending)", path: "#" },
       ],
     },
     {
       title: "MASTER DATA",
       items: [
-        { label: "Item Maintainance", path: "#" },
-        { label: "Business Partners", path: "#" },
+        { label: "Item Maintainance (Pending)", path: "#" },
+        { label: "Business Partners (InProgress)", path: ROUTES.BUSINESS_PARTNERS },
       ],
     },
   ],

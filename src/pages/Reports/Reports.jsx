@@ -1,62 +1,25 @@
-import { useState } from "react";
+import ReportPage from "./components/ReportPage/ReportPage";
 
-import {
-  Page,
-  Tabs,
-} from "../../components/common";
+import salesConfig from "./configs/salesConfig";
+import purchasingConfig from "./configs/purchasingConfig";
+import inventoryConfig from "./configs/inventoryConfig";
+import itemsContactsConfig from "./configs/itemsContactsConfig";
 
-import reportCategories from "./reportCategories";
+const reportConfigs = {
+  sales: salesConfig,
+  purchasing: purchasingConfig,
+  inventory: inventoryConfig,
+  itemsContacts: itemsContactsConfig,
+};
 
-import SalesReports from "./Sales/SalesReports";
+function Reports({ reportType }) {
+  const config = reportConfigs[reportType];
 
-// Temporary placeholders
-function PurchasingReports() {
-  return <div style={{ padding: 24 }}>Purchasing Reports</div>;
-}
+  if (!config) {
+    return <div>Report configuration not found.</div>;
+  }
 
-function InventoryReports() {
-  return <div style={{ padding: 24 }}>Inventory Reports</div>;
-}
-
-function ItemsContactsReports() {
-  return <div style={{ padding: 24 }}>Items & Contacts Reports</div>;
-}
-
-function Reports() {
-
-  const [category, setCategory] = useState("Sales");
-
-  return (
-
-    <Page>
-
-      <Tabs
-        tabs={reportCategories.map(
-          item => item.label
-        )}
-        activeTab={category}
-        onChange={setCategory}
-      />
-
-      {category === "Sales" &&
-        <SalesReports />
-      }
-
-      {category === "Purchasing" &&
-        <PurchasingReports />
-      }
-
-      {category === "Inventory" &&
-        <InventoryReports />
-      }
-
-      {category === "Items & Contacts" &&
-        <ItemsContactsReports />
-      }
-
-    </Page>
-
-  );
+  return <ReportPage config={config} />;
 }
 
 export default Reports;

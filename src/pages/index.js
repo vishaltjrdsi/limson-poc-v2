@@ -1,48 +1,48 @@
 export { default as Home } from "./Home/Home";
 
-export { default as CanopyExports } from "./CanopyExports/CanopyExports";
+export { default as CanopyExports } from "./Admin/CanopyExports/CanopyExports";
 
-export { default as ProgramSettings } from "./ProgramSettings/ProgramSettings";
+export { default as ProgramSettings } from "./Admin/ProgramSettings/ProgramSettings";
 
-export { default as ScreenSetup } from "./ScreenSetup/ScreenSetup";
+export { default as ScreenSetup } from "./Admin/ScreenSetup/ScreenSetup";
 
-export { default as VendorRules } from "./VendorRules/VendorRules";
+export { default as VendorRules } from "./Admin/VendorRules/VendorRules";
 
-export { default as WarehouseRules } from "./WarehouseRules/WarehouseRules";
+export { default as WarehouseRules } from "./Admin/WarehouseRules/WarehouseRules";
 
-export { default as ListNavigation } from "./ListNavigation/ListNavigation";
+export { default as ListNavigation } from "./Admin/ListNavigation/ListNavigation";
 
 export { default as MasterDataList } from "./MasterDataList/MasterDataList";
 
-export { default as InventoryAdjustment } from "./InventoryAdjustment/InventoryAdjustment";
+export { default as InventoryAdjustment } from "./Admin/InventoryAdjustment/InventoryAdjustment";
 
-export { default as TxQtyAdjustment } from "./TxQtyAdjustment/TxQtyAdjustment";
+export { default as TxQtyAdjustment } from "./Admin/TxQtyAdjustment/TxQtyAdjustment";
 
-export { default as UserSettings } from "./UserSettings/UserSettings";
+export { default as UserSettings } from "./Admin/UserSettings/UserSettings";
 
-export { default as RolesManagement } from "./RolesManagement/RolesManagement";
+export { default as RolesManagement } from "./Admin/RolesManagement/RolesManagement";
 
-export { default as BackupAccess } from "./BackupAccess/BackupAccess";
+export { default as BackupAccess } from "./Admin/BackupAccess/BackupAccess";
 
-export { default as SpotRate } from "./SpotRate/SpotRate";
+export { default as SpotRate } from "./Tools/SpotRate/SpotRate";
 
-export { default as FiscalCalendar } from "./FiscalCalendar/FiscalCalendar";
+export { default as FiscalCalendar } from "./Tools/FiscalCalendar/FiscalCalendar";
 
-export { default as EdiSettings } from "./EdiSettings/EdiSettings";
+export { default as EdiSettings } from "./Tools/EdiSettings/EdiSettings";
 
-export { default as UnitOfMeasure } from "./UnitOfMeasure/UnitOfMeasure";
+export { default as UnitOfMeasure } from "./Tools/UnitOfMeasure/UnitOfMeasure";
 
-export { default as PricingMismatch } from "./PricingMismatch/PricingMismatch";
+export { default as PricingMismatch } from "./Tools/PricingMismatch/PricingMismatch";
 
 export { default as Reports } from "./Reports/Reports";
 
-export { default as SalesReports } from "./Reports/Sales/SalesReports";
+export { default as SalesReports } from "./Reports/Sales/Sales";
 
-export { default as PurchasingReports } from "./Reports/Purchasing/PurchasingReports";
+export { default as PurchasingReports } from "./Reports/Purchasing/Purchasing";
 
-export { default as InventoryReports } from "./Reports/Inventory/InventoryReports";
+export { default as InventoryReports } from "./Reports/Inventory/Inventory";
 
-export { default as ItemsContactsReports } from "./Reports/ItemsContacts/ItemsContactsReports";
+export { default as ItemsContactsReports } from "./Reports/ItemsContacts/ItemsContacts";
 
-
+export { default as BusinessPartners } from "./Apps/BusinessPartners/BusinessPartners";
 

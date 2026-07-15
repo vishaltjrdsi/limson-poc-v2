@@ -19,7 +19,7 @@ export const ROUTES = {
   BACKUP_ACCESS: "/backup-access",
 
   // TOOLS
-  SPOT_RATE: "/spot-rate",
+  SPOT_RATE: "/tools/spot-rate",
   FISCAL_CALENDAR: "/fiscal-calendar",
   EDI_SETTINGS: "/edi-settings",
   UNIT_OF_MEASURE: "/unit-of-measure",
@@ -35,7 +35,8 @@ export const ROUTES = {
   INVENTORY_REPORTS: "/reports/inventory",
   ITEMS_CONTACTS_REPORTS: "/reports/items-contacts",
 
-
+// APPS
+BUSINESS_PARTNERS: "/apps/business-partners",
 
   
 };
