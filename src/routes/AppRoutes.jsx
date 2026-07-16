@@ -30,7 +30,8 @@ import {
   ItemMaintenance,
   PendingOrders,
   TransferOrder,
-  RepackOrder
+  RepackOrder,
+  InventoryControl
 } from "../pages";
 
 import { ROUTES } from "./routeConstants";
@@ -115,6 +116,8 @@ function AppRoutes() {
         <Route path={ROUTES.TRANSFER_ORDER} element={<TransferOrder />} />
 
         <Route path={ROUTES.REPACK_ORDER} element={<RepackOrder />} />
+
+        <Route path={ROUTES.INVENTORY_CONTROL} element={<InventoryControl />} />
       </Route>
     </Routes>
   );

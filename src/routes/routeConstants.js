@@ -41,5 +41,6 @@ ITEM_MAINTENANCE: "/item-maintenance",
 PENDING_ORDERS: "/pending-orders",
 TRANSFER_ORDER: "/transfer-order",
 REPACK_ORDER: "/repack-order",
+INVENTORY_CONTROL: "/inventory-control"
   
 };

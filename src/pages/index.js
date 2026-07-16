@@ -53,3 +53,5 @@ export { default as PendingOrders } from "./Apps/PendingOrders/PendingOrders";
 export { default as TransferOrder } from "./Apps/TransferOrder/TransferOrder";
 
 export { default as RepackOrder } from "./Apps/RepackOrder/RepackOrder";
+
+export { default as InventoryControl } from "./Apps/InventoryControl/InventoryControl";
