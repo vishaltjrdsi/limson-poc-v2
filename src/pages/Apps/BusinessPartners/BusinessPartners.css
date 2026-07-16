@@ -9,3 +9,161 @@
     margin-bottom:24px;
 
 }
+
+/* ==========================================
+   STATUS ROW
+========================================== */
+
+.bp-status-section{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:18px;
+
+    align-items:center;
+
+    margin:20px 0 14px;
+
+}
+
+.bp-status-section label{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:6px;
+
+    font-size:12px;
+
+    font-weight:500;
+
+    color:#444;
+
+    white-space:nowrap;
+
+}
+
+.bp-status-section input{
+
+    width:16px;
+
+    height:16px;
+
+}
+
+/* ==========================================
+   PRODUCER
+========================================== */
+
+.bp-producer-row{
+
+    margin-bottom:20px;
+
+}
+
+/* ==========================================
+   FORM
+========================================== */
+
+.bp-form {
+
+    margin-top: 10px;
+
+}
+
+/* ==========================================
+   GENERAL INFORMATION
+========================================== */
+
+.bp-form-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:14px 18px;
+
+    margin-top:10px;
+
+}
+
+/* ==========================================================
+   NOTES
+========================================================== */
+
+.bp-notes{
+
+    margin-top:22px;
+
+}
+
+.bp-label{
+
+    display:block;
+
+    margin-bottom:8px;
+
+    font-size:11px;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+
+    color:#8d6333;
+
+    text-transform:uppercase;
+
+}
+
+.bp-notes-textarea{
+
+    width:100%;
+
+    min-height:120px;
+
+    resize:vertical;
+
+    padding:10px 12px;
+
+    border:1px solid var(--border);
+
+    border-radius:6px;
+
+    background:#fffdf8;
+
+    font-size:13px;
+
+    font-family:inherit;
+
+    box-sizing:border-box;
+
+}
+
+.bp-notes-textarea:focus{
+
+    outline:none;
+
+    border-color:#b9852d;
+
+}
+
+/* ==========================================================
+   FOOTER
+========================================================== */
+
+.bp-footer{
+
+    display:flex;
+
+    gap:10px;
+
+    margin-top:22px;
+
+    padding-top:18px;
+
+    border-top:1px solid var(--border);
+
+}
