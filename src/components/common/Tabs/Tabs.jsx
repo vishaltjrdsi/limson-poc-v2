@@ -5,9 +5,12 @@ function Tabs({
   activeTab,
   onChange = () => {},
   variant = "pill",
+  className = "",
 }) {
   return (
-    <div className={`tabs tabs-${variant}`}>
+    <div
+      className={`tabs tabs-${variant} ${className}`}
+    >
       {tabs.map((tab) => (
         <button
           key={tab}

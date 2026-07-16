@@ -8,9 +8,9 @@ const menuData = {
         { label: "Purchase Orders (Pending)", path: "#" },
         { label: "Sales Orders (Pending)", path: "#" },
         { label: "Inventory Control (Pending)", path: "#" },
-        { label: "Repack Order (Pending)", path: "#" },
-        { label: "Transfer Order (Pending)", path: "#" },
-        { label: "Pending Orders (InProgress)", path: ROUTES.PENDING_ORDERS },
+        { label: "Repack Order (InProgress)", path: "#" },
+        { label: "Transfer Order", path: ROUTES.TRANSFER_ORDER,},
+        { label: "Pending Orders", path: ROUTES.PENDING_ORDERS },
       ],
     },
     {

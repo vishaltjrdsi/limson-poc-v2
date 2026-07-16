@@ -28,7 +28,8 @@ import {
   ItemsContactsReports,
   BusinessPartners,
   ItemMaintenance,
-  PendingOrders
+  PendingOrders,
+  TransferOrder,
 } from "../pages";
 
 import { ROUTES } from "./routeConstants";
@@ -109,6 +110,8 @@ function AppRoutes() {
         <Route path={ROUTES.ITEM_MAINTENANCE} element={<ItemMaintenance />} />
 
         <Route path={ROUTES.PENDING_ORDERS} element={<PendingOrders />} />
+
+        <Route path={ROUTES.TRANSFER_ORDER} element={<TransferOrder />} />
       </Route>
     </Routes>
   );

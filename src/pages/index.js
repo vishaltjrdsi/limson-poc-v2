@@ -49,3 +49,6 @@ export { default as BusinessPartners } from "./Apps/BusinessPartners/BusinessPar
 export { default as ItemMaintenance } from "./Apps/ItemMaintenance/ItemMaintenance";
 
 export { default as PendingOrders } from "./Apps/PendingOrders/PendingOrders";
+
+export { default as TransferOrder }
+    from "./Apps/TransferOrder/TransferOrder";

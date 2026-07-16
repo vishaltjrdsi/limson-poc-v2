@@ -1,0 +1,114 @@
+.transfer-location-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:28px;
+
+}
+
+.transfer-panel{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.transfer-card-title{
+
+    margin:0 0 18px;
+
+    font-size:18px;
+
+    font-weight:600;
+
+}
+
+.transfer-panel .input-group,
+.transfer-panel .select-group{
+
+    margin-bottom:12px;
+
+}
+
+.transfer-panel .input-group:last-child,
+.transfer-panel .select-group:last-child{
+
+    margin-bottom:0;
+
+}
+
+.transfer-form-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:18px;
+
+    margin-top:20px;
+
+}
+
+.transfer-summary{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:flex-start;
+
+    gap:40px;
+
+    padding:14px 18px;
+
+    border-top:1px solid var(--border);
+
+    background:#fffdf8;
+
+}
+
+.transfer-footer{
+
+    display:flex;
+
+    gap:10px;
+
+    padding:14px 18px;
+
+    border-top:1px solid var(--border);
+
+    background:#fffdf8;
+
+}
+
+
+/* Header */
+
+.transfer-header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.transfer-header-fields {
+  display: flex;
+  align-items: flex-end;
+  gap: 14px;
+}
+
+.transfer-header-fields .input-group {
+  width: 120px;
+}
+
+.transfer-header button {
+  margin-bottom: 2px;
+}
+
+.transfer-tabs {
+  margin: 10px;
+}
