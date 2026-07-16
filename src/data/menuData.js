@@ -10,13 +10,13 @@ const menuData = {
         { label: "Inventory Control (Pending)", path: "#" },
         { label: "Repack Order (Pending)", path: "#" },
         { label: "Transfer Order (Pending)", path: "#" },
-        { label: "Pending Orders (Pending)", path: "#" },
+        { label: "Pending Orders (InProgress)", path: "#" },
       ],
     },
     {
       title: "MASTER DATA",
       items: [
-        { label: "Item Maintainance (InProgress)", path: ROUTES.ITEM_MAINTENANCE },
+        { label: "Item Maintainance", path: ROUTES.ITEM_MAINTENANCE },
         { label: "Business Partners", path: ROUTES.BUSINESS_PARTNERS },
       ],
     },
