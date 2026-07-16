@@ -30,6 +30,7 @@ import {
   ItemMaintenance,
   PendingOrders,
   TransferOrder,
+  RepackOrder
 } from "../pages";
 
 import { ROUTES } from "./routeConstants";
@@ -112,6 +113,8 @@ function AppRoutes() {
         <Route path={ROUTES.PENDING_ORDERS} element={<PendingOrders />} />
 
         <Route path={ROUTES.TRANSFER_ORDER} element={<TransferOrder />} />
+
+        <Route path={ROUTES.REPACK_ORDER} element={<RepackOrder />} />
       </Route>
     </Routes>
   );

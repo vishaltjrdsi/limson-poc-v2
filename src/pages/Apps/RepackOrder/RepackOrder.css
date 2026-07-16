@@ -1,0 +1,316 @@
+.repack-header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 16px;
+  margin-bottom: 2px;
+}
+
+.repack-header-fields {
+  display: flex;
+  gap: 16px;
+}
+
+.repack-header-fields .input-group {
+  width: 140px;
+}
+
+.repack-top-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 2px;
+}
+
+.repack-helper {
+  display: block;
+  margin-top: 6px;
+  color: #8b8272;
+  font-size: 12px;
+}
+
+.repack-card-grid {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 24px;
+
+  align-items: stretch;
+}
+
+.repack-panel {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 16px;
+}
+
+.repack-card-grid > .card {
+  display: flex;
+  flex-direction: column;
+  min-height: 230px;
+}
+
+.repack-card-title {
+  margin: 0 0 6px;
+
+  font-size: 16px;
+
+  font-weight: 600;
+}
+
+.repack-form-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 16px;
+}
+
+.repack-form-grid .full-width {
+  grid-column: 1 / -1;
+}
+
+.repack-panel .input-group {
+  margin-bottom: 0;
+}
+
+.repack-notes {
+  margin-bottom: 2px;
+}
+
+.repack-notes-textarea {
+  width: 100%;
+  min-height: 70px;
+  resize: vertical;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 12px;
+  background: #fffdf8;
+}
+
+.repack-details-card {
+  margin-top: 1px;
+}
+
+.repack-summary {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  padding: 14px 18px;
+  border-top: 1px solid var(--border);
+}
+
+.repack-total {
+  margin-left: auto;
+  color: #2f6d37;
+  font-weight: 700;
+}
+
+.repack-footer {
+  display: flex;
+  gap: 12px;
+  padding: 14px 18px;
+  border-top: 1px solid var(--border);
+}
+
+.repack-tabs {
+  margin: 10px;
+}
+
+.repack-panel:first-child{
+
+    border-right:1px solid var(--border);
+
+    padding-right:20px;
+
+}
+
+.repack-panel:last-child{
+
+    padding-left:20px;
+
+}
+
+
+/* ===========================================
+   Section Header
+=========================================== */
+
+.repack-header-actions{
+
+    display:flex;
+
+    align-items:flex-end;
+
+    gap:14px;
+
+}
+
+.repack-header-actions .input-group{
+
+    width:140px;
+
+    margin-bottom:0;
+
+}
+
+.repack-header-actions .button{
+
+    margin-bottom:2px;
+
+}
+
+/* ===========================================
+   Source / Packer
+=========================================== */
+
+.repack-top-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:20px;
+
+    margin-bottom:20px;
+
+}
+
+.repack-helper{
+
+    display:block;
+
+    margin-top:6px;
+
+    color:#8b8272;
+
+    font-size:12px;
+
+}
+
+/* ===========================================
+   Source Item / Result Item
+=========================================== */
+
+.repack-card-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:28px;
+
+}
+
+.repack-panel{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.repack-panel:first-child{
+
+    border-right:1px solid #e5dfd4;
+
+    padding-right:20px;
+
+}
+
+.repack-panel:last-child{
+
+    padding-left:20px;
+
+}
+
+.repack-card-title{
+
+    margin:0 0 16px;
+
+    font-size:18px;
+
+    font-weight:600;
+
+}
+
+.repack-panel .input-group{
+
+    margin-bottom:14px;
+
+}
+
+/* ===========================================
+   Notes
+=========================================== */
+
+.repack-notes{
+
+    margin-top:20px;
+
+}
+
+.repack-notes-textarea{
+
+    width:100%;
+
+    min-height:70px;
+
+    border:1px solid #ddd;
+
+    border-radius:8px;
+
+    resize:vertical;
+
+    padding:10px 12px;
+
+}
+
+/* ===========================================
+   Details
+=========================================== */
+
+.repack-details-card{
+
+    margin-top:20px;
+
+}
+
+.repack-summary{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:40px;
+
+    padding:14px 18px;
+
+    border-top:1px solid #e5dfd4;
+
+}
+
+.repack-total{
+
+    margin-left:auto;
+
+    color:#2f6d37;
+
+    font-weight:600;
+
+}
+
+.repack-footer{
+
+    display:flex;
+
+    gap:12px;
+
+    padding:14px 18px;
+
+    border-top:1px solid #e5dfd4;
+
+}
