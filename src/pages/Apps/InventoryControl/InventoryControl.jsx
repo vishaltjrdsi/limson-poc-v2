@@ -6,7 +6,6 @@ import {
 
  import InventoryHeader from "./components/InventoryHeader";
  import InventorySummary from "./components/InventorySummary";
- import InventoryStatus from "./components/InventoryStatus";
  import LotTransactions from "./components/LotTransactions";
 
 import "./InventoryControl.css";
@@ -33,7 +32,6 @@ function InventoryControl() {
 
       </SectionCard>
 
-      <InventoryStatus />
 
       <LotTransactions /> 
 
