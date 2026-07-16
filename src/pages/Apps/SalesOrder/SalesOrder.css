@@ -1,0 +1,134 @@
+/* ===========================
+   Header
+=========================== */
+
+.sales-header-actions {
+  display: flex;
+  gap: 10px;
+}
+
+/* ===========================
+   Top Cards
+=========================== */
+.sales-info-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 355px;
+}
+
+.sales-info-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 18px;
+
+  align-items: stretch;
+}
+
+.sales-info-grid > .card {
+  display: flex;
+
+  flex-direction: column;
+
+  margin-top: 0px;
+}
+
+.sales-card-title {
+  margin: 0 0 14px;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.02em;
+}
+
+.sales-address-content {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5px;
+  gap: 8px;
+  flex: 1;
+}
+
+.sales-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.sales-form-grid .full-width {
+  grid-column: 1 / -1;
+}
+
+/* ===========================
+   Details Grid
+=========================== */
+
+.sales-details-card {
+  margin-top: 20px;
+}
+
+.sales-summary {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 16px 20px;
+  border-top: 1px solid var(--border);
+}
+
+.sales-summary div {
+  font-size: 13px;
+}
+
+.sales-summary strong {
+  font-weight: 700;
+}
+
+.sales-process-btn {
+  margin-left: auto;
+}
+
+.ship-box {
+  border: 1px solid var(--border);
+
+  border-radius: 4px;
+
+  background: #fffdf8;
+
+  padding: 10px 12px;
+
+  margin-bottom: 16px;
+
+  min-height: 74px;
+}
+
+.ship-box strong {
+  color: #0b7285;
+
+  font-size: 13px;
+}
+
+.ship-box div {
+  font-size: 12px;
+
+  margin-top: 2px;
+}
+
+.sales-order-tabs{
+    margin: 13px;
+}
+/* ===========================
+   Responsive
+=========================== */
+
+@media (max-width: 1200px) {
+  .sales-info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sales-info-card {
+    min-height: auto;
+  }
+}

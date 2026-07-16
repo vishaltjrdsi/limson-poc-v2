@@ -5,10 +5,10 @@ const menuData = {
     {
       title: "CORE WORKFLOWS",
       items: [
-        { label: "Purchase Orders (Pending)", path: "#" },
-        { label: "Sales Orders (InProgress)", path: "#" },
+        { label: "Purchase Orders (InProgress)", path: "#" },
+        { label: "Sales Orders", path: ROUTES.SALES_ORDER},
         { label: "Inventory Control", path: ROUTES.INVENTORY_CONTROL},
-        { label: "Repack Order", path: ROUTES.REPACK_ORDER },
+        { label: "Repack Order", path: ROUTES.REPACK_ORDER},
         { label: "Transfer Order", path: ROUTES.TRANSFER_ORDER},
         { label: "Pending Orders", path: ROUTES.PENDING_ORDERS },
       ],

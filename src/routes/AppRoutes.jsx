@@ -31,7 +31,8 @@ import {
   PendingOrders,
   TransferOrder,
   RepackOrder,
-  InventoryControl
+  InventoryControl,
+  SalesOrder
 } from "../pages";
 
 import { ROUTES } from "./routeConstants";
@@ -118,6 +119,8 @@ function AppRoutes() {
         <Route path={ROUTES.REPACK_ORDER} element={<RepackOrder />} />
 
         <Route path={ROUTES.INVENTORY_CONTROL} element={<InventoryControl />} />
+
+        <Route path={ROUTES.SALES_ORDER} element={<SalesOrder />} />
       </Route>
     </Routes>
   );
