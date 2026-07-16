@@ -10,7 +10,7 @@ const menuData = {
         { label: "Inventory Control (Pending)", path: "#" },
         { label: "Repack Order (Pending)", path: "#" },
         { label: "Transfer Order (Pending)", path: "#" },
-        { label: "Pending Orders (InProgress)", path: "#" },
+        { label: "Pending Orders (InProgress)", path: ROUTES.PENDING_ORDERS },
       ],
     },
     {

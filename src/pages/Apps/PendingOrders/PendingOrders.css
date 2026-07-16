@@ -1,0 +1,72 @@
+.pending-orders-page{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:16px;
+
+}
+.pending-checkbox{
+
+    width:18px;
+
+    height:18px;
+
+    cursor:pointer;
+
+}
+
+.pending-orders .ag-cell{
+
+    display:flex;
+
+    align-items:center;
+
+}
+
+.pending-po{
+
+    font-weight:700;
+
+    color:#1f1f1f;
+
+    cursor:pointer;
+
+}
+
+.pending-po:hover{
+
+    color:#0b5cab;
+
+}
+
+.pending-checkbox{
+
+    width:18px;
+
+    height:18px;
+
+    cursor:pointer;
+
+}
+
+.pending-orders-page .ag-row{
+
+    min-height:64px;
+
+}
+
+.pending-orders-page .ag-cell{
+
+    display:flex;
+
+    align-items:center;
+
+}
+
+.pending-orders-page .ag-header-cell{
+
+    align-items:center;
+
+}

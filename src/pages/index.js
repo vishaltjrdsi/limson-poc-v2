@@ -47,3 +47,5 @@ export { default as ItemsContactsReports } from "./Reports/ItemsContacts/ItemsCo
 export { default as BusinessPartners } from "./Apps/BusinessPartners/BusinessPartners";
 
 export { default as ItemMaintenance } from "./Apps/ItemMaintenance/ItemMaintenance";
+
+export { default as PendingOrders } from "./Apps/PendingOrders/PendingOrders";
