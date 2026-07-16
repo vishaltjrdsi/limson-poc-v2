@@ -37,6 +37,7 @@ export const ROUTES = {
 
 // APPS
 BUSINESS_PARTNERS: "/apps/business-partners",
+ITEM_MAINTENANCE: "/item-maintenance",
 
   
 };

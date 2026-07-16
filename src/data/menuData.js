@@ -16,8 +16,8 @@ const menuData = {
     {
       title: "MASTER DATA",
       items: [
-        { label: "Item Maintainance (Pending)", path: "#" },
-        { label: "Business Partners (InProgress)", path: ROUTES.BUSINESS_PARTNERS },
+        { label: "Item Maintainance (InProgress)", path: ROUTES.ITEM_MAINTENANCE },
+        { label: "Business Partners", path: ROUTES.BUSINESS_PARTNERS },
       ],
     },
   ],

@@ -27,6 +27,7 @@ import {
   InventoryReports,
   ItemsContactsReports,
   BusinessPartners,
+  ItemMaintenance
 } from "../pages";
 
 import { ROUTES } from "./routeConstants";
@@ -103,6 +104,12 @@ function AppRoutes() {
         {/* Apps */}
 
         <Route path={ROUTES.BUSINESS_PARTNERS} element={<BusinessPartners />} />
+
+        <Route
+  path={ROUTES.ITEM_MAINTENANCE}
+  element={<ItemMaintenance />}
+/>
+
       </Route>
     </Routes>
   );
