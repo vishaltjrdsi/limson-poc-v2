@@ -20,20 +20,22 @@ function Header() {
   const location = useLocation();
 
   const [hoverMenu, setHoverMenu] = useState(null);
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [expandedMenu, setExpandedMenu] = useState(null);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [mobileSection, setMobileSection] = useState(null);
 
   const timer = useRef(null);
 
   const isMenuActive = (menu) => {
-  const sections = menuData[menu] || [];
+    const sections = menuData[menu] || [];
 
-  return sections.some((section) =>
-    section.items.some(
-      (item) =>
-        item.path !== "#" &&
-        location.pathname.startsWith(item.path)
-    )
-  );
-};
+    return sections.some((section) =>
+      section.items.some(
+        (item) => item.path !== "#" && location.pathname.startsWith(item.path),
+      ),
+    );
+  };
 
   const menuIcons = {
     APPS: <MdApps className="nav-icon" />,
@@ -57,137 +59,146 @@ function Header() {
 
   return (
     <header className="header">
-
       {/* Left */}
 
       <div className="header-left">
+        <img src={logo} alt="Atlas Logo" className="header-logo" />
 
-        <img
-          src={logo}
-          alt="Atlas Logo"
-          className="header-logo"
-        />
-
-        <h2 className="header-title">
-          ATLAS
-        </h2>
-
+        <h2 className="header-title">ATLAS</h2>
       </div>
 
       {/* Menu */}
+      <>
+        <nav className="header-nav">
+          {menus.map((menu) => {
+            const sections = menuData[menu] || [];
 
-      <nav className="header-nav">
+            const totalItems = sections.reduce(
+              (count, section) => count + section.items.length,
+              0,
+            );
 
-        {menus.map((menu) => {
+            let columns = 1;
 
-          const sections = menuData[menu] || [];
+            if (totalItems > 20) columns = 3;
+            else if (totalItems > 10) columns = 2;
 
-          const totalItems = sections.reduce(
-            (count, section) => count + section.items.length,
-            0
-          );
-
-          let columns = 1;
-
-          if (totalItems > 20) columns = 3;
-          else if (totalItems > 10) columns = 2;
-
-          return (
-
-            <div
-              key={menu}
-              className="nav-wrapper"
-              onMouseEnter={() => openMenu(menu)}
-              onMouseLeave={closeMenu}
-            >
-
-              <a
-                href="#"
-                onClick={(e) => e.preventDefault()}
-                className={
-    hoverMenu === menu || isMenuActive(menu)
-        ? "active"
-        : ""
-}
+            return (
+              <div
+                key={menu}
+                className="nav-wrapper"
+                onMouseEnter={() => openMenu(menu)}
+                onMouseLeave={closeMenu}
               >
+                <a
+                  href="#"
+                  onClick={(e) => e.preventDefault()}
+                  className={
+                    hoverMenu === menu || isMenuActive(menu) ? "active" : ""
+                  }
+                >
+                  {menuIcons[menu]}
 
+                  <span>{menu}</span>
+                </a>
+
+                {hoverMenu === menu && (
+                  <div
+                    className="dropdown-menu"
+                    style={{
+                      "--columns": columns,
+                    }}
+                  >
+                    <div className="dropdown-grid">
+                      {sections.map((section) => (
+                        <div key={section.title} className="dropdown-section">
+                          <h5>{section.title}</h5>
+
+                          {section.items.map((item) => (
+                            <div
+                              key={item.label}
+                              className={`dropdown-item ${
+                                location.pathname === item.path ? "active" : ""
+                              }`}
+                              onClick={() => {
+                                if (item.path !== "#") {
+                                  navigate(item.path);
+                                }
+
+                                setHoverMenu(null);
+                              }}
+                            >
+                              {item.label}
+                            </div>
+                          ))}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+            );
+          })}
+        </nav>
+
+        <div className={`mobile-menu ${mobileOpen ? "open" : ""}`}>
+          <div className="mobile-top">
+            <span>MENU</span>
+
+            <button onClick={() => setMobileOpen(false)}>✕</button>
+          </div>
+
+          {menus.map((menu) => (
+            <div key={menu} className="mobile-group">
+              <div
+                className="mobile-title"
+                onClick={() =>
+                  setExpandedMenu(expandedMenu === menu ? null : menu)
+                }
+              >
                 {menuIcons[menu]}
 
                 <span>{menu}</span>
+              </div>
 
-              </a>
-
-              {hoverMenu === menu && (
-
-                <div
-                  className="dropdown-menu"
-                  style={{
-                    "--columns": columns,
-                  }}
-                >
-
-                  <div className="dropdown-grid">
-
-                    {sections.map((section) => (
-
-                      <div
-                        key={section.title}
-                        className="dropdown-section"
-                      >
-
-                        <h5>{section.title}</h5>
-
-                        {section.items.map((item) => (
-
-                          <div
-                            key={item.label}
-                            className={`dropdown-item ${
-                              location.pathname === item.path
-                                ? "active"
-                                : ""
-                            }`}
-                            onClick={() => {
-
-                              if (item.path !== "#") {
-                                navigate(item.path);
-                              }
-
-                              setHoverMenu(null);
-
-                            }}
-                          >
-
-                            {item.label}
-
-                          </div>
-
-                        ))}
-
+              {expandedMenu === menu && (
+                <div className="mobile-sections">
+                  {menuData[menu].map((section) => (
+                    <div key={section.title}>
+                      <div className="mobile-section-title">
+                        {section.title}
                       </div>
 
-                    ))}
+                      {section.items.map((item) => (
+                        <div
+                          key={item.label}
+                          className="mobile-item"
+                          onClick={() => {
+                            navigate(item.path);
 
-                  </div>
-
+                            setMobileOpen(false);
+                          }}
+                        >
+                          {item.label}
+                        </div>
+                      ))}
+                    </div>
+                  ))}
                 </div>
-
               )}
-
             </div>
+          ))}
+        </div>
+      </>
 
-          );
-
-        })}
-
-      </nav>
+      <button className="mobile-toggle" onClick={() => setMobileMenuOpen(true)}>
+        ☰
+      </button>
 
       {/* Right */}
 
       <div className="header-right">
-
-        <span className="environment-chip">
-          US US
-        </span>
+        <span className="environment-chip">US US</span>
 
         <span className="environment-chip environment-chip-wide">
           SIT ENVIRONMENT
@@ -197,20 +208,72 @@ function Header() {
 
         <FaBell className="icon" />
 
-        <span className="user-avatar">
-          R
-        </span>
+        <span className="user-avatar">R</span>
 
-        <span className="user-name">
-          Local Dev User
-        </span>
+        <span className="user-name">Local Dev User</span>
 
         <FiChevronDown className="user-caret" />
 
         <FiLogOut className="logout-icon" />
-
       </div>
 
+      {/* Mobile Responive */}
+
+      {mobileMenuOpen && (
+        <div
+          className="mobile-overlay"
+          onClick={() => setMobileMenuOpen(false)}
+        >
+          <div className="mobile-drawer" onClick={(e) => e.stopPropagation()}>
+            <div className="mobile-header">
+              <h3>Menu</h3>
+
+              <button onClick={() => setMobileMenuOpen(false)}>✕</button>
+            </div>
+
+            {menus.map((menu) => (
+              <div key={menu} className="mobile-section">
+                <div
+                  className="mobile-section-title"
+                  onClick={() =>
+                    setMobileSection(mobileSection === menu ? null : menu)
+                  }
+                >
+                  <span>{menuIcons[menu]}</span>
+
+                  <span>{menu}</span>
+                </div>
+
+                {mobileSection === menu && (
+                  <div className="mobile-items">
+                    {menuData[menu].map((section) => (
+                      <div key={section.title}>
+                        <div className="mobile-subtitle">{section.title}</div>
+
+                        {section.items.map((item) => (
+                          <div
+                            key={item.label}
+                            className="mobile-item"
+                            onClick={() => {
+                              if (item.path !== "#") {
+                                navigate(item.path);
+                              }
+
+                              setMobileMenuOpen(false);
+                            }}
+                          >
+                            {item.label}
+                          </div>
+                        ))}
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
     </header>
   );
 }
