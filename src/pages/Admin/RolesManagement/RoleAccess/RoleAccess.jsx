@@ -66,7 +66,7 @@ function RoleAccess() {
           </div>
         </div>
 
-        <div className="card-footer">
+        <div className="card-role-access-footer">
           <Button variant="secondary">Clear Subs</Button>
 
           <Button>Save Role</Button>
