@@ -12,19 +12,21 @@ function Select({
   compact = false,
   className = "",
   style = {},
+  inputStyle = {},
 }) {
   return (
     <div
       className={`select-group ${compact ? "compact" : ""} ${className}`}
-      style={style}
+      style={{
+        width: "100%",
+        ...style,
+      }}
     >
       {label && (
         <label className="select-label">
           {label}
 
-          {required && (
-            <span className="required">*</span>
-          )}
+          {required && <span className="required">*</span>}
         </label>
       )}
 
@@ -34,28 +36,24 @@ function Select({
         value={value}
         onChange={onChange}
         disabled={disabled}
+        style={{
+          background: "#fffdf8",
+          ...inputStyle,
+        }}
       >
-        <option value="">
-          {placeholder}
-        </option>
+        <option value="">{placeholder}</option>
 
         {options.map((option) => {
           if (typeof option === "string") {
             return (
-              <option
-                key={option}
-                value={option}
-              >
+              <option key={option} value={option}>
                 {option}
               </option>
             );
           }
 
           return (
-            <option
-              key={option.value}
-              value={option.value}
-            >
+            <option key={option.value} value={option.value}>
               {option.label}
             </option>
           );

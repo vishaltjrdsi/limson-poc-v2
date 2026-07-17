@@ -5,7 +5,7 @@ const menuData = {
     {
       title: "CORE WORKFLOWS",
       items: [
-        { label: "Purchase Orders (InProgress)", path: ROUTES.PURCHASE_ORDERS},
+        { label: "Purchase Orders", path: ROUTES.PURCHASE_ORDERS},
         { label: "Sales Orders", path: ROUTES.SALES_ORDER},
         { label: "Inventory Control", path: ROUTES.INVENTORY_CONTROL},
         { label: "Repack Order", path: ROUTES.REPACK_ORDER},

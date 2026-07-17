@@ -1,48 +1,47 @@
 export const ROUTES = {
   HOME: "/",
 
-  // ADMIN
-  PROGRAM_SETTINGS: "/program-settings",
-  SCREEN_SETUP: "/screen-setup",
-  VENDOR_RULES: "/vendor-rules",
-  WAREHOUSE_RULES: "/warehouse-rules",
-  LIST_NAVIGATION: "/list-navigation",
-  MASTER_DATA_LIST: "/master-data-list",
-
-  // ADJUSTMENTS
-  INVENTORY_ADJUSTMENT: "/inventory-adjustment",
-  TX_QTY_ADJUSTMENT: "/tx-qty-adjustment",
-
-  // USERS
-  USER_SETTINGS: "/user-settings",
-  ROLES: "/roles",
-  BACKUP_ACCESS: "/backup-access",
-
-  // TOOLS
-  SPOT_RATE: "/tools/spot-rate",
-  FISCAL_CALENDAR: "/fiscal-calendar",
-  EDI_SETTINGS: "/edi-settings",
-  UNIT_OF_MEASURE: "/unit-of-measure",
-  PRICING_MISMATCH: "/pricing-mismatch",
-
-  // MASTER DATA
-  CANOPY_EXPORTS: "/canopy-exports",
+  // APPS
+  PURCHASE_ORDERS: "/apps/purchase-orders",
+  SALES_ORDER: "/apps/sales-order",
+  INVENTORY_CONTROL: "/apps/inventory-control",
+  REPACK_ORDER: "/apps/repack-order",
+  TRANSFER_ORDER: "/apps/transfer-order",
+  PENDING_ORDERS: "/apps/pending-orders",
+  ITEM_MAINTENANCE: "/apps/item-maintenance",
+  BUSINESS_PARTNERS: "/apps/business-partners",
 
   // REPORTS
-  REPORTS: "/reports",
+  // REPORTS: "/reports",
   SALES_REPORTS: "/reports/sales",
   PURCHASING_REPORTS: "/reports/purchasing",
   INVENTORY_REPORTS: "/reports/inventory",
   ITEMS_CONTACTS_REPORTS: "/reports/items-contacts",
 
-// APPS
-BUSINESS_PARTNERS: "/apps/business-partners",
-ITEM_MAINTENANCE: "/item-maintenance",
-PENDING_ORDERS: "/pending-orders",
-TRANSFER_ORDER: "/transfer-order",
-REPACK_ORDER: "/repack-order",
-INVENTORY_CONTROL: "/inventory-control",
-SALES_ORDER: "/sales-order",
-PURCHASE_ORDERS: "/purchase-orders",
-  
+  // ADMIN
+  PROGRAM_SETTINGS: "/admin/program-settings",
+  SCREEN_SETUP: "/admin/screen-setup",
+  VENDOR_RULES: "/admin/vendor-rules",
+  WAREHOUSE_RULES: "/admin/warehouse-rules",
+
+  LIST_NAVIGATION: "/admin/list-navigation",
+  CANOPY_EXPORTS: "/admin/canopy-exports",
+  MASTER_DATA_LIST: "/admin/master-data-list",
+
+  USER_SETTINGS: "/admin/user-settings",
+  ROLES: "/admin/roles",
+  BACKUP_ACCESS: "/admin/backup-access",
+
+  INVENTORY_ADJUSTMENT: "/admin/inventory-adjustment",
+  TX_QTY_ADJUSTMENT: "/admin/tx-qty-adjustment",
+
+  // TOOLS
+  SPOT_RATE: "/tools/spot-rate",
+  FISCAL_CALENDAR: "/tools/fiscal-calendar",
+  EDI_SETTINGS: "/tools/edi-settings",
+  UNIT_OF_MEASURE: "/tools/unit-of-measure",
+  PRICING_MISMATCH: "/tools/pricing-mismatch",
+
+
+
 };

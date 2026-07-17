@@ -10,6 +10,7 @@ function Input({
   name,
   required = false,
   disabled = false,
+  style = {},
 }) {
   return (
     <div className={`input-group ${className}`}>
@@ -26,12 +27,17 @@ function Input({
 
       <input
         className="input-field"
+        style={style}
         type={type}
         name={name}
         value={value}
         placeholder={placeholder}
         onChange={onChange}
         disabled={disabled}
+        style={{
+          borderRadius: "6px",
+          ...style,
+        }}
       />
 
     </div>
