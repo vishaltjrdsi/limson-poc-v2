@@ -32,7 +32,8 @@ import {
   TransferOrder,
   RepackOrder,
   InventoryControl,
-  SalesOrder
+  SalesOrder,
+  PurchaseOrders,
 } from "../pages";
 
 import { ROUTES } from "./routeConstants";
@@ -121,6 +122,8 @@ function AppRoutes() {
         <Route path={ROUTES.INVENTORY_CONTROL} element={<InventoryControl />} />
 
         <Route path={ROUTES.SALES_ORDER} element={<SalesOrder />} />
+
+        <Route path={ROUTES.PURCHASE_ORDERS} element={<PurchaseOrders />} />
       </Route>
     </Routes>
   );

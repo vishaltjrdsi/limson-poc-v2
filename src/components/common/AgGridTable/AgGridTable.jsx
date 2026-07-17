@@ -14,16 +14,17 @@ function AgGridTable({
   maxHeight = 450,
   pagination = true,
   pageSize = 10,
+  className = "",
+  onSelectionChanged,
+  rowSelection = "single",
 }) {
-  const shouldAutoHeight =
-    autoHeight && rowData.length <= 10;
+  const shouldAutoHeight = autoHeight && rowData.length <= 10;
 
   const gridClassName = [
     "ag-theme-quartz",
     "limson-grid",
-    shouldAutoHeight
-      ? "limson-grid-auto-height"
-      : "",
+    shouldAutoHeight ? "limson-grid-auto-height" : "",
+    className,
   ]
     .filter(Boolean)
     .join(" ");
@@ -32,9 +33,7 @@ function AgGridTable({
     <div
       className={gridClassName}
       style={{
-        height: shouldAutoHeight
-          ? "auto"
-          : Math.min(height, maxHeight),
+        height: shouldAutoHeight ? "auto" : Math.min(height, maxHeight),
         maxHeight,
       }}
     >
@@ -48,11 +47,7 @@ function AgGridTable({
         paginationPageSize={pageSize}
         rowHeight={38}
         headerHeight={34}
-        domLayout={
-          shouldAutoHeight
-            ? "autoHeight"
-            : "normal"
-        }
+        domLayout={shouldAutoHeight ? "autoHeight" : "normal"}
         overlayNoRowsTemplate="
           <span class='ag-overlay-no-rows-center'>
             No records found

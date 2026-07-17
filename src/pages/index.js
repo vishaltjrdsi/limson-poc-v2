@@ -57,3 +57,5 @@ export { default as RepackOrder } from "./Apps/RepackOrder/RepackOrder";
 export { default as InventoryControl } from "./Apps/InventoryControl/InventoryControl";
 
 export { default as SalesOrder } from "./Apps/SalesOrder/SalesOrder";
+
+export { default as PurchaseOrders } from "./Apps/PurchaseOrders/PurchaseOrders";

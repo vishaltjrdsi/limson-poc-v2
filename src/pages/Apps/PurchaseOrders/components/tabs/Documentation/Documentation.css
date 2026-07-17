@@ -1,0 +1,153 @@
+.documentation-page{
+    padding:18px 20px;
+    background:#f7f5ef;
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+/* ---------- TOP ---------- */
+
+.documentation-top{
+    display:grid;
+    grid-template-columns:620px 370px 260px;
+    gap:20px;
+    align-items:start;
+}
+
+.doc-column{
+display:flex;
+flex-direction:column;
+gap:10px;
+flex: 1;
+}
+
+.doc-column h3{
+    margin:0 0 10px;
+    font-size:12px;
+    font-weight:700;
+    color:#183b63;
+}
+
+.doc-row{
+    display:flex;
+    justify-content: space-between;
+    gap:8px;
+    margin-bottom:8px;
+}
+
+.doc-row span{
+    font-size:10px;
+    font-weight:600;
+}
+
+/* ---------- NOTES ---------- */
+
+.doc-notes-header{
+    height:18px;
+    line-height:18px;
+    background:#ccd2db;
+    border:1px solid #b8c0cb;
+    border-bottom:none;
+    padding:0 6px;
+    font-size:10px;
+    font-weight:700;
+    color:#183b63;
+}
+
+.doc-notes textarea{
+    width:100%;
+    height:62px;
+    resize:none;
+    border:1px solid #b8c0cb;
+    padding:6px;
+    font-size:11px;
+    box-sizing:border-box;
+}
+
+/* ---------- RIGHT ---------- */
+
+.multi-select-area{
+    display:grid;
+    grid-template-columns:115px 115px;
+    column-gap:16px;
+    justify-content:start;
+}
+
+.multi-list{
+    width:118px;
+    text-align:center;
+}
+
+.multi-list label{
+    display:block;
+    margin-bottom:6px;
+    font-size:10px;
+    font-weight:700;
+}
+
+.multi-list select{
+    width:118px;
+    height:300px;
+    font-size:10px;
+}
+
+.multi-list button{
+    margin-top:8px;
+}
+
+/* ---------- DOCUMENTS ---------- */
+
+.documents-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin:18px 0 10px;
+}
+
+.documents-header h3{
+    margin:0;
+    font-size:12px;
+    color:#183b63;
+}
+
+.documents-filter{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:8px;
+    width: 300px;
+}
+
+.documents-filter span{
+    font-size:11px;
+    font-weight:600;
+    width: 180px;
+}
+
+.documents-grid {
+  height: 150px;
+  border: 1px solid #c8c8c8;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.purchase-column{
+    width:620px;
+}
+
+.ship-column{
+    width:360px;
+}
+
+.doc-btn{
+    min-width:120px;
+}
+
+.documents-section{
+  width: 50%;
+}
+
+.select-group{
+  width: 500px;
+}

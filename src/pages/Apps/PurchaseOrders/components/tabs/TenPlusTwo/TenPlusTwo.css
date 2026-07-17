@@ -1,0 +1,62 @@
+.tenplus2-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 2px;
+  margin-bottom: 2px;
+}
+
+.tenplus2-field {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #cfd5de;
+  background: #fff;
+}
+
+.tenplus2-label {
+  background: #d6dbe3;
+  color: #30435d;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  text-align: center;
+  padding: 6px;
+}
+
+.tenplus2-field .input-wrapper,
+.tenplus2-field .input-container {
+  margin: 0;
+}
+
+.tenplus2-field input {
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  height: 32px;
+  text-align: center;
+}
+
+.tenplus2-notes {
+  border: 1px solid #cfd5de;
+}
+
+.tenplus2-notes-title {
+  background: #d6dbe3;
+  color: #30435d;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 6px;
+}
+
+.tenplus2-notes textarea {
+  width: 100%;
+  min-height: 200px;
+  border: none;
+  resize: vertical;
+  padding: 10px;
+  font-size: 12px;
+  font-family: inherit;
+  outline: none;
+  box-sizing: border-box;
+}

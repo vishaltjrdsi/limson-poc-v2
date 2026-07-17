@@ -43,5 +43,6 @@ TRANSFER_ORDER: "/transfer-order",
 REPACK_ORDER: "/repack-order",
 INVENTORY_CONTROL: "/inventory-control",
 SALES_ORDER: "/sales-order",
+PURCHASE_ORDERS: "/purchase-orders",
   
 };

@@ -2,42 +2,36 @@
    GROUP
 ========================================================== */
 
-.select-group{
+.select-group {
+  display: flex;
 
-    display:flex;
+  flex-direction: column;
 
-    flex-direction:column;
+  gap: 4px;
 
-    gap:4px;
-
-    width:100%;
-
+  width: 100%;
 }
 
 /* ==========================================================
    LABEL
 ========================================================== */
 
-.select-label{
+.select-label {
+  font-size: 11px;
 
-    font-size:11px;
+  font-weight: 600;
 
-    font-weight:600;
+  color: #666;
 
-    color:#666;
+  letter-spacing: 0.3px;
 
-    letter-spacing:.3px;
-
-    text-transform:uppercase;
-
+  text-transform: uppercase;
 }
 
-.required{
+.required {
+  color: #d84d4d;
 
-    color:#d84d4d;
-
-    margin-left:3px;
-
+  margin-left: 3px;
 }
 
 /* ==========================================================
@@ -45,50 +39,51 @@
 ========================================================== */
 
 .select-input {
-    width: 99%;
+    width: 100%;
     height: 35px;
-
-    padding: 0 36px 0 12px;   /* Leave room for the arrow */
-
+    padding: 0 36px 0 12px;
     background: #fffdf8;
-
     border: 1px solid var(--border);
-
     border-radius: 11.2px;
-
     font-size: var(--text-sm);
-
     color: #333;
-
     outline: none;
-
     transition: all .2s ease;
-
     box-sizing: border-box;
-
     appearance: auto;
     -webkit-appearance: menulist;
     -moz-appearance: menulist;
 }
 
-.select-input:hover{
-
-    border-color:#cbbda6;
-
+.select-input:hover {
+  border-color: #cbbda6;
 }
 
-.select-input:focus{
+.select-input:focus {
+  border-color: #b9862d;
 
-    border-color:#b9862d;
-
-    box-shadow:0 0 0 2px rgba(185,134,45,.08);
-
+  box-shadow: 0 0 0 2px rgba(185, 134, 45, 0.08);
 }
 
-.select-input:disabled{
+.select-input:disabled {
+  background: #f3f3f3;
 
-    background:#f3f3f3;
+  cursor: not-allowed;
+}
 
-    cursor:not-allowed;
+/* ==========================================
+   COMPACT (BOS)
+========================================== */
 
+.select-group.compact {
+  gap: 0;
+}
+
+.select-input.compact {
+  width: 100%;
+  height: 28px;
+  padding: 0 8px;
+  border-radius: 2px;
+  font-size: 11px;
+  background: #fffdf8;
 }

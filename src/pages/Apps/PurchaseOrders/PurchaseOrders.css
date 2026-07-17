@@ -1,0 +1,378 @@
+.purchase-header{
+
+    background:#233f8d;
+
+    color:#fff;
+
+    border-radius:8px 8px 0 0;
+
+    padding:10px 16px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:18px;
+
+}
+
+.purchase-header-left{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+}
+
+.purchase-title{
+
+    font-size:12px;
+
+    font-weight:700;
+
+    line-height:1.1;
+
+    margin-right:8px;
+
+}
+
+.purchase-header-center{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:6px;
+
+    font-size:12px;
+
+}
+
+.purchase-label{
+
+    font-weight:700;
+
+}
+
+.purchase-header-right{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+}
+
+.purchase-header-right .input-group{
+
+    width:90px;
+
+}
+
+.purchase-header-left .select-group{
+
+    width:140px;
+
+}
+
+.purchase-form-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:14px 18px;
+
+}
+
+.purchase-form-grid .full-width{
+
+    grid-column:1;
+
+}
+
+/* ============================
+   Purchase Order Lines
+============================ */
+
+.purchase-lines-card{
+
+    margin-top:18px;
+
+}
+
+.purchase-lines-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:18px;
+
+    border-bottom:1px solid var(--border);
+
+}
+
+.purchase-section-label{
+
+    font-size:11px;
+
+    font-weight:700;
+
+    letter-spacing:.08em;
+
+    color:#8a7a67;
+
+    text-transform:uppercase;
+
+}
+
+.purchase-section-title{
+
+    margin-top:4px;
+
+    font-size:20px;
+
+    font-weight:600;
+
+}
+
+.purchase-summary{
+
+    display:flex;
+
+    justify-content:flex-end;
+
+    gap:40px;
+
+    padding:16px 18px;
+
+    border-top:1px solid var(--border);
+
+}
+
+.purchase-summary div{
+
+    display:flex;
+
+    gap:6px;
+
+}
+
+.purchase-summary span{
+
+    color:#2f6d37;
+
+    font-weight:700;
+
+}
+
+
+/* ==============================
+   Bottom Bar
+============================== */
+
+.purchase-bottom{
+
+    margin-top:18px;
+
+    border:1px solid var(--border);
+
+    border-radius:8px;
+
+    background:#fff;
+
+    overflow:hidden;
+
+}
+
+.purchase-bottom-top{
+
+    padding:14px 16px;
+
+    border-bottom:1px solid var(--border);
+
+}
+
+.purchase-left-actions{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:8px;
+
+}
+
+.purchase-green-header{
+
+    display:grid;
+
+    grid-template-columns:repeat(10,1fr);
+
+    background:#0d5b55;
+
+    color:#fff;
+
+    padding:10px 16px;
+
+    font-size:11px;
+
+    font-weight:700;
+
+    text-transform:uppercase;
+
+}
+
+.purchase-bottom-form{
+
+    display:grid;
+
+    grid-template-columns:2fr 3fr 2fr;
+
+    gap:20px;
+
+    padding:18px;
+
+}
+
+.purchase-action-buttons{
+
+    display:flex;
+
+    gap:8px;
+
+    margin-bottom:16px;
+
+}
+
+.purchase-form-center{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:14px;
+
+}
+
+.purchase-form-right{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:14px;
+
+}
+
+.purchase-summary span {
+    font-weight: 700;
+    font-size: 16px;
+    color: #2f6d37;
+}
+
+
+
+.purchase-bottom-form{
+
+    display:grid;
+
+    grid-template-columns:2.3fr 1fr 1.2fr 1.4fr;
+
+    gap:24px;
+
+    padding:18px;
+
+    align-items:start;
+
+}
+
+.purchase-form-actions{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:14px;
+
+}
+
+.purchase-action-buttons{
+
+    display:flex;
+
+    gap:8px;
+
+    flex-wrap:wrap;
+
+}
+
+.purchase-form-user{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:14px;
+
+    padding-top:2px;
+
+}
+
+.purchase-form-cost{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:14px;
+
+}
+
+.purchase-form-approval{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:12px 16px;
+
+    border-left:1px solid var(--border);
+
+    padding-left:20px;
+
+}
+
+.purchase-edi-title{
+
+    font-size:11px;
+
+    font-weight:700;
+
+    color:#6b7280;
+
+    text-transform:uppercase;
+
+    grid-column:1 / -1;
+
+}
+
+.purchase-total input{
+
+    background:#d8f5df;
+
+    color:#12743d;
+
+    font-weight:700;
+
+    text-align:center;
+
+}
