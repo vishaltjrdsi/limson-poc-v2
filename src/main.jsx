@@ -1,24 +1,29 @@
+import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import { ModuleRegistry, AllCommunityModule } from "ag-grid-community";
 
 import App from "./App";
+import AuthProvider from "./auth/context/AuthProvider";
 
 import "./styles/global.css";
 import "./styles/theme.css";
 import "./styles/typography.css";
 import "./styles/variables.css";
 
+
+
+
 ModuleRegistry.registerModules([
   AllCommunityModule,
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-
-    <BrowserRouter>
-
-        <App/>
-
-    </BrowserRouter>
-
+    <React.StrictMode>
+        <BrowserRouter>
+            <AuthProvider>
+                <App />
+            </AuthProvider>
+        </BrowserRouter>
+    </React.StrictMode>
 );

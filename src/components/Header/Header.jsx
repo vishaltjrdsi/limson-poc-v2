@@ -1,7 +1,7 @@
 import "./Header.css";
 import { useState, useRef } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
-
+import useAuth from "../../auth/hooks/useAuth";
 import menuData from "../../data/menuData";
 import logo from "../../assets/icons/atlas_logo.png";
 
@@ -16,16 +16,16 @@ import {
 } from "react-icons/md";
 
 function Header() {
-  const navigate = useNavigate();
-  const location = useLocation();
-
   const [hoverMenu, setHoverMenu] = useState(null);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [expandedMenu, setExpandedMenu] = useState(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [mobileSection, setMobileSection] = useState(null);
 
+  const navigate = useNavigate();
+  const location = useLocation();
   const timer = useRef(null);
+  const { user, logout } = useAuth();
 
   const isMenuActive = (menu) => {
     const sections = menuData[menu] || [];
@@ -208,13 +208,22 @@ function Header() {
 
         <FaBell className="icon" />
 
-        <span className="user-avatar">R</span>
+        <span className="user-avatar">
+          {user?.name?.charAt(0)?.toUpperCase() || "U"}
+        </span>
 
-        <span className="user-name">Local Dev User</span>
+        <span className="user-name">
+          {user?.name || user?.preferred_username || "User"}
+        </span>
 
         <FiChevronDown className="user-caret" />
 
-        <FiLogOut className="logout-icon" />
+        <FiLogOut
+          className="logout-icon"
+          onClick={logout}
+          title="Logout"
+          style={{ cursor: "pointer" }}
+        />
       </div>
 
       {/* Mobile Responive */}
