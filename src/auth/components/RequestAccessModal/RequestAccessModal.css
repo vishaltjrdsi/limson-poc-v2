@@ -1,0 +1,153 @@
+.request-modal-overlay{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.35);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:999;
+}
+
+.request-modal{
+
+    width:370px;
+
+    background:#d8dbd5;
+
+    border-radius:12px;
+
+    padding:18px;
+
+    position:relative;
+
+    animation:popup .25s ease;
+}
+
+@keyframes popup{
+
+    from{
+
+        transform:scale(.92);
+
+        opacity:0;
+    }
+
+    to{
+
+        transform:scale(1);
+
+        opacity:1;
+    }
+
+}
+
+.close-btn{
+
+    position:absolute;
+
+    right:16px;
+
+    top:16px;
+
+    border:none;
+
+    background:none;
+
+    cursor:pointer;
+
+    color:#666;
+}
+
+.request-header{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin-bottom:25px;
+}
+
+.request-icon{
+
+    width:42px;
+
+    height:42px;
+
+    border-radius:50%;
+
+    background:#d7ece6;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:#2b6158;
+}
+
+.request-header h3{
+
+    margin:0;
+
+    font-size:24px;
+
+    color:#222;
+}
+
+.request-body{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+}
+
+.request-body label{
+
+    font-size:11px;
+
+    font-weight:700;
+
+    color:#666;
+}
+
+.request-body input{
+
+    height:42px;
+
+    border:none;
+
+    border-radius:7px;
+
+    padding:0 14px;
+}
+
+.submit-btn{
+
+    margin-top:12px;
+
+    height:44px;
+
+    border:none;
+
+    border-radius:8px;
+
+    background:#1b6a5d;
+
+    color:white;
+
+    font-weight:700;
+
+    cursor:pointer;
+}

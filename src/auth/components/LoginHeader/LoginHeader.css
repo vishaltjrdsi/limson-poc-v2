@@ -12,6 +12,11 @@
   padding: 0 40px;
 
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+
+
+    position: relative;
+    z-index: 10;
+
 }
 
 .login-header img {
@@ -25,4 +30,19 @@
 .header-right h1 {
   font-size: 12px;
   color: #fff;
+}
+
+.request-access-btn {
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 6px 10px;
+}
+
+.request-access-btn:hover {
+    opacity: 0.8;
 }
