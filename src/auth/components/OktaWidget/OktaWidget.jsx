@@ -19,7 +19,7 @@ function OktaWidget() {
       issuer: oktaConfig.issuer,
       redirectUri: oktaConfig.redirectUri,
       scopes: oktaConfig.scopes,
-
+      oktaAuth,
       useInteractionCodeFlow: true,
     });
 
