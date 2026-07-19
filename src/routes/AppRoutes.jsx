@@ -45,11 +45,10 @@ import { ROUTES } from "./routeConstants";
 function AppRoutes() {
   return (
     <Routes>
+      {/* Public Routes */}
       <Route path="/login" element={<LoginPage />} />
-
-      {/* Okta Callback */}
       <Route path="/login/callback" element={<LoginCallback />} />
-
+      <Route path="/health" element={<HealthCheck />} />
     
       {/* Protected Application */}
       <Route
@@ -59,7 +58,6 @@ function AppRoutes() {
           </AuthenticatedRoute>
         }
       >
-        <Route path="/health" element={<HealthCheck />} />
         
         {/* Home */}
         <Route path={ROUTES.HOME} element={<Home />} />
