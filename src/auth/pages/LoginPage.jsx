@@ -2,6 +2,7 @@ import LoginHeader from "../components/LoginHeader/LoginHeader";
 import LoginFooter from "../components/LoginFooter/LoginFooter";
 import LoginCard from "../components/LoginCard/LoginCard";
 
+
 import "./LoginPage.css";
 
 
@@ -15,7 +16,10 @@ function LoginPage() {
 
             <main className="login-main">
 
-                <div className="background-map"></div>
+<div
+  className="background-map"
+  style={{ backgroundImage: "url('/assets/world-map.jpg')" }} 
+></div>
 
                 <LoginCard />
 
