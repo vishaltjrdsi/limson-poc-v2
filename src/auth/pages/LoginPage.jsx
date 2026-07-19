@@ -1,8 +1,8 @@
-import LoginHeader from "../components/LoginHeader";
-import LoginFooter from "../components/LoginFooter";
-import LoginCard from "../components/LoginCard";
+import LoginHeader from "../components/LoginHeader/LoginHeader";
+import LoginFooter from "../components/LoginFooter/LoginFooter";
+import LoginCard from "../components/LoginCard/LoginCard";
 
-import "../styles/LoginPage.css";
+import "./LoginPage.css";
 
 
 function LoginPage() {
@@ -21,7 +21,7 @@ function LoginPage() {
 
             </main>
 
-            <LoginFooter />
+            {/* <LoginFooter /> */}
 
         </div>
 

@@ -3,7 +3,7 @@ import { useState, useRef } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import useAuth from "../../auth/hooks/useAuth";
 import menuData from "../../data/menuData";
-import logo from "../../assets/icons/atlas_logo.png";
+import logo from "../../assets/icons/atlas-logo.png";
 
 import { FaBell, FaSearch } from "react-icons/fa";
 import { FiChevronDown, FiLogOut } from "react-icons/fi";

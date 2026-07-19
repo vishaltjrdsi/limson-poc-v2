@@ -11,7 +11,7 @@ import "./styles/theme.css";
 import "./styles/typography.css";
 import "./styles/variables.css";
 import "@okta/okta-signin-widget/css/okta-sign-in.min.css";
-import "./auth/styles/oktaWidget.css"
+import "./auth/components/OktaWidget/OktaWidget";
 
 
 ModuleRegistry.registerModules([

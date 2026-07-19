@@ -2,8 +2,11 @@ import { useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import OktaSignIn from "@okta/okta-signin-widget";
 
-import oktaConfig from "../okta/oktaConfig";
-import oktaAuth from "../okta/oktaAuth";
+import oktaConfig from "../../okta/oktaConfig";
+import oktaAuth from "../../okta/oktaAuth";
+
+import "@okta/okta-signin-widget/css/okta-sign-in.min.css";
+import "./oktaWidget.css";
 
 function OktaWidget() {
   const widgetRef = useRef(null);
@@ -16,6 +19,7 @@ function OktaWidget() {
       issuer: oktaConfig.issuer,
       redirectUri: oktaConfig.redirectUri,
       scopes: oktaConfig.scopes,
+
       useInteractionCodeFlow: true,
     });
 
@@ -24,11 +28,11 @@ function OktaWidget() {
         el: widgetRef.current,
       })
       .then(async (tokens) => {
-        // ⭐ This is the missing piece
         oktaAuth.tokenManager.setTokens(tokens);
 
-        // Navigate into your app
-        navigate("/", { replace: true });
+        navigate("/", {
+          replace: true,
+        });
       })
       .catch((err) => {
         console.error("Okta Widget Error:", err);
@@ -37,7 +41,12 @@ function OktaWidget() {
     return () => signIn.remove();
   }, [navigate]);
 
-  return <div ref={widgetRef} />;
+  return (
+    <div
+      id="okta-login-container"
+      ref={widgetRef}
+    />
+  );
 }
 
 export default OktaWidget;
