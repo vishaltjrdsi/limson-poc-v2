@@ -36,6 +36,7 @@ import {
   InventoryControl,
   SalesOrder,
   PurchaseOrders,
+  HealthCheck
 } from "../pages";
 
 import LoginCallback from "../auth/components/LoginCallback";
@@ -49,6 +50,7 @@ function AppRoutes() {
       {/* Okta Callback */}
       <Route path="/login/callback" element={<LoginCallback />} />
 
+    
       {/* Protected Application */}
       <Route
         element={
@@ -57,6 +59,8 @@ function AppRoutes() {
           </AuthenticatedRoute>
         }
       >
+        <Route path="/health" element={<HealthCheck />} />
+        
         {/* Home */}
         <Route path={ROUTES.HOME} element={<Home />} />
 

@@ -1,5 +1,6 @@
 export const ROUTES = {
   HOME: "/",
+  HEALTH_CHECK: "/health-check",
 
   // APPS
   PURCHASE_ORDERS: "/apps/purchase-orders",
