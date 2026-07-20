@@ -18,10 +18,7 @@ ModuleRegistry.registerModules([
   AllCommunityModule,
 ]);
 
-console.log("Issuer:", import.meta.env.VITE_OKTA_ISSUER);
-console.log("Client ID:", import.meta.env.VITE_OKTA_CLIENT_ID);
-console.log("Redirect URI:", import.meta.env.VITE_OKTA_REDIRECT_URI);
-console.log("Scopes:", import.meta.env.VITE_OKTA_SCOPES);
+
 
 ReactDOM.createRoot(document.getElementById("root")).render(
     <React.StrictMode>
