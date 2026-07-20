@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "node -e \"fs.rmSync('dist', { recursive: true, force: true }); fs.mkdirSync('dist/assets', { recursive: true });\" && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
@@ -30,6 +30,6 @@
     "eslint-plugin-react-hooks": "^7.1.1",
     "eslint-plugin-react-refresh": "^0.5.3",
     "globals": "^17.7.0",
-    "vite": "^8.1.1"
+    "vite": "^8.1.5"
   }
 }

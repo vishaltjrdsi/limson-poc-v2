@@ -4,6 +4,13 @@ import path from 'path';
 
 export default defineConfig({
   plugins: [react()],
+
+  build: {
+    outDir: 'dist',
+    emptyOutDir: true,
+    chunkSizeWarningLimit: 3000
+  },
+
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),

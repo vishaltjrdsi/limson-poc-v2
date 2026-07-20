@@ -18,8 +18,7 @@ function LoginPage() {
 
 <div
   className="background-map"
-  style={{ backgroundImage: "url('/assets/world-map.jpg')" }} 
-></div>
+/>
 
                 <LoginCard />
 
