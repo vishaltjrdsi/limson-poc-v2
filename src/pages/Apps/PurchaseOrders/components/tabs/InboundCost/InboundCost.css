@@ -1,8 +1,8 @@
 .inbound-cost-page {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 100%;
 }
 
 /* ===========================
@@ -10,190 +10,151 @@
 =========================== */
 
 .cost-entry-section {
-    background: #f8f6f1;
-    border: 1px solid #d7d0c4;
+  background: #f8f6f1;
+  border: 1px solid #d7d0c4;
 }
 
 .section-title {
-    height: 18px;
-    display: flex;
-    align-items: center;
-    padding: 0 8px;
-    font-size: 11px;
-    font-weight: 700;
-    color: #1a3556;
-    border-bottom: 1px solid #d7d0c4;
-    background: #fbfaf7;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #1a3556;
+  border-bottom: 1px solid #d7d0c4;
+  background: #fbfaf7;
 }
 
 .cost-grid {
-    height: 250px;
+  height: 250px;
 }
 
 /* ===========================
-   FOOTER
+   FOOTER & FORM
 =========================== */
 
 .cost-footer {
-    background: #f8f6f1;
-    border: 1px solid #d7d0c4;
-    padding: 10px 12px 12px;
+  background: #f8f6f1;
+  border: 1px solid #d7d0c4;
+  padding: 10px 12px 12px;
+  box-sizing: border-box;
 }
 
-/* ===========================
-   TOTAL
-=========================== */
-
 .total-row {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 10px;
-    font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  font-size: 12px;
 }
 
 .total-row strong {
-    color: #0066cc;
+  color: #0066cc;
 }
 
-/* ===========================
-   FORM
-=========================== */
-
-.cost-select{
-     width: 20px;
-}
-.cost-form{
-    display:grid;
-    grid-template-columns:190px 190px 190px 1fr 190px auto;
-    gap:18px;
-    align-items:end;
+/* Responsive Grid Layout to keep buttons contained */
+.cost-form {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(100px, 1fr)) minmax(180px, 1.5fr) minmax(100px, 1fr) auto;
+  gap: 10px;
+  align-items: end;
+  width: 100%;
 }
 
 .field {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-width: 0; /* Prevents input overflow inside grid cells */
 }
 
 .field label {
-    height: 24px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #c7ccd4;
-    color: #6b5334;
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: .5px;
-    border: 1px solid #d1d1d1;
-    border-bottom: none;
-     
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #c7ccd4;
+  color: #6b5334;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  border: 1px solid #d1d1d1;
+  border-bottom: none;
 }
 
-
+/* Remove hardcoded select width of 500px to allow flex growth */
 .field select {
-    height: 32px;
-    border: 1px solid #cfcfcf;
-    background: white;
-    padding: 0 8px;
-    font-size: 12px;
-    width: 500px;
-}
-
-/* ===========================
-   NOTES
-=========================== */
-
-.notes-row {
-    display: grid;
-    grid-template-columns: 58px 1fr 110px;
-    gap: 0;
-    margin-top: 8px;
-}
-
-.notes-row label {
-    background: #c7ccd4;
-    border: 1px solid #d1d1d1;
-    border-right: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 10px;
-    font-weight: 700;
-    color: #6b5334;
-    letter-spacing: .5px;
-}
-
-.notes-row textarea {
-    resize: none;
-    height: 66px;
-    border: 1px solid #d1d1d1;
-    padding: 6px;
-    font-size: 12px;
-    outline: none;
-    font-family: inherit;
+  height: 32px;
+  border: 1px solid #cfcfcf;
+  background: white;
+  padding: 0 8px;
+  font-size: 12px;
+  width: 100%;
 }
 
 /* ===========================
    BUTTONS
 =========================== */
 
-.action-buttons{
-    display:flex;
-    align-items:center;
-    gap:6px;
-    justify-content:flex-end;
+.action-buttons {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  justify-content: flex-end;
+  flex-shrink: 0; /* Ensures buttons never overflow or push out */
 }
 
-.action-buttons button{
-    height:30px;
+.action-buttons button {
+  height: 30px;
+  white-space: nowrap;
 }
 
 .action-buttons button:first-child,
-.action-buttons button:nth-child(2){
-    width:30px;
-    min-width:30px;
-    padding:0;
+.action-buttons button:nth-child(2) {
+  width: 30px;
+  min-width: 30px;
+  padding: 0;
 }
 
 .action-buttons button:last-child {
-    min-width: 70px;
+  min-width: 70px;
 }
 
+/* ===========================
+   NOTES
+=========================== */
 
-.vendor-field{
-    min-width:340px;
+.notes-section {
+  display: grid;
+  grid-template-columns: 58px 1fr;
+  margin-top: 8px;
+  width: 100%;
 }
 
-.notes-section{
-    display:grid;
-    grid-template-columns:58px 1fr;
-    margin-top:8px;
+.notes-label {
+  background: #c7ccd4;
+  border: 1px solid #d3d3d3;
+  border-right: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: 700;
+  color: #6b5334;
 }
 
-.notes-label{
-    background:#c7ccd4;
-    border:1px solid #d3d3d3;
-    border-right:none;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:10px;
-    font-weight:700;
-    color:#6b5334;
+.notes-section textarea {
+  height: 66px;
+  border: 1px solid #d3d3d3;
+  resize: none;
+  padding: 6px;
+  width: 100%; /* Changed from 88% to fill grid properly */
+  box-sizing: border-box;
 }
 
-.notes-section textarea{
-    height:66px;
-    border:1px solid #d3d3d3;
-    resize:none;
-    padding:6px;
-    width: 88%;
-}
-
-.input-field{
-       border-radius: 0px;
-       height: 28px;
+.input-field {
+  border-radius: 0px !important;
+  height: 28px !important;
 }
